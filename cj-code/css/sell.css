@@ -1,0 +1,136 @@
+/* /////////////////背景圖///////////////// */
+.big-bag{
+    /* border: 10px solid #000; */
+    width: 100%;
+    background-image: url(../../texture/bcg2.png),
+    url(../../texture/bcg.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: left bottom, right top;
+    position: relative;
+}
+
+
+
+/* /////////////////導覽列///////////////// */
+
+nav .wrap .nav-a a:nth-child(5):before{
+    content:"";
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 3px;
+    width: 3px;
+    height: 3px;
+    margin-right: 5px;
+    text-align: center;
+    top:50%;
+    transform: translateY(-50%);
+    
+}    
+
+.dessert{
+    width: 100%;
+}
+
+.dessert .title-1{
+    margin-top: 160px;
+}
+
+.dessert .container{
+    /* border: 1px solid red; */
+}
+
+/* 小導覽列 */
+
+.dessert .nav{
+    /* border: 1px solid #000; */
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dessert .nav a{
+
+}
+
+.dessert .container .item-wrap .item{
+    /* border: 1px solid #000; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dessert .container .item-wrap .item .fa-circle-chevron-left,
+.dessert .container .item-wrap .item .fa-circle-chevron-right{
+    /* border: 1px solid #000; */
+    margin-bottom: 12%;
+}
+
+
+.dessert .container .item-wrap .item .card{
+    /* border: 2px solid purple; */
+    width: 28%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.dessert .container .item-wrap .item .card .pic {
+    /* border: 1px solid #000; */
+    width: 100%;
+    padding-bottom: 80%;
+    position: relative;
+    
+}
+
+.dessert .container .item-wrap .item .card .pic img{
+    width: 100%;
+    border-radius: 20px;
+    vertical-align: top;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.dessert .container .item-wrap .item .card .pic img:hover{
+    transform: translateY(-10px);
+    opacity: .8;
+}
+
+.dessert .container .item-wrap .item .card .pic .title-shot{
+    position: absolute;
+    top:-32px;
+    left:-65px;
+    transform: rotate(-20deg);
+}
+
+.dessert .container .item-wrap .item .card .name{
+    /* border: 1px solid #000; */
+    margin-top: 1em;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.dessert .container .item-wrap .item .card .name::after{
+    /* border: 1px solid #000; */
+    content:" ";
+    height: 15px;
+    width: 100%;
+    background-image: url(../../texture/Waves.svg);
+    background-repeat: repeat-x;
+    background-position: center;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    right:50%;
+    text-align: center;
+    transform: translateX(-50%);
+
+}

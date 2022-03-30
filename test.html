@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        a{
+            border:1px solid orange;
+            display:inline-block;
+            width: 200px;
+        }
+
+        .ch{
+            display:none;
+        }
+
+        .en:hover{
+            display:none;
+        }
+
+        .en:hover +.ch{
+            display:inline-block;
+            color:black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="" class="en">food</a>
+    <a href="" class="ch">食物</a>
+    <a href="" class="en">123</a>
+    <a href="" class="ch">食物</a>
+    <a href="" class="en">43434</a>
+    <a href="" class="ch">食物</a>
+    
+</body>
+</html>
