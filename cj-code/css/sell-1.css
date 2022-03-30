@@ -161,7 +161,7 @@
 }
 
 .dessert .container .item .card .pic{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     width: 100%;
     padding-bottom:90%;
     border-radius: 10px 10px 0 0;
@@ -171,7 +171,7 @@
 }
 
 .dessert .container .item .card .pic img{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     width: 100%;
     position: absolute;
     /* object-fit: contain; */

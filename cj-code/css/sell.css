@@ -1,12 +1,11 @@
 /* /////////////////背景圖///////////////// */
-.big-bag{
-    /* border: 10px solid #000; */
+body{
     width: 100%;
-    background-image: url(../../texture/bcg2.png),
-    url(../../texture/bcg.png);
+    background-image: url(../../texture/bcg4.png);
     background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: left bottom, right top;
+    background-size: 100%;
+    background-position: 0 900px;
+    z-index: 10;
     position: relative;
 }
 
@@ -108,7 +107,7 @@ nav .wrap .nav-a a:nth-child(5):before{
     position: absolute;
     top:-32px;
     left:-65px;
-    transform: rotate(-20deg);
+   
 }
 
 .dessert .container .item-wrap .item .card .name{

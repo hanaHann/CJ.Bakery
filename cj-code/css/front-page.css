@@ -172,7 +172,7 @@ body{
 
 }
 
-.new-dessert .container .item .main h2{
+.new-dessert .container .item .main h3{
     /* border: 1px solid #000; */
     color:var(--imcolor1);
     font-size:1.8rem;
@@ -319,7 +319,7 @@ body{
     box-shadow: var(--box-shadow);
 }
 
-.hot .container .item .card-inf a h2{
+.hot .container .item .card-inf a h4{
     /* border: 1px solid #000; */
     font-size: 1.5rem;
     margin-bottom: 30px;
@@ -422,13 +422,13 @@ body{
     /* padding-left: 14%; */
 }
 
-.about .wrap .inf h1{
+.about .wrap .inf :first-child{
     font-size:2.5rem;
     color:var(--imcolor2);
     font-family: 'Yusei Magic', sans-serif;
 }
 
-.about .wrap .inf p{
+.about .wrap .inf :nth-child(2){
     /* border: 1px solid #000; */
     font-size: 1.2rem;
     margin-top: 10px;

@@ -27,6 +27,7 @@
         cursor:url(../../texture/cursor.svg),auto;
         /* cursor:url(../../texture/cursor/abpfn-0in5w-001.ico),auto; */
         background-repeat: no-repeat;
+        list-style: none;
     }
 
     *:active{
@@ -44,7 +45,7 @@
     }
 
     .wrap{
-        /* border: 1px solid #000; */
+        /* border: 2px solid orange; */
         width:calc(1280 / 1440 * 100%);
         max-width:1280px;
         margin: auto;
@@ -52,21 +53,34 @@
         margin-bottom: 50px;
     }
 
+    h1{
+        position: fixed;
+        top:0;
+        left:-100000px;
+
+    }
+
         
     a{text-decoration: none;}
 
-    h1,h2,h3,h4,h5,h6{
+    
+
+    h2,h3,h4,h5,h6{
         color:var(--wcolor);
-        /* font-family: 'Saira Condensed', sans-serif; */
-        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 300;
         letter-spacing: .2em;
         text-indent: 0.2em;
         line-height: 1.8em;
-    }       
+    }  
+    
+    h2,h3{
+        font-weight: 400;
+
+    }
         
     p{
-        font-family: 'Rambla', sans-serif;
-        font-weight: 400;
+        /* font-family: 'Rambla', sans-serif; */
+        font-weight: 200;
         color:var(--wcolor);
         letter-spacing: .1em;
         text-indent: 0.1em;
@@ -295,7 +309,7 @@
 
     /* /////////////////標題形式一///////////////// */
 
-    .title-1{
+    h2 .wrap{
         /* border: 1px solid #000; */
         width: 100%;
         margin-top: 80px;
@@ -303,14 +317,14 @@
         
     }
 
-    .title-1 .wrap .title{
+    h2 .wrap .title{
         margin: auto;
         display:flex;
         align-items: center;
         justify-content: center;
     }
 
-    .title-1 .line{
+    h2 .wrap .line{
         /* border:1px solid red; */
         width: 100px;
         border-radius: 5px;
@@ -319,13 +333,13 @@
         background-size: 15px 100%;
     }
 
-    .title-1 .middle{
+    h2 .wrap .middle{
         /* border:2px solid red; */
         margin: 0 20px;
         text-align: center;
     }
 
-    .title-1 .wrap .title .middle p:first-child{
+    h2 .wrap .title .middle p:first-child{
         /* border:1px solid red; */
         font-size:3rem;
         font-weight: 400;
@@ -333,7 +347,7 @@
         color: var(--imcolor1);
         text-shadow: var(--box-shadowsmall);
     }
-    .title-1 .wrap .title .middle p:last-child{
+    h2 .wrap .title .middle p:last-child{
         /* border:1px solid blue; */
         color: var(--color2);
         font-size:1.4rem;
@@ -481,7 +495,7 @@
         padding: 5px 30px;
         position: relative;
         transition: .5s;
-        margin: 0 20px;
+        margin: 0 2%;
     }
 
     .btn-2:after{
@@ -548,24 +562,44 @@
     }
 
     /* /////////////////按鈕五///////////////// */
-    .btn-5-1,.btn-5-2{
-        border-radius: 4px;
-        padding: 5px 10px;
-        font-size:1.4rem;
+
+    form{
+        border: 1px solid #000;
+    }
+
+    .btn-5-1 , .btn-5-2{
+        /* background-color: #000; */
+        border:0px;
+        border-radius: 20px;
+        padding: 12px 22px;
         font-weight: 400;
         color:white;
+        display: inline-block;
+    }
+
+    .btn-5-1 button,.btn-5-2 button{
+        /* border:0px; */
+        font-size:1.4rem;
+        color:white;
+        border:0px;
+    
     }
 
     .btn-5-1:hover,.btn-5-2:hover{
-
+        opacity: .9;
     }
 
-    .btn-5-1{
-        background-color: var(--imcolor1);
+    .btn-5-1,.btn-5-1 button{
+        background-color: var(--color1);
     }
 
-    .btn-5-2{
+    .btn-5-2,.btn-5-2 button{
         background-color: var(--imcolor2);
+    }
+
+    form .fa-cart-shopping{
+        color:white;
+        font-size: 1.2rem;
     }
 
     /* /////////////////sale標籤///////////////// */
@@ -622,12 +656,15 @@
         background-image: url("../../texture/Line 2.svg");
 
     }
+.transtitle {
+    transform: rotate(-20deg);
 
-       /* .label-sale{
+}
+       .title-shot{
         animation:rubberBand 3s infinite;
     }
-
-    @keyframes img {
+/* 
+    @keyframes title-shot {
         0% { transform: rotate(0deg); }
        80% { transform: rotate(0deg); }
        85% { transform: rotate(-10deg); }
