@@ -11,21 +11,15 @@ body{
 }
 
 
-.dessert{
+.dessert-page2{
     /* border: 1px solid #000; */
     width: 100%;
 }
 
-.dessert .title-1{
+.dessert-page2 .title-1{
     margin-top: 140px;
 }
 
-.dessert .nav :first-child{
-    color:white;  
-    background-color: var(--imcolor2);
-    border:5px solid var(--color2);
-    padding: 5px 30px; 
-}
 
 
 
@@ -45,26 +39,21 @@ nav .wrap .nav-a a:nth-child(5):before{
 }  
 
 
+/* /////////////////小導覽列///////////////// */
 
-
-/* /////////////////導覽列///////////////// */
-
-.dessert .nav{
+.dessert-page2 .summary .nav-btn-2{
     /* border: 1px solid #000; */
-    display: flex;
-    margin: auto;
     margin-bottom: 8%;
-    justify-content: center;
-    align-items: center;
 }
 
-.dessert .nav a{
-
+.dessert-page2 .nav-btn-2 :first-child{
+    color:white;  
+    background-color: var(--color2);
+    border:5px solid var(--color3);
 }
+/* /////////////////上方內容-介紹///////////////// */
 
-/* /////////////////介紹///////////////// */
-
-.dessert .introduce{
+.dessert-page2 .summary .introduce{
     /* border: 1px solid #000; */
     width: 100%;
     display: flex;
@@ -72,14 +61,15 @@ nav .wrap .nav-a a:nth-child(5):before{
     margin-bottom: 80px;
 }
 
-.dessert .introduce .pic, .dessert .introduce .inf-container{
+.dessert-page2 .summary .introduce .pic
+, .dessert-page2 .summary .introduce .inf-container{
     box-shadow: var(--box-shadow);
     width: 53%;
     padding-bottom: 30%;
     border-radius: 10px;
 }
 
-.dessert .introduce .inf-container{
+.dessert-page2 .summary .introduce .inf-container{
     /* border: 1px solid #000; */
     background-color:white;
     position: absolute;
@@ -87,7 +77,7 @@ nav .wrap .nav-a a:nth-child(5):before{
     top: -45px;
 }
 
-.dessert .introduce .inf-container .inf{
+.dessert-page2 .summary .introduce .inf-container .inf{
     /* border: 1px solid #000; */
     display: flex;
     flex-direction: column;
@@ -98,26 +88,23 @@ nav .wrap .nav-a a:nth-child(5):before{
     bottom:0%;
 }
 
-.dessert .introduce .inf-container .inf h3{
+.dessert-page2 .summary .introduce .inf-container .inf h3{
     font-size: 1.8rem;
     text-align: center; 
 }
 
-.dessert .introduce .inf-container .inf p{
+.dessert-page2 .summary .introduce .inf-container .inf p{
     /* border: 1px solid #000; */
     margin-top: 5%;
     font-size: 1.2rem;
     text-align: left; 
 }
 
-
-.dessert .introduce .pic{
+.dessert-page2 .summary .introduce .pic{
     position: relative;
-
-
 }
 
-.dessert .introduce .pic img{
+.dessert-page2 .summary .introduce .pic img{
     width: 100%;
     border-radius: 10px;
     vertical-align: top;
@@ -126,52 +113,56 @@ nav .wrap .nav-a a:nth-child(5):before{
     height: 100%;
     object-fit: cover;
     transition: .4s;
-
 }
 
-.dessert .introduce .inf{
+.dessert-page2 .summary .introduce .inf{
     background-color: white;
     /* border: 1px solid #000; */
     border-radius: 10px;
     position: absolute;
     top:-70px;
     right:0%;
-
 }
 
-
-/* /////////////////商品們///////////////// */
-
-.dessert .container{
+.dessert-page2 main {
     /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dessert-page2 main .wrap{
+    /* border: 1px solid purple; */
     width: 100%;
     margin: auto;
     margin: 50px 0 80px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    
 }
 
 /* ////////////////選單///////////////// */
 
-.dessert select{
+.dessert-page2 main select{
+    border: 1px solid #000;
     border-radius: 10px;
     border: 3px solid var(--color1);
     padding: 4px 10px;
     width: 40%;
-    margin-top: 10% ;
     margin-bottom: 5%;
     height: 40px;
     font-size: 1.4rem;
     color: var(--color1);
-    text-align: center;
     letter-spacing: .2em;
     text-indent: 0.2em;
 }
 
 /* ////////////////主要內容///////////////// */
 
-.dessert .container .main{
+.dessert-page2 main .container{
     /* border: 1px solid #000; */
     display: flex;
     flex-direction: column;
@@ -179,20 +170,24 @@ nav .wrap .nav-a a:nth-child(5):before{
     margin: auto;
 }
 
-.dessert .container .main .item:nth-of-type(even){
+.dessert-page2 main .container .item:nth-of-type(even){
     /* border: 2px solid red; */
     flex-direction:row-reverse;
 }
 
-.dessert .container .main .item{
-    /* border: 1px solid #000; */
+.dessert-page2 main .container .item{
+    /* border: 4px solid red; */
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10%;
 
 }
 
-.dessert .container .main .item .pic{
+.dessert-page2 main .container .item:nth-child(1){
+    margin-bottom: 10%;
+}
+
+.dessert-page2 main .container .item .pic{
     border: 5px solid white;
     width: 53%;
     padding-bottom: 56%;
@@ -201,19 +196,18 @@ nav .wrap .nav-a a:nth-child(5):before{
 
 }
 
-.dessert .container .main .item .pic img{
+.dessert-page2 main .container .item .pic img{
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
 }
 
-.dessert .container .main .item:nth-child(1) .pic :first-child{
+.dessert-page2 main .container .item:nth-child(1) .pic :first-child{
    transform: scale(1.4);
 }
 
-
-.dessert .container .main .item .inf{
+.dessert-page2 main .container .item .inf{
     /* border: 3px solid red; */
     width: 47%;
     padding: 0  40px;
@@ -223,32 +217,31 @@ nav .wrap .nav-a a:nth-child(5):before{
     justify-content: space-between;
 }
 
-.dessert .container .main .item .inf h3{
+.dessert-page2 main .container .item .inf h3{
     color:var(--imcolor1);
     font-size: 1.7rem;
     margin: 0 30px 10px 30px;
     
 }
-.dessert .container .main .item .inf h3+p{
+.dessert-page2 main .container .item .inf h3+p{
     text-align: left;
     margin-bottom: 30px;
     font-size: 1.2rem;
 }
 
-.dessert .container .main .item .inf .food-in {
+.dessert-page2 main .container .item .inf .food-in {
     /* border: 1px solid #000; */
     margin-bottom: 18%;
 }
 
-.dessert .container .main .item .inf .food-in .title {
+.dessert-page2 main .container .item .inf .food-in .title {
     /* border: 1px solid #000; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-.dessert .container .main .item .inf .food-in .title .line{
+.dessert-page2 main .container .item .inf .food-in .title .line{
     /* border: 1px solid #000; */
     width: 90px;
     border-radius: 6px;
@@ -257,16 +250,13 @@ nav .wrap .nav-a a:nth-child(5):before{
     background-size: 15px 100%;
 }
 
-.dessert .container .main .item .inf .food-in .title :nth-child(2){
+.dessert-page2 main .container .item .inf .food-in .title :nth-child(2){
     font-size: 1.3rem;
     color:var(--imcolor2);
     margin: 0 10px;
 }
 
-
-
-
-.dessert .container .main .item .inf ul{
+.dessert-page2 main .container .item .inf ul{
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     flex-wrap: wrap;
@@ -274,7 +264,8 @@ nav .wrap .nav-a a:nth-child(5):before{
     justify-content: center;
 }
 
-.dessert .container .main .item .inf ul li .circle{
+.dessert-page2 main .container .item .inf ul li .circle{
+    /* border: 1px solid #000; */
     background-color:white;
     aspect-ratio:1 / 1;
     border-radius: 50%;
@@ -288,11 +279,11 @@ nav .wrap .nav-a a:nth-child(5):before{
 
 }
 
-.dessert .container .main .item .inf ul li p{
+.dessert-page2 main .container .item .inf ul li p{
     font-size: 1rem;
 }
 
-.dessert .container .main .item .inf .price{
+.dessert-page2 main .container .item .inf .price{
     /* border: 1px solid #000; */
     display: flex;
     justify-content: center;
@@ -300,11 +291,11 @@ nav .wrap .nav-a a:nth-child(5):before{
     justify-content: space-between;
 }
 
-.dessert .container .main .item .inf .price:nth-of-type(2){
+.dessert-page2 main .container .item .inf .price:nth-of-type(2){
     margin: 3% 0;
 }
 
-.dessert .container .main .item .inf .price p {
+.dessert-page2 main .container .item .inf .price p {
     color:var(--imcolor1);
     font-size: 1.8rem;
     font-weight: 500;
@@ -313,102 +304,44 @@ nav .wrap .nav-a a:nth-child(5):before{
 
 
 
-.dessert .container .main .item .inf .price .detail{
+.dessert-page2 main .container .item .inf .price .detail{
     /* border: 1px solid #000; */
     display: flex;
     align-items: center;
 
 }
 
-.dessert .container .main .item .inf .price .detail :first-child{
+.dessert-page2 main .container .item .inf .price .detail :first-child{
     /* border: 1px solid #000; */
     width: 100px;
     font-size: 1.4rem;
 }
 
-/* /////////////////font///////////////// */
+/* /////////////////font icon///////////////// */
 
-.dessert .food-in i{
+.dessert-page2 .food-in i{
     font-size: 3rem;
     color:var(--color2);
     object-fit: cover;
-  
-   
+
 }
 
 /* /////////////////食用建議///////////////// */
 
 
-.dessert .advice{
+.dessert-page2 .eat-advice .inf{
     border: 1px solid #000;
     width: 100%;
     border: 3px dashed var(--color3);
     border-radius: 15px;
-    margin: 5% auto;
+    margin: 5% 0 10% 0;
     padding: 20px 0;
     text-align: center;
     
 }
 
-.dessert .advice p:first-child{
+.dessert-page2 .eat-advice .inf p:first-child{
     font-size: 1.2rem;
-}
-
-
-
-
-/* IG-post */
-
-div{
-    outline: 0;
-}
-
-.ig-post{
-    width: 100%;
-    margin: 10% auto;
-}
-
-.ig-post .container{
-    /* border: 1px solid #000; */
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: space-between;
-    gap:15px;
-    
-
-}
-
-.ig-post .container .pic{
-    width:100%;
-    padding-bottom: 100%;
-    position: relative; 
-    overflow: hidden;
-}
-
-
-.ig-post .container .pic img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    background-color: var(--color2);
-    
-}
-
-.ig-post .container .pic:hover::after{
-    content: "查看貼文";
-    opacity: .5;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50% , -50%);
-    color:white;
-    font-size: 1.3rem;
-    font-family: 'Yusei Magic', sans-serif;
-    letter-spacing: .2rem;
-    text-indent: .2em;
-    
 }
 
 

@@ -49,8 +49,8 @@
         width:calc(1280 / 1440 * 100%);
         max-width:1280px;
         margin: auto;
-        padding: 0 20px;
-        margin-bottom: 50px;
+        padding: 0 80px;
+        margin-bottom: 2%;
     }
 
     h1{
@@ -89,7 +89,10 @@
     }
 /* ---------------導覽列--------------- */
 
-    nav{
+
+
+  nav{
+        /* border: 1px solid #000; */
         width: 100%;
         max-height: 80px;
         justify-content: center;
@@ -104,6 +107,7 @@
     }   
 
     nav .wrap{
+        /* border: 1px solid #000; */
         position: relative;   
         display:flex;
         justify-content: center;
@@ -118,17 +122,17 @@
         width: 140px;
     }
 
-    nav .wrap .icon{
+    nav .wrap ul:nth-of-type(1){
         /* border:1px solid black; */
         position: absolute;
         top:5px;
         right:0;
-
+        display: flex;
     }
 
-    nav .wrap .icon .fa-arrow-right-to-bracket,
-    nav .icon .fa-user,
-    nav .icon .fa-cart-shopping{
+    nav  .fa-arrow-right-to-bracket,
+    nav  .fa-user,
+    nav  .fa-cart-shopping{
         /* border:1px solid red; */
         font-size: 1.5rem;
         margin: 10px;
@@ -136,20 +140,20 @@
         margin-right: 0px;
     }
 
-    nav .wrap .nav-a{
-        /* border:1px solid blue; */
+    nav ul:nth-of-type(2){
+        /* border:2px solid blue; */
         margin-top: -5px;
         width: 60%;
         margin-bottom: 6px;
         display: flex;
         justify-content: center;
-        font-size: 0;
+        /* font-size: 0; */
     }
 
-    nav .wrap .nav-a a{
-        /* display: inline-block; */
+    nav ul:nth-of-type(2) a{
+        /* border: 1px solid #000; */
+        display: inline-block;
         width: 120px;
-        /* border:1px solid red; */
         margin:auto;
         font-size:1rem;
         font-weight: 200;
@@ -161,30 +165,20 @@
         position: relative;
     } 
 
-    nav .wrap .nav-a .ch{
+    nav .wrap ul:nth-of-type(2) .ch{
         /* border: 1px solid #000; */
         display: none;  
         font-weight: 100;
     }
 
-
-
-    nav .wrap .nav-a .en:hover{
+    nav .wrap ul:nth-of-type(2) .en:hover{
+        /* border: 1px solid #000; */
         display: none;
     }
 
-
-
-    nav .wrap .nav-a .en:hover +.ch{
+    nav .wrap ul:nth-of-type(2) .en:hover +.ch{
         display:inline-block;
     }
-
-    /* nav .wrap .nav-a .ch::after{
-    position: absolute;
-    content: "";
-    border-bottom: 1px solid white;
-    
-} */
 
 
 /* ---------------footer--------------- */
@@ -199,9 +193,7 @@
         position: relative;
     }
 
-    footer .wrap{
-        margin-bottom: 0px;
-    }
+
 
     footer .container {
         /* border:1px solid blue; */
@@ -211,7 +203,7 @@
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        bottom:0%;
+        bottom:0;
         right:0;
         left:0;
         
@@ -483,26 +475,32 @@
 
     /* /////////////////按鈕二///////////////// */
 
+    .nav-btn-2{
+        /* border: 1px solid #000; */
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
 
     .btn-2{
         background-color: transparent;
-        border: 0px;
         border: 5px solid transparent;
         display: inline-block;
-        font-size:1.4rem;
+        font-size:1.2rem;
         text-align: center;
         color:var(--imcolor2);
-        padding: 5px 30px;
+        padding: 5px 10px;
         position: relative;
         transition: .5s;
-        margin: 0 2%;
+        margin: 0 20px;
     }
 
     .btn-2:after{
         content:"";
         height: 2px;
-        width: 82%;
-        background-color: var(--imcolor2);
+        width: 92%;
+        background-color: var(--color2);
         position: absolute;
         right:50%;
         bottom: 0;
@@ -511,9 +509,9 @@
 
     .btn-2:hover , .btn-2:active{
         color:white;  
-        background-color: var(--imcolor2);
-        border:5px solid var(--color2);
-        padding: 5px 30px;
+        background-color: var(--color2);
+        border:5px solid var(--color3);
+        padding: 5px 10px;
     }
 
     .btn-2:active .btn:after{
@@ -656,24 +654,109 @@
         background-image: url("../../texture/Line 2.svg");
 
     }
-.transtitle {
-    transform: rotate(-20deg);
+    .transtitle {
+        transform: rotate(-20deg);
+    }
 
-}
        .title-shot{
-        animation:rubberBand 3s infinite;
+        animation:shakeY 3s infinite;
     }
-/* 
-    @keyframes title-shot {
-        0% { transform: rotate(0deg); }
-       80% { transform: rotate(0deg); }
-       85% { transform: rotate(-10deg); }
-       95% { transform: rotate(0deg); }
-      100% { transform: rotate(0deg); }
-    }
-     */
 
+
+
+/* IG-post */
+
+
+.ig-post .wrap {
+    /* border: 1px solid #000; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap:15px;
+}
+
+.ig-post .follow{
+    background-color: var(--imcolor2);
+}
+
+
+.ig-post .pic, .ig-post .follow{
+    /* border: 1px solid #000; */
+    width:100%;
+    padding-bottom: 100%;
+    position: relative; 
+    overflow: hidden;
+}
+
+.ig-post .pic img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    background-color: var(--color2);
+    /* opacity: .2; */
     
+}
+
+.ig-post .pic::after,.ig-post .follow::after{
+    content:"";
+    background-color: rgba(15, 15, 15, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .1rem;
+    text-indent: .1rem;
+    
+}
+
+.ig-post .pic:hover::after,.ig-post .follow:hover::after{
+    /* border: 1px solid #000; */
+    content:"";
+    background-color: rgba(15, 15, 15, 0.5);
+    color:white;
+    text-align:center;
+    font-size: 1.2rem;
+    transition: background-color 1s;
+    
+}
+
+.ig-post .pic:hover::after{
+    content:"查看貼文";
+}
+
+.ig-post .follow i , .ig-post .follow .inf {
+    position: absolute;
+    color:white;
+  
+}
+
+.ig-post .follow i {
+    font-size: 3rem;
+    left:2%;
+    top:2%;
+    
+}
+
+.ig-post .follow .inf{
+    /* border: 1px solid #000; */
+    right:2%;
+    bottom: 0%;
+}
+
+.ig-post .follow .inf p{
+    color:white;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+
 
 
     /* /////////////////icon///////////////// */

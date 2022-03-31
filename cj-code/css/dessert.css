@@ -9,8 +9,6 @@ body{
     position: relative;
 }
 
-
-
 /* /////////////////導覽列///////////////// */
 
 nav .wrap .nav-a a:nth-child(5):before{
@@ -26,69 +24,84 @@ nav .wrap .nav-a a:nth-child(5):before{
     top:50%;
     transform: translateY(-50%);
     
-}    
+}   
 
-.dessert{
+.dessert-page1{
     width: 100%;
-}
-
-.dessert .title-1{
-    margin-top: 160px;
-}
-
-.dessert .container{
-    /* border: 1px solid red; */
-}
-
-/* 小導覽列 */
-
-.dessert .nav{
     /* border: 1px solid #000; */
+}
+
+.dessert-page1 .title-1{
+    margin-top: 140px;
+}
+
+
+/* /////////////////主要內容///////////////// */
+
+
+
+/* .dessert-page1 .nav-btn-2{
+    border: 1px solid #000;
     display: flex;
     margin: auto;
-    margin-bottom: 50px;
-    height: 90px;
     justify-content: center;
     align-items: center;
-}
+} */
 
-.dessert .nav a{
-
-}
-
-.dessert .container .item-wrap .item{
+.dessert-page1 main .container{
+    background-color: white;
     /* border: 1px solid #000; */
-    width: 100%;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+
+.dessert-page1  main .wrap .container .item{
+    /* border: 2px solid red; */
+    /* width: 100%; */
+    margin: 70px 0;
+}
+
+.dessert-page1  main .container .item .column .fa-circle-chevron-left,
+.dessert-page1  main .container .item .column .fa-circle-chevron-right{
+    /* border: 1px solid #000; */
+    margin-bottom: 6%;
+    margin: auto;
+}
+
+.dessert-page1  main .container .item .column{
+    /* border: 1px solid #000; */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.dessert .container .item-wrap .item .fa-circle-chevron-left,
-.dessert .container .item-wrap .item .fa-circle-chevron-right{
-    /* border: 1px solid #000; */
-    margin-bottom: 12%;
+    margin-top: 70px;
 }
 
 
-.dessert .container .item-wrap .item .card{
+.dessert-page1  main .container .item .column ul{
     /* border: 2px solid purple; */
-    width: 28%;
+    width: 85%;
     display: flex;
-    flex-direction:column;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 80px;
+    margin: auto;
 }
 
-.dessert .container .item-wrap .item .card .pic {
-    /* border: 1px solid #000; */
+.dessert-page1  main .container .item .column ul li{
+    width: 30%;
+}
+
+
+.dessert-page1  main .container .item .column ul li .pic{
     width: 100%;
     padding-bottom: 80%;
     position: relative;
-    
+
 }
 
-.dessert .container .item-wrap .item .card .pic img{
+.dessert-page1  main .container .item .column ul li img{
     width: 100%;
     border-radius: 20px;
     vertical-align: top;
@@ -98,26 +111,35 @@ nav .wrap .nav-a a:nth-child(5):before{
     transition: .4s;
 }
 
-.dessert .container .item-wrap .item .card .pic img:hover{
+.dessert-page1  main .container .item .column ul li  img:hover{
     transform: translateY(-10px);
     opacity: .8;
 }
 
-.dessert .container .item-wrap .item .card .pic .title-shot{
+.dessert-page1  main .container .item .column ul li .pic .title-shot{
     position: absolute;
-    top:-32px;
-    left:-65px;
+    top:-85px;
+    left:-45px;
    
 }
 
-.dessert .container .item-wrap .item .card .name{
+.dessert-page1 main .container .item .column ul li{
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dessert-page1 main .container .item .column ul li .name{
     /* border: 1px solid #000; */
     margin-top: 1em;
     font-size: 1.4rem;
     position: relative;
+    text-align: center;
+    display: inline;
 }
 
-.dessert .container .item-wrap .item .card .name::after{
+.dessert-page1 main .container .item .column ul li .name::after{
     /* border: 1px solid #000; */
     content:" ";
     height: 15px;
