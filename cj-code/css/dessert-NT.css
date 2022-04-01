@@ -16,6 +16,11 @@ body{
     width: 100%;
 }
 
+.dessert-page2 .container{
+    border: 1px solid #000;
+    /* visibility: hidden;~ */
+}
+
 
 /* /////////////////小導覽列///////////////// */
 
@@ -23,7 +28,6 @@ body{
     /* border: 1px solid #000; */
     margin-bottom: 8%;
 }
-
 .dessert-page2 .nav-btn-2 :first-child{
     color:white;  
     background-color: var(--color2);
