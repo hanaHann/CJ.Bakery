@@ -9,44 +9,14 @@ body{
     position: relative;
 }
 
-/* /////////////////導覽列///////////////// */
-
-nav .wrap .nav-a a:nth-child(5):before{
-    content:"";
-    display: inline-block;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 3px;
-    width: 3px;
-    height: 3px;
-    margin-right: 5px;
-    text-align: center;
-    top:50%;
-    transform: translateY(-50%);
-    
-}   
-
 .dessert-page1{
     width: 100%;
     /* border: 1px solid #000; */
 }
 
-.dessert-page1 .title-1{
-    margin-top: 140px;
-}
-
-
 /* /////////////////主要內容///////////////// */
 
 
-
-/* .dessert-page1 .nav-btn-2{
-    border: 1px solid #000;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-} */
 
 .dessert-page1 main .container{
     background-color: white;
@@ -62,6 +32,7 @@ nav .wrap .nav-a a:nth-child(5):before{
     /* border: 2px solid red; */
     /* width: 100%; */
     margin: 70px 0;
+    
 }
 
 .dessert-page1  main .container .item .column .fa-circle-chevron-left,

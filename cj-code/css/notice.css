@@ -1,0 +1,136 @@
+.notice{
+    border: 1px solid #000;
+}
+
+/* /////////////////訂購步驟///////////////// */
+.notice .step{
+    /* border: 1px solid #000; */
+}
+
+.notice .step .container{
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice .step .container .card{
+    /* border: 1px solid #000; */
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+}
+
+.notice .step .container .card .pic{
+    /* border: 1px solid #000; */
+    aspect-ratio: 6 / 8;
+        /* width: 100%;
+        padding-bottom: 99%; */
+    position: relative;
+    overflow: hidden;
+}
+
+.notice .step .container .card .pic img{
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    object-fit: cover;
+}
+
+.notice .step .container .card  .title{
+    position: absolute;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    opacity: .8;
+    color:var(--imcolor1);
+    font-weight: 300;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.notice .step .container .card:first-of-type  .title{
+    top:20px;
+}
+
+.notice .step .container .card:nth-of-type(2)  .title{
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.notice .step .container .card:nth-of-type(3)  .title{
+    bottom:20px;
+}
+
+.notice .step .container .card .inf{
+    background-color: white;
+    padding: 30px 30px 120px 30px;
+    flex-grow: 1;
+    display: none;
+    /* visibility: hidden; */
+    transition: .5s;
+}
+
+.notice .step .container .card .inf :first-child{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+
+}
+
+.notice .step .container .card:first-of-type .pic:hover ~.inf,
+.notice .step .container .card:nth-of-type(2) .pic:hover ~.inf,
+.notice .step .container .card:nth-of-type(3) .pic:hover ~.inf{
+    display: block;
+    /* visibility:visible; */
+}
+
+
+.notice .step .container .card .inf :first-child{
+    text-align: center;
+}
+
+/* /////////////////FAQ///////////////// */
+
+.faq{
+    border: 1px solid #000;
+}
+
+.faq .wrap .item{
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    background-color: var(--color3);
+    display: flex;
+    padding: 10px 20px;
+    margin: 3% 0;
+    position: relative;
+}
+
+.faq .wrap .item p{
+    color:var(--imcolor1);
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.faq .wrap .item .inf-hidden{
+    /* display: none; */
+    position: absolute;
+    top:100%;
+    background-color: var(--color3);
+    width: 100%;
+}
+
+.faq .wrap .item i{
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color:var(--imcolor1);
+}
+
+
+
+.faq .wrap .item input:target ~.inf-hidden{
+    border: 1px solid #000;
+}
+

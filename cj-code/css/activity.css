@@ -1,0 +1,38 @@
+.activity{
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.activity .container{
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.activity .container .item{
+    border: 1px solid orange;
+    margin-bottom: 5%;
+}
+
+.activity .container .item .pic{
+    width: 100%;
+    padding-bottom: 40%;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.activity .container .item .pic img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.activity .container .item .inf{
+    border: 1px solid red;
+    position: absolute;
+    top:0;
+}
+

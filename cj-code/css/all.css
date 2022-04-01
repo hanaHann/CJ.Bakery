@@ -35,7 +35,8 @@
         /* cursor:url(../../texture/cursor/a3mk9-27o0z-001.ico),auto; */
     }
 
-    a:hover , img:hover , [class*="btn-"]:hover{
+    a:hover , img:hover , [class*="btn-"]:hover, i:hover ,button:hover,
+    li:hover{
         cursor:url(../../texture/hover.svg),auto;
     }
 
@@ -46,8 +47,8 @@
 
     .wrap{
         /* border: 2px solid orange; */
-        width:calc(1280 / 1440 * 100%);
-        max-width:1280px;
+        width:var(--width-);
+        max-width:calc(1280 / 1440 * 100%);
         margin: auto;
         padding: 0 80px;
         margin-bottom: 2%;
@@ -301,6 +302,8 @@
 
     /* /////////////////標題形式一///////////////// */
 
+   
+
     h2 .wrap{
         /* border: 1px solid #000; */
         width: 100%;
@@ -308,6 +311,10 @@
         margin-bottom: 50px;
         
     }
+
+    .dessert-page1 h2 .wrap ,.dessert-page2 h2 .wrap{
+        margin-top: 140px;
+       }
 
     h2 .wrap .title{
         margin: auto;
@@ -353,6 +360,7 @@
         /* border: 1px solid rgb(49, 46, 46); */
         margin: auto;
         width: 100%;
+       
         
     }
 
@@ -361,6 +369,7 @@
         background-color: var(--color3);
         border-radius: 30px;
         text-align: center;
+        /* box-shadow: var(--box-shadowsmall); */
     }
 
     .title-2-1 .wrap{
@@ -666,10 +675,14 @@
 
 /* IG-post */
 
+.ig-post {
+    /* border: 1px solid #000; */
+    width: 100%;
+
+}
 
 .ig-post .wrap {
     /* border: 1px solid #000; */
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
@@ -783,3 +796,19 @@
         font-size: 32px;
     }
 
+    .dessert-page2 nav .wrap li:nth-child(5) a:before,
+    .dessert-page1 nav .wrap li:nth-child(5) a:before{
+        border: 1px solid #000;
+        content:"";
+        display: inline-block;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        
+    }  
