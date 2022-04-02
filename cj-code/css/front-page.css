@@ -221,7 +221,7 @@ body{
 }
 
 .new-dessert .container .main .pic img:hover{
-    opacity: .5;
+    opacity: .8;
     animation:img .1s none;
 }
 @keyframes img {

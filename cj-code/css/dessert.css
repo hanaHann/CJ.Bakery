@@ -4,7 +4,8 @@ body{
     background-image: url(../../texture/bcg4.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 0 900px;
+    background-position: 0 200px;
+    background-position: bottom;
     z-index: 10;
     position: relative;
 }
@@ -38,8 +39,19 @@ body{
 .dessert-page1  main .container .item .column .fa-circle-chevron-left,
 .dessert-page1  main .container .item .column .fa-circle-chevron-right{
     /* border: 1px solid #000; */
-    margin-bottom: 6%;
+    margin-bottom: -20%;
     margin: auto;
+    position: absolute;
+    top: 30%;
+}
+.dessert-page1 .fa-circle-chevron-right{
+    left:100%;
+    transform: translateX(65%);
+}
+
+.dessert-page1 .fa-circle-chevron-left{
+    right:100%;
+    transform: translateX(-65%);
 }
 
 .dessert-page1  main .container .item .column{
@@ -61,7 +73,9 @@ body{
 }
 
 .dessert-page1  main .container .item .column ul li{
+    /* border: 1px solid #000; */
     width: 30%;
+    position: relative;
 }
 
 

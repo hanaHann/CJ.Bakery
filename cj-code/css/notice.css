@@ -18,11 +18,12 @@
     width: 31%;
     display: flex;
     flex-direction: column;
+ 
 }
 
 .notice .step .container .card .pic{
     /* border: 1px solid #000; */
-    aspect-ratio: 6 / 8;
+    aspect-ratio: 6 / 7.5;
         /* width: 100%;
         padding-bottom: 99%; */
     position: relative;
@@ -42,7 +43,7 @@
     padding: 15px 20px;
     background-color: white;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     opacity: .8;
     color:var(--imcolor1);
     font-weight: 300;
@@ -64,24 +65,30 @@
 
 .notice .step .container .card .inf{
     background-color: white;
-    padding: 30px 30px 120px 30px;
+    padding: 30px 30px 50px 30px;
     flex-grow: 1;
-    display: none;
-    /* visibility: hidden; */
     transition: .5s;
+    animation: opcaity 2s 1s ;
+ 
 }
+
+
 
 .notice .step .container .card .inf :first-child{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
+    font-weight: 400;
 
 }
 
-.notice .step .container .card:first-of-type .pic:hover ~.inf,
-.notice .step .container .card:nth-of-type(2) .pic:hover ~.inf,
-.notice .step .container .card:nth-of-type(3) .pic:hover ~.inf{
-    display: block;
-    /* visibility:visible; */
+.notice .step .container .card .inf :nth-child(2){
+    opacity: 0.2;
+    transition: 1s;
+}
+
+.notice .step .container .card .inf:hover > p:nth-of-type(2){
+    /* border: 1px solid #000; */
+    opacity: 1;
 }
 
 
@@ -91,46 +98,82 @@
 
 /* /////////////////FAQ///////////////// */
 
-.faq{
-    border: 1px solid #000;
+.faq .wrap {
+    /* border: 1px solid #000; */
+    margin-bottom: 8%;
 }
 
-.faq .wrap .item{
+.faq .wrap h2{
     /* border: 1px solid #000; */
-    border-radius: 20px;
+    font-size: 4rem;
+    position: relative;
+    color:var(--imcolor1);
+    text-shadow: var(--box-shadowsmall);
+    
+}
+
+.faq .wrap h2::after{
+    content:"";
+    background-color: var(--imcolor1);
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left:0;
+}
+
+
+.faq .wrap .item{
+    border-radius: 5px;
     background-color: var(--color3);
     display: flex;
     padding: 10px 20px;
-    margin: 3% 0;
+    margin: 3% 0 0 0 ;
     position: relative;
 }
 
-.faq .wrap .item p{
-    color:var(--imcolor1);
-    font-weight: 400;
-    font-size: 1.4rem;
+
+.faq .wrap input{
+    display: none;
+    z-index: -10;
 }
 
-.faq .wrap .item .inf-hidden{
-    /* display: none; */
-    position: absolute;
-    top:100%;
-    background-color: var(--color3);
+.faq .wrap .inf-hidden{
+    display: none;
+    padding: 30px;
     width: 100%;
+    /* background-color:rgba(231,212,171,.9 );  */
+    background-color: white;
+
 }
 
-.faq .wrap .item i{
+.faq .wrap .item p:first-of-type{
+    color:var(--imcolor1);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+.faq .wrap .item form i{
+    /* border: 1px solid #000; */
     position: absolute;
     right:20px;
     top:50%;
     transform: translateY(-50%);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    color:var(--imcolor1);
+}
+
+.faq .wrap input:checked ~.inf-hidden {
+    /* border: 1px solid #000; */
+    display: block;
+    margin: auto;
+
+}
+
+.faq .wrap .item .inf-hidden{
     color:var(--imcolor1);
 }
 
 
-
-.faq .wrap .item input:target ~.inf-hidden{
-    border: 1px solid #000;
-}
 

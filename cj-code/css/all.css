@@ -35,6 +35,8 @@
         /* cursor:url(../../texture/cursor/a3mk9-27o0z-001.ico),auto; */
     }
 
+   
+
     a:hover , img:hover , [class*="btn-"]:hover, i:hover ,button:hover,
     li:hover{
         cursor:url(../../texture/hover.svg),auto;
@@ -64,10 +66,15 @@
         
     a{text-decoration: none;}
 
+    h2{
+        font-family: 'Yusei Magic', sans-serif;
+
+    }
+
     
 
     h2,h3,h4,h5,h6{
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         color:var(--wcolor);
         font-weight: 300;
         letter-spacing: .2em;
@@ -137,9 +144,15 @@
     nav  .fa-cart-shopping{
         /* border:1px solid red; */
         font-size: 1.5rem;
-        margin: 10px;
+        margin: 15px;
         color:var(--bcg-color);
         margin-right: 0px;
+    }
+
+    nav  .fa-arrow-right-to-bracket:hover,
+    nav  .fa-user:hover,
+    nav  .fa-cart-shopping:hover{
+        opacity: .9;
     }
 
     nav ul:nth-of-type(2){
@@ -182,6 +195,21 @@
         display:inline-block;
     }
 
+    #new-dessert:target::before{
+        content:"";
+        height: 80px;
+        display: block;
+    }
+
+    #hot-dessert:target::before{
+        content:"";
+        height: 80px;
+        display: block;
+    }
+
+
+
+
 
 /* ---------------footer--------------- */
     footer{
@@ -211,26 +239,39 @@
         
     }
 
-    footer .container .ig{
-        /* border:1px solid blue; */
-        /* width: 200px; */
-        /* width:calc( 200 / var(--width) * 100%); */
-        margin-bottom: 100px;
+    footer .container .inf{
+        /* border: 1px solid #000; */
+        display: flex;
+        margin-bottom: 5%;
+        justify-content: space-between;
+    }
+
+    footer .container .ig,   footer .container .line{
+        /* border: 1px solid #000; */
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
 
     }
-    footer .container .ig a p{
-        transition: .5s;
-        color:var(--imcolor2);
+
+    footer .container .ig{
+        margin-right: 20px;
     }
 
-    footer .container .ig a p:hover{
+    footer .container .ig a ,   footer .container .line a {
+        transition: .5s;
+        color:var(--imcolor2);
+        font-size:1.2rem;
+        transition: .5s;
+    }
+
+    footer .container .ig a :hover,footer .container .line a :hover{
         color: white;
     }
 
-    footer .container .ig .fa-instagram{
+    footer .container .ig .fa-instagram,
+    footer .container .line .fa-line{
         font-size: 30px;
         /* border:1px solid red; */
         text-align: center;
@@ -239,10 +280,7 @@
         transition: .5s;
     }
 
-    footer .container .ig .fa-instagram p{
-        font-size:1.2rem;
-        transition: .5s;
-    }
+
 
     footer .container .bar {
         /* border:1px solid green; */
@@ -572,7 +610,7 @@
     /* /////////////////按鈕五///////////////// */
 
     form{
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
     }
 
     .btn-5-1 , .btn-5-2{
@@ -668,7 +706,7 @@
         transform: rotate(-20deg);
     }
 
-       .title-shot{
+    .title-shot{
         animation:shakeY 3s infinite;
     }
 
