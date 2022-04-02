@@ -22,17 +22,14 @@ body{
     position: absolute;
     left:0;
     top:30%;
-
 }
-
-
 
  /* //////////////////banner////////////////// */
 
  .banner{
     /* border:4px solid blue; */
     width: 100%;
-    min-height: 780px;
+    aspect-ratio: 16 / 9;
     display: flex;
     background-image:
     linear-gradient(rgba(148, 116, 56, 0.5),rgba(255, 255, 255, 0.1)),
@@ -41,16 +38,13 @@ body{
     background-size:cover;
     background-position: bottom right;
     position: relative;
-  
  }
-
-
 
 .banner .pic{
     /* border: 1px solid #000; */
     width: 100%;
+    bottom: -2%;
     position: absolute;
-    bottom: -1%;
 }
 
 .banner .pic img{
@@ -59,52 +53,41 @@ body{
 
 .banner .pic img:hover{
     cursor:url(../../texture/cursor.svg),auto;
-
 }
-
 
 .banner .wrap .frame{
-    width: 450px;
-    height: 320px;
-    background-color:rgb(255, 255, 255,0.8);
     border-radius: 10px;
+    width: calc(400 / 1280 *100%);
+    padding: 80px 35px;
     position: absolute;
     top:25%;
-    padding: 40px;
+    background-color:rgb(255, 255, 255,0.8);
 }
 
-.banner .frame .new{
-    color:var(--wcolor);
-    font-weight: normal;
+.banner .frame :first-child{
+    margin-top: -5%;
+    margin-bottom: 5%;
     font-size: 1.5rem;
     text-align: center;
-    letter-spacing: .3rem;
-    text-indent: .3em;
-    font-family: 'Noto Sans TC', sans-serif;
+    color:var(--wcolor);
 }
 
 .banner .frame .btn-1-2{
+    margin: auto;
     position: absolute;
     left:50%;
-    bottom:40px;
-    margin: auto;
-    transform: translateX(-50%);
     z-index: 4;
+    transform: translateX(-50%);
 }
 
-
-
-.banner .frame p{
-    font-size:1.1rem;
-    margin-top: -20px;
+.banner .frame :nth-child(2) {
+    margin-bottom: 8%;
     text-align: center;
-    padding-top: 50px;
+    font-size:1rem;
 }
-
 
 
 /* /////////////////最新甜點///////////////// */
-
 
 .new-dessert .container{
     /* border:1px solid blue;    */
@@ -118,7 +101,7 @@ body{
     padding: 50px 0;
     display: flex;
     position: relative;
-    margin-bottom:10px;
+    margin-bottom:2%;
 }
 
 .new-dessert .item:nth-child(2){
@@ -138,15 +121,15 @@ body{
     text-align: center;
 }
 
-
 .new-dessert .item .num p{
-    margin-top: -110px;
+    /* border: 1px solid #000; */
+    margin-top: -75%;
     font-size: 8rem;
     font-weight: bold;
     letter-spacing: .5rem;
-    color: var(--color2);
     text-shadow: var(--box-shadowsmall);
     font-family: 'Yusei Magic', sans-serif;
+    color: var(--color2);
 }
 
 
@@ -164,9 +147,10 @@ body{
 .new-dessert .container .item .main .title{
     /* border:2px solid red; */
     display: flex;
-    margin-bottom:40px;
+    margin-bottom:10%;
     /* justify-content: center; */
 }
+
 .new-dessert .container .item .main .title img{
     /* border:1px solid red; */
     transform: scale(1);  
@@ -178,18 +162,18 @@ body{
     color:var(--imcolor1);
     font-size:1.8rem;
     margin: 0 20px;
-    
 }
 
 
 .new-dessert .wrap .container .item .main p{
     /* border:1px solid blue; */
     width: 100%;
+    padding: 0  0 0 60px;
     font-size:1.3rem;
     font-weight: 400;
-    padding: 0  0 0 60px;
     color:var(--wcolor)
 }
+
 
 .new-dessert .container .item .main .pic img{
     /* border:1px solid orange; */
@@ -207,7 +191,6 @@ body{
 }
 
 .new-dessert .wrap .container .item-1 .main .pic img,.new-dessert .container .item-1 .main .title{
-  
     transform: rotate(-5deg);
 }
 
@@ -239,16 +222,15 @@ body{
 }
 
 .hot .container .item{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 100%;
     min-height: 340px;
-    margin-bottom: 40px;
+    margin-bottom: 5%;
     display: flex;
     justify-content: space-between;
 }
 
 .hot .container .item:nth-child(even){
-    margin-bottom: 40px;
     flex-direction: row-reverse;  
 }
 
@@ -310,7 +292,6 @@ body{
 
 .hot .container .item .card-inf{
     /* border: 2px solid #000; */
-    background: white;
     width: 40%;
     /* padding: 20px; */
     display: flex;
@@ -318,13 +299,12 @@ body{
     justify-content: center;
     align-items: center;
     box-shadow: var(--box-shadow);
+    background-color: white;
 }
 
 .hot .container .item .card-inf a h4{
-    /* border: 1px solid #000; */
     font-size: 1.5rem;
-    margin-bottom: 30px;
-    
+    margin-bottom: 10%;
 }
 
 .hot .container .item .card-inf a+p{
@@ -338,19 +318,16 @@ body{
 
 .hot .container .item .card-inf .price{
     /* border: 1px solid #000; */
+    width: 50%;
     display: flex;
-    margin-top: 30px;
+    margin-top: 8%;
     align-items: center;
     justify-content: space-between;
 }
 
-.hot .container .item .card-inf .price .price-nt{
-    /* border: 1px solid #000; */
-}
-
 .hot .container .item .card-inf .price .price-num{
     /* border: 1px solid #000; */
-    margin:0 30px 0 10px;
+    margin: 0 5%;
 }
 
 .hot .container .item .card-inf .price .price-nt,
@@ -360,9 +337,7 @@ body{
 
 }
 
-
-
-/* /////////////////關於我///////////////// */
+/* ////////////////關於我們///////////////// */
 
 .about{
     /* border:1px solid red; */
@@ -373,7 +348,6 @@ body{
 .about .wrap{
     /* border: 1px solid #000; */
     display:flex;
-    
 }
 
 .about .wrap .inf{
@@ -394,9 +368,7 @@ body{
     /* border: 1px solid #000; */
     width: 35vw;
     height: 85vh;
-    /* max-height:calc(650 / var(--width) * 100%);; */
     border-radius: 80px 0 80px 0px;
-    /* box-shadow:-90px 120px 0 rgba(210,180,141,1); */
 }
 
 .about  .video-frame{
@@ -419,10 +391,6 @@ body{
     z-index: -1;
 }
 
-.about .wrap .inf{
-    /* padding-left: 14%; */
-}
-
 .about .wrap .inf :first-child{
     font-size:2.5rem;
     color:var(--imcolor2);
@@ -431,11 +399,8 @@ body{
 
 .about .wrap .inf :nth-child(2){
     /* border: 1px solid #000; */
-    font-size: 1.2rem;
-    margin-top: 10px;
-    
+    font-size: 1.2rem;    
 }
-
 
 /* /////////////////食材嚴選///////////////// */
 
