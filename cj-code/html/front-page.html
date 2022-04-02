@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="../../fontawesome-free-6.1.0-web/css/all.min.css">
     <link rel="stylesheet" href="../../fontawesome-free-6.1.0-web/webfonts/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <script src="https://kit.fontawesome.com/638613e24c.js" crossorigin="anonymous"></script>
 
     <!-- /////////////////css///////////////// -->
 
@@ -29,12 +30,16 @@
     <link rel="stylesheet" href="../css/front-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <script src="https://kit.fontawesome.com/638613e24c.js" crossorigin="anonymous"></script>
+     <!-- /////////////////動畫///////////////// -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+     />
  
     
 </head>
 <body>
+
 
 <!-- /////////////////首頁all///////////////// -->  
 
@@ -48,6 +53,19 @@
         </div>
     </div>
 <!-- /////////////////側邊按鈕///////////////// -->  
+
+    <div class="btn-aside">
+        <a href="https://www.instagram.com/cj.bakery_/" class="btn-aside-1">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://line.me/R/ti/p/@054pbzqi" class="btn-aside-2">
+            <i class="fa-brands fa-line"></i>
+        </a>
+        <a href="#" class="btn-aside-3">
+            <i class="fa-solid fa-chevron-up"></i>
+            TOP
+        </a>
+    </div>
 
 <!-- /////////////////導覽列///////////////// -->  
     <h1>CJ.Bakery</h1>
@@ -83,41 +101,54 @@
                     <a href="#">NEW IN</a>
                 </li>
                 <li class="ch">
-                    <a href="#new-dessert" >最新甜點</a>
+                    <a href="../html/front-page.html#new-dessert" >最新甜點</a>
                 </li>
+
                 <li  class="en">
                     <a href="#">HOT</a>
                 </li>
                 <li class="ch">
-                    <a href="#hot-dessert" >熱賣甜點</a>
+                    <a href="../html/front-page.html#hot-dessert" >熱賣甜點</a>
                 </li>
+
                 <li  class="en">
                     <a href="#">DESSERT</a>
                 </li>
                 <li class="ch">
                     <a href="../html/dessert.html">甜點一覽</a>
                 </li>
+
                 <li  class="en">
                     <a href="#" >STORY</a>
                 </li>
                 <li class="ch">
-                    <a href="#" >關於我們</a>
+                    <a href="#story" >關於我們</a>
                 </li>
+
                 <li  class="en">
                     <a href="#">SELECTION</a>
                 </li>
                 <li class="ch">
-                    <a href="#">食材嚴選</a>
+                    <a href="../html/selection.html">食材嚴選</a>
                 </li>
+
                 <li  class="en">
                     <a href="#">NOTICE</a>
                 </li>
                 <li  class="ch">
                     <a href="../html/notice.html" >訂購事項</a>
                 </li>
+
+                <li  class="en">
+                    <a href="#">ACTIVITY</a>
+                </li>
+                <li  class="ch">
+                    <a href="../html/activity.html" >最新活動</a>
+                </li>
             </ul>
         </div>
     </nav>
+
 <!-- /////////////////banner///////////////// -->  
 
     <div class="banner">
@@ -126,7 +157,7 @@
         </div>
         <div class="wrap">
             <div class="frame">
-                <div class="new">最新公告</div>
+                <p>最新公告</p>
                 <p>工作室從二月中旬開始整修<br>
                 預計三月中旬開放下訂<br></p>
                 <a href="#" class="btn-1-2">前往選購</a>
@@ -236,8 +267,9 @@
 
             <div class="container">
             <!-- 熱賣甜點＿內容section1 -->
-                <div class="item item-1">
+                <div class="item">
                     <div class="card-pic">
+                        <img src="../../texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
                     </div>
                     <div class="card-inf">
                         <a href=""><h4>瑪德蓮 Madeleine</h4></a>
@@ -254,10 +286,35 @@
                     </div>
 
                 </div>
-            <!-- 熱賣甜點＿內容section2 -->
 
-                <div class="item item-2">
+                <script>
+                    function switchFavorite(){
+                    var heart = document.getElementById("heart");
+
+                    if(heart.title=="加入收藏"){
+                        heart.src="../../texture/heart2.png";
+                        heart.title="取消收藏";
+                        console.log("成功");
+                    }
+                    else if (heart.title="取消收藏"){
+                        heart.src="../../texture/heart1.png";
+                        heart.title="加入收藏";
+                        console.log("成功了");
+    
+                }
+
+
+            }
+heart.addEventListener("click",switchFavorite);
+                </script>
+                
+
+
+             
+            <!-- 熱賣甜點＿內容section2 -->
+                <div class="item">
                     <div class="card-pic">
+                        <img src="../../texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
                     </div>
                     <div class="card-inf">
                         <a href=""><h4>布朗尼 Brownie</h4></a>
@@ -266,13 +323,14 @@
                         <div class="price">
                             <p class="price-nt">NT＄</p>
                             <p class="price-num"> 70</p>
-                            <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="#"><i class="fa-solid fa-chevron-right" id="heart"></i></a>
                         </div>
                     </div>
                 </div>
             <!-- 熱賣甜點＿內容section3 -->
-                <div class="item item-3">
+                <div class="item">
                     <div class="card-pic">
+                        <img src="../../texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
                     </div>
                     <div class="card-inf">
                         <a href=""><h4>燕麥小熊 Oat Bear</h4></a>
@@ -286,8 +344,9 @@
                     </div>
                 </div>
             <!-- 熱賣甜點＿內容section4 -->
-                <div class="item item-4">
+                <div class="item">
                     <div class="card-pic">
+                        <img src="../../texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
                     </div>
                     <div class="card-inf">
                         <a href=""><h4>巴斯克 Basque</h4></a>
@@ -305,8 +364,8 @@
         </div>
     </div>
 
-<!-- /////////////////關於我們///////////////// -->˜
-    <div class="about">
+<!-- /////////////////關於我們///////////////// -->
+    <div class="about" id="story">
         <div class="video-frame">
             <video muted src="../../texture/video (1).mp4" autoplay loop></video>
         </div>
@@ -343,7 +402,7 @@
 
 <!-- /////////////////食材嚴選///////////////// -->
     <!-- 食材嚴選－標題-->
-    <div class="selection">
+    <!-- <div class="selection">
         <div class="wrap">`
             <div class="title-1">
                 <div class="wrap">
@@ -395,7 +454,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
 
 <!-- /////////////////footer///////////////// -->
 
@@ -403,30 +463,32 @@
         <div class="wrap">
             <div class="container">
                 <div class="bar">
-                    <a href="">NEW IN</a>
+                    <a href="#new-dessert">NEW IN</a>
                     <p>|</p>
-                    <a href="">HOT</a>
+                    <a href="#hot-dessert">HOT</a>
                     <p>|</p>
-                    <a href="">SELL</a>
+                    <a href="./dessert.html">SELL</a>
                     <p>|</p>
-                    <a href="">ABOUT</a>
+                    <a href="#story">ABOUT</a>
                     <p>|</p>
-                    <a href="">SELECTION</a>
+                    <a href="../html/selection.html">SELECTION</a>
                     <p>|</p>
-                    <a href="">NOTICE</a>
+                    <a href="./notice.html">NOTICE</a>
+                    <p>|</p>
+                    <a href="./notice.html">ACTIVITY</a>
                 </div>
                 <div class="inf">
                     <div class="ig">
                         <a href="https://www.instagram.com/cj.bakery_/" target=_blank>
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.instagram.com/cj.bakery_/" target=_blank>Instagram</a>
+                        <a href="https://www.instagram.com/cj.bakery_/" target=_blank class="some">Instagram</a>
                     </div>
                     <div class="line">
                         <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank>
                             <i class="fa-brands fa-line"></i>
                         </a>
-                        <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank>
+                        <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank class="">
                             Line
                         </a>
                     </div>

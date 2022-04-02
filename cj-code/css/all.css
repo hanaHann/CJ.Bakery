@@ -1,5 +1,65 @@
 
 
+        .col-1{ width: 8.333333%;}
+        .col-2{ width: 16.666666%;}
+        .col-3{ width: 25%;}
+        .col-4{ width: 33.333333%;}
+        .col-5{ width: 41.666666%;}
+        .col-6{ width: 50%;}
+        .col-7{ width: 58.333333%;}
+        .col-8{ width: 66.666666%;}
+        .col-9{ width: 75%;}
+        .col-10{ width: 83.333333%;}
+        .col-11{ width: 91.666666%;}
+        .col-12{ width: 100%;}
+
+        @media screen and (min-width:768px){
+        .col-md-1{ width: 8.333333%;}
+        .col-md-2{ width: 16.666666%;}
+        .col-md-3{ width: 25%;}
+        .col-md-4{ width: 33.333333%;}
+        .col-md-5{ width: 41.666666%;}
+        .col-md-6{ width: 50%;}
+        .col-md-7{ width: 58.333333%;}
+        .col-md-8{ width: 66.666666%;}
+        .col-md-9{ width: 75%;}
+        .col-md-10{ width: 83.333333%;}
+        .col-md-11{ width: 91.666666%;}
+        .col-md-12{ width: 100%;}
+        }
+
+        @media screen and (min-width:992px){
+            .col-lg-1{ width: 8.333333%;}
+            .col-lg-2{ width: 16.666666%;}
+            .col-lg-3{ width: 25%;}
+            .col-lg-4{ width: 33.333333%;}
+            .col-lg-5{ width: 41.666666%;}
+            .col-lg-6{ width: 50%;}
+            .col-lg-7{ width: 58.333333%;}
+            .col-lg-8{ width: 66.666666%;}
+            .col-lg-9{ width: 75%;}
+            .col-lg-10{ width: 83.333333%;}
+            .col-lg-11{ width: 91.666666%;}
+            .col-lg-12{ width: 100%;}
+
+        }
+
+        @media screen and (min-width:1200px){
+            .col-xl-1{ width: 8.333333%;}
+            .col-xl-2{ width: 16.666666%;}
+            .col-xl-3{ width: 25%;}
+            .col-xl-4{ width: 33.333333%;}
+            .col-xl-5{ width: 41.666666%;}
+            .col-xl-6{ width: 50%;}
+            .col-xl-7{ width: 58.333333%;}
+            .col-xl-8{ width: 66.666666%;}
+            .col-xl-9{ width: 75%;}
+            .col-xl-10{ width: 83.333333%;}
+            .col-xl-11{ width: 91.666666%;}
+            .col-xl-12{ width: 100%;}
+
+        }
+
 :root{
 /* 變數----顏色 */
     --imcolor1:#AF6E4D;
@@ -56,6 +116,21 @@
         margin-bottom: 2%;
     }
 
+    @media screen and (min-width:992px){
+        .wrap{
+            min-width:calc(960 / 992 * 100%);
+       }
+    }
+
+    @media screen and (min-width:768px){
+        .wrap{
+             min-width:calc(720 / 768 * 100%);
+        }
+    }
+
+
+
+
     h1{
         position: fixed;
         top:0;
@@ -63,22 +138,18 @@
 
     }
 
-        
     a{text-decoration: none;}
 
     h2{
         font-family: 'Yusei Magic', sans-serif;
-
     }
-
-    
 
     h2,h3,h4,h5,h6{
         /* border: 1px solid #000; */
         color:var(--wcolor);
         font-weight: 300;
-        letter-spacing: .2em;
-        text-indent: 0.2em;
+        letter-spacing: .15em;
+        text-indent: 0.15em;
         line-height: 1.8em;
     }  
     
@@ -96,6 +167,8 @@
         /* margin-right: -0.1em; */
         line-height: 1.8em;
     }
+
+
 /* ---------------導覽列--------------- */
 
 
@@ -168,7 +241,7 @@
     nav ul:nth-of-type(2) a{
         /* border: 1px solid #000; */
         display: inline-block;
-        width: 120px;
+        width: 100px;
         margin:auto;
         font-size:1rem;
         font-weight: 200;
@@ -202,6 +275,12 @@
     }
 
     #hot-dessert:target::before{
+        content:"";
+        height: 80px;
+        display: block;
+    }
+
+    #story:target::before{
         content:"";
         height: 80px;
         display: block;
@@ -255,6 +334,15 @@
 
     }
 
+    footer .container .bar a:hover,
+    footer .container .line .fa-line:hover,
+    footer .container .ig .fa-instagram:hover,
+    footer .container .some:hover{
+        /* border: 1px solid #000; */
+        color:white;
+
+    }
+
     footer .container .ig{
         margin-right: 20px;
     }
@@ -266,10 +354,6 @@
         transition: .5s;
     }
 
-    footer .container .ig a :hover,footer .container .line a :hover{
-        color: white;
-    }
-
     footer .container .ig .fa-instagram,
     footer .container .line .fa-line{
         font-size: 30px;
@@ -279,7 +363,6 @@
         margin-right: 8px;
         transition: .5s;
     }
-
 
 
     footer .container .bar {
@@ -299,13 +382,7 @@
     footer .container .bar p{
         color:var(--imcolor2); 
     }
-    footer .container .bar a:hover,
-    footer .container .bar .ig:hover{
-        color: white;
-    }
-    footer .container .ig .fa-instagram:hover{
-        color: white;
-    }
+
 
 
     footer .container .box{
@@ -346,14 +423,12 @@
     h2 .wrap{
         /* border: 1px solid #000; */
         width: 100%;
-        margin-top: 80px;
+        margin-top: 140px;
         margin-bottom: 50px;
         
     }
 
-    .dessert-page1 h2 .wrap ,.dessert-page2 h2 .wrap{
-        margin-top: 140px;
-       }
+
 
     h2 .wrap .title{
         margin: auto;
@@ -435,51 +510,67 @@
     /* /////////////////側邊按鈕///////////////// */
 
 
-    .btn-aside-1,.btn-aside-2{
+    .btn-aside-1,.btn-aside-2,.btn-aside-3{
         /* border:1px solid red; */
-        border-radius: 0px 15px 15px 0;
-        height: 100px;
-        padding: 0px 3px;
-        writing-mode: vertical-rl;  
-        font-size:1.2rem;
-        text-align: center;
-        box-shadow: -5px -5px 10px #b9b9b9;
+        /* writing-mode: vertical-rl;   */
+        box-shadow: var(--box-shadow);
         z-index: 50;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
     }
 
+    .btn-aside-1,.btn-aside-2{
+        border-radius: 15px 0px 0px 15px;
+        padding: 35px 8px;
+        right:0;
+    }
 
-
+    .btn-aside-1 i,.btn-aside-2 i{
+        /* border: 1px solid #000; */
+        font-size: 1.6rem;
+        text-align: center;
+    }
 
     .btn-aside-1{
-        position: fixed;
-        right:0;
         top:120px;
         background-color:var(--color1);
         color:white;
-        transform: rotate(180deg);
-        border-radius: 0px 15px 15px 0;
     }
 
     .btn-aside-1:hover{
         background-color: var(--imcolor2);
     }
 
-
-    /* .btn-aside-2{
-        
-        position: fixed;
-        right:0;
-        top:120px;
+    .btn-aside-2{
+        top: 230px;
         background-color:white;
         color:var(--color1);
-        transform: rotate(180deg);
-        
-
     }
 
     .btn-aside-2:hover{
         color:var(--imcolor2);
-    } */
+    }
+
+    .btn-aside-3{
+        /* border: 1px solid #000; */
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        right:10px;
+        bottom:20px;
+        color:var(--imcolor2);
+        text-align: center;
+        background-color: white;
+        flex-direction: column;
+        animation: pulse .5s infinite;
+    }
+
+    .btn-aside-3 i{
+        font-size: 1rem;
+    }
+
 
     /* /////////////////按鈕一///////////////// */
 
@@ -569,22 +660,22 @@
     /* /////////////////按鈕三///////////////// */
 
     .btn-3{
-        border-radius: 4px;
+        border-radius: 15px;
         display: inline-block;
-        font-size:1rem;
+        font-size:1.4rem;
         text-align: center;
-        padding: 5px 20px;
-        color:white;  
-        background-color: var(--color1);
-        /* border:5px solid var(--color2); */
-        transition: 1s;
-        
+        font-weight: 500;
+        padding: 6px 25px;
+        color:var(--imcolor2);  
+        /* background-color: var(--color3); */
+        border:2px solid var(--color1);
     }
 
     .btn-3:hover{
-        /* border:5px solid var(--imcolor2); */
-        opacity: .8;
-
+        /* border:3px solid var(--imcolor2); */
+        color: var(--color1);
+        /* opacity: .8; */
+        
     }
 
     /* /////////////////按鈕四///////////////// */
@@ -714,97 +805,97 @@
 
 /* IG-post */
 
-.ig-post {
-    /* border: 1px solid #000; */
-    width: 100%;
+    .ig-post {
+        /* border: 1px solid #000; */
+        width: 100%;
 
-}
+    }
 
-.ig-post .wrap {
-    /* border: 1px solid #000; */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: space-between;
-    gap:15px;
-}
+    .ig-post .wrap {
+        /* border: 1px solid #000; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: space-between;
+        gap:15px;
+    }
 
-.ig-post .follow{
-    background-color: var(--imcolor2);
-}
+    .ig-post .follow{
+        background-color: var(--imcolor2);
+    }
 
 
-.ig-post .pic, .ig-post .follow{
-    /* border: 1px solid #000; */
-    width:100%;
-    padding-bottom: 100%;
-    position: relative; 
-    overflow: hidden;
-}
+    .ig-post .pic, .ig-post .follow{
+        /* border: 1px solid #000; */
+        width:100%;
+        padding-bottom: 100%;
+        position: relative; 
+        overflow: hidden;
+    }
 
-.ig-post .pic img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    background-color: var(--color2);
-    /* opacity: .2; */
+    .ig-post .pic img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        background-color: var(--color2);
+        /* opacity: .2; */
+        
+    }
+
+    .ig-post .pic::after,.ig-post .follow::after{
+        content:"";
+        background-color: rgba(15, 15, 15, 0);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: .1rem;
+        text-indent: .1rem;
+        
+    }
+
+    .ig-post .pic:hover::after,.ig-post .follow:hover::after{
+        /* border: 1px solid #000; */
+        content:"";
+        background-color: rgba(15, 15, 15, 0.5);
+        color:white;
+        text-align:center;
+        font-size: 1.2rem;
+        transition: background-color 1s;
+        
+    }
+
+    .ig-post .pic:hover::after{
+        content:"查看貼文";
+    }
+
+    .ig-post .follow i , .ig-post .follow .inf {
+        position: absolute;
+        color:white;
     
-}
+    }
 
-.ig-post .pic::after,.ig-post .follow::after{
-    content:"";
-    background-color: rgba(15, 15, 15, 0);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color:white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: .1rem;
-    text-indent: .1rem;
-    
-}
+    .ig-post .follow i {
+        font-size: 3rem;
+        left:2%;
+        top:2%;
+        
+    }
 
-.ig-post .pic:hover::after,.ig-post .follow:hover::after{
-    /* border: 1px solid #000; */
-    content:"";
-    background-color: rgba(15, 15, 15, 0.5);
-    color:white;
-    text-align:center;
-    font-size: 1.2rem;
-    transition: background-color 1s;
-    
-}
+    .ig-post .follow .inf{
+        /* border: 1px solid #000; */
+        right:2%;
+        bottom: 0%;
+    }
 
-.ig-post .pic:hover::after{
-    content:"查看貼文";
-}
-
-.ig-post .follow i , .ig-post .follow .inf {
-    position: absolute;
-    color:white;
-  
-}
-
-.ig-post .follow i {
-    font-size: 3rem;
-    left:2%;
-    top:2%;
-    
-}
-
-.ig-post .follow .inf{
-    /* border: 1px solid #000; */
-    right:2%;
-    bottom: 0%;
-}
-
-.ig-post .follow .inf p{
-    color:white;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
+    .ig-post .follow .inf p{
+        color:white;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
 
 
 
@@ -834,9 +925,61 @@
         border-radius:32px ;
         font-size: 32px;
     }
+    /* /////////////////愛心///////////////// */
+    #heart{
+        transform: scale(.4);
+    }
+
+
+    /* /////////////////導覽列變化///////////////// */
 
     .dessert-page2 nav .wrap li:nth-child(5) a:before,
     .dessert-page1 nav .wrap li:nth-child(5) a:before{
+        border: 1px solid #000;
+        content:"";
+        display: inline-block;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        
+    }  
+    .notice nav .wrap li:nth-child(11) a:before{
+        border: 1px solid #000;
+        content:"";
+        display: inline-block;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        
+    }  
+    .activity nav .wrap li:nth-child(13) a:before{
+        border: 1px solid #000;
+        content:"";
+        display: inline-block;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        
+    }  
+    .selection nav .wrap li:nth-child(9) a:before{
         border: 1px solid #000;
         content:"";
         display: inline-block;

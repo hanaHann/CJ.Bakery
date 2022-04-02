@@ -45,11 +45,21 @@
 
 <body>
 
-    
-
-<div class="dessert-page2">
-
-<!-- /////////////////導覽列///////////////// -->
+    <div class="dessert-page2">
+<!-- /////////////////側邊按鈕///////////////// -->
+        <div class="btn-aside">
+            <a href="https://www.instagram.com/cj.bakery_/" class="btn-aside-1">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://line.me/R/ti/p/@054pbzqi" class="btn-aside-2">
+                <i class="fa-brands fa-line"></i>
+            </a>
+            <a href="#" class="btn-aside-3">
+                <i class="fa-solid fa-chevron-up"></i>
+                TOP
+            </a>
+        </div>
+<!-- /////////////////導覽列///////////////// -->  
     <h1>CJ.Bakery</h1>
     <nav>
         <div class="wrap">
@@ -83,42 +93,55 @@
                     <a href="#">NEW IN</a>
                 </li>
                 <li class="ch">
-                    <a href="#" >最新甜點</a>
+                    <a href="../html/front-page.html#new-dessert" >最新甜點</a>
                 </li>
+
                 <li  class="en">
                     <a href="#">HOT</a>
                 </li>
                 <li class="ch">
-                    <a href="#" >熱賣甜點</a>
+                    <a href="../html/front-page.html#hot-dessert" >熱賣甜點</a>
                 </li>
+
                 <li  class="en">
                     <a href="#">DESSERT</a>
                 </li>
                 <li class="ch">
                     <a href="../html/dessert.html">甜點一覽</a>
                 </li>
+
                 <li  class="en">
                     <a href="#" >STORY</a>
                 </li>
                 <li class="ch">
-                    <a href="#" >關於我們</a>
+                    <a href="#story" >關於我們</a>
                 </li>
+
                 <li  class="en">
                     <a href="#">SELECTION</a>
                 </li>
                 <li class="ch">
-                    <a href="#">食材嚴選</a>
+                    <a href="../html/selection.html">食材嚴選</a>
                 </li>
+
                 <li  class="en">
                     <a href="#">NOTICE</a>
                 </li>
                 <li  class="ch">
-                    <a href="#" >訂購事項</a>
+                    <a href="../html/notice.html" >訂購事項</a>
+                </li>
+
+                <li  class="en">
+                    <a href="#">ACTIVITY</a>
+                </li>
+                <li  class="ch">
+                    <a href="../html/activity.html" >最新活動</a>
                 </li>
             </ul>
         </div>
     </nav>
-<!-- /////////////////上方內容-介紹///////////////// -->
+
+    <!-- /////////////////上方內容-介紹///////////////// -->
     <div class="summary">
         <div class="wrap">
         <!-- 標題形式一 -->
@@ -158,7 +181,7 @@
             </div>
         </div>
     </div> 
-<!-- /////////////////主要內容///////////////// --> 
+    <!-- /////////////////主要內容///////////////// --> 
         <main>
             <div class="wrap">
                 <select name="" id="select" onchange="selection();">
@@ -171,28 +194,27 @@
                     <option value="scon">司康</option>
                     <option value="horse">馬林糖</option>
                 </select>
-         
+            
                 <script>
 
                     function selection() {
                         var selectValue =document.getElementById("select").value;
                         console.log(selectValue);
-
+                        var snow =document.getElementById("snow");
+                        var moder =document.getElementById("moder");
                         
 
                         if(selectValue = "moder"){
-                            document.getElementById("snow").style.display="none";
-                            document.getElementById("moder").style.display="block";
+                            snow.style.display="none";
+                            moder.style.display="block";
                             
-                        }
+                        }   
 
                         else if(selectValue = "snow"){
-                            document.getElementById("snow").style.display="block";  
-                            document.getElementById("moder").style.display="none";  
-                        }
-
-                      
-                      
+                            snow.style.display="block";  
+                            moeder.style.display="none";  
+                        }       
+                        
                     }  
                     
                     
@@ -351,8 +373,8 @@
                     </div>
                 </div>
 
-                 <!-- 主要二欄式甜點一 -->
-                 <div class="container" id="moder" >
+                    <!-- 主要二欄式甜點一 -->
+                <div class="container" id="moder" >
                     <div class="item">
                         <div class="pic">
                             <img src="../../pic/lemon.jpg" alt="">
@@ -739,18 +761,24 @@
         </main>  
 
 
-<!-- /////////////////食用建議///////////////// -->
+    <!-- /////////////////食用建議///////////////// -->
         <div class="eat-advice">
             <div class="wrap">
                 <div class="inf">
-                    <p>食用建議</p>
-                    <p>常溫5天/冷藏14，最佳賞味期2-3天<br>拆封後請立即食用完畢
+                    <p>:: 食用建議 ::</p>
+                    <p>常溫5天/冷藏14，最佳賞味期2-3天
                         </p>
+
+                    <p>:: 食用方式 ::</p>
+                    <p>冷藏取出直接吃/冷藏取出後讓甜點在室溫休息5-10分鐘<br>
+                        冷藏取出後放入烤箱180度5-10分鐘</p>
+
+
                 </div>
             </div>
         </div>
 
-<!-- /////////////////IG貼文///////////////// -->
+    <!-- /////////////////IG貼文///////////////// -->
         <div class="ig-post">
             <div class="wrap">
                 <a href="">
@@ -805,60 +833,61 @@
             </div>
         </div>
 
-<!-- /////////////////footer///////////////// -->   
+    <!-- /////////////////footer///////////////// -->
 
     <footer>
-        <div class="container">
-            <div class="bar">
-                <a href="">NEW IN</a>
-                <p>|</p>
-                <a href="">HOT</a>
-                <p>|</p>
-                <a href="">SELL</a>
-                <p>|</p>
-                <a href="">ABOUT</a>
-                <p>|</p>
-                <a href="">SELECTION</a>
-                <p>|</p>
-                <a href="">NOTICE</a>
-            </div>
-            <div class="ig">
-                <a href="https://www.instagram.com/cj.bakery_/" target=_blank>
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.instagram.com/cj.bakery_/" target=_blank><p>Instagram</p></a>
-            </div>
+        <div class="wrap">
+            <div class="container">
+                <div class="bar">
+                    <a href="#new-dessert">NEW IN</a>
+                    <p>|</p>
+                    <a href="#hot-dessert">HOT</a>
+                    <p>|</p>
+                    <a href="./dessert.html">SELL</a>
+                    <p>|</p>
+                    <a href="#story">ABOUT</a>
+                    <p>|</p>
+                    <a href="../html/selection.html">SELECTION</a>
+                    <p>|</p>
+                    <a href="./notice.html">NOTICE</a>
+                    <p>|</p>
+                    <a href="./notice.html">ACTIVITY</a>
+                </div>
+                <div class="inf">
+                    <div class="ig">
+                        <a href="https://www.instagram.com/cj.bakery_/" target=_blank>
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cj.bakery_/" target=_blank class="some">Instagram</a>
+                    </div>
+                    <div class="line">
+                        <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank>
+                            <i class="fa-brands fa-line"></i>
+                        </a>
+                        <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank class="some">
+                            Line
+                        </a>
+                    </div>
+                </div>
 
-            <div class="box">
-                <p>©CJ.Bakery</p>
-            </div>
+                <div class="box">
+                    <p>©CJ.Bakery</p>
+                </div>
 
-            <div class="final">
-                <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理。</p>
+                <div class="final">
+                    <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理。</p>
+                </div>
             </div>
         </div>
     </footer>
 
-  
-
-
-<!--     
-    <div id="result"></div>
-
-      <script>
-        function select(){
-            var i = document.getElementById("dropdown").value;
-            document.getElementById("snow").style.display="block";
-            var i = document.getElementById("dropdown").value;
-            document.getElementById("moder").style.display="none";
-        }
-        
-    </script> -->
 
 
 
 
-</div>
+
+
+    </div>
 
 
 

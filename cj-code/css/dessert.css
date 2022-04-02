@@ -1,5 +1,6 @@
 /* /////////////////背景圖///////////////// */
 body{
+    /* border: 1px solid #000; */
     width: 100%;
     background-image: url(../../texture/bcg4.png);
     background-repeat: no-repeat;
@@ -86,7 +87,7 @@ body{
 
 }
 
-.dessert-page1  main .container .item .column ul li img{
+.dessert-page1  main .container .item .column ul li img:nth-of-type(1){
     width: 100%;
     border-radius: 20px;
     vertical-align: top;
@@ -94,6 +95,12 @@ body{
     height: 100%;
     object-fit: cover;
     transition: .4s;
+}
+
+.dessert-page1  main .container .item .column ul li img:nth-of-type(2){
+    position: absolute;
+    left:1%; 
+    width: 50px;
 }
 
 .dessert-page1  main .container .item .column ul li  img:hover{
@@ -138,5 +145,6 @@ body{
     right:50%;
     text-align: center;
     transform: translateX(-50%);
+
 
 }

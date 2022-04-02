@@ -1,5 +1,20 @@
-.notice{
+.notice .bcg{
+    position: relative;
     border: 1px solid #000;
+}
+.notice .dot{
+    position:absolute;
+    left:0;
+    top:900px;
+    z-index: -2;
+
+}
+
+.notice .sq{
+    position: absolute;
+    right:0;
+    top:1200px;
+    
 }
 
 /* /////////////////訂購步驟///////////////// */

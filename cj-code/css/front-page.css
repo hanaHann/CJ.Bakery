@@ -38,6 +38,7 @@ body{
     background-size:cover;
     background-position: bottom right;
     position: relative;
+    margin-bottom: -120px;
  }
 
 .banner .pic{
@@ -222,7 +223,7 @@ body{
 }
 
 .hot .container .item{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     min-height: 340px;
     margin-bottom: 5%;
@@ -230,7 +231,7 @@ body{
     justify-content: space-between;
 }
 
-.hot .container .item:nth-child(even){
+.hot .container .item:nth-of-type(even){
     flex-direction: row-reverse;  
 }
 
@@ -258,34 +259,34 @@ body{
     }
     
 
-.hot .container .item-1 .card-pic{
+.hot .container .item:nth-of-type(1) .card-pic{
     background-image: url(../../pic/ma.jpg);
     border-radius: 30px 0px 0px 30px;
     
 }
 
-.hot .container .item-2 .card-pic{
+.hot .container .item:nth-of-type(2) .card-pic{
     background-image: url(../../pic/LINE_ALBUM_220317_20.jpg);
     border-radius: 0 30px 30px 0;
 }
 
-.hot .container .item-3 .card-pic{
+.hot .container .item:nth-of-type(3) .card-pic{
     background-image: url(../../pic/LINE_ALBUM_220306_16.jpg);
     border-radius: 30px 0px 0px 30px;
 }
 
-.hot .container .item-4 .card-pic{
+.hot .container .item:nth-of-type(4) .card-pic{
     background-image: url(../../pic/LINE_ALBUM_220317_6.jpg);
     background-position: 25% 30%;
     border-radius: 0 30px 30px 0;
 }
 
-.hot .container .item-2 .card-inf,.hot .container .item-4 .card-inf{
+.hot .container .item:nth-of-type(even) .card-inf{
     border-radius: 30px 0px 0px 30px;
 
 }
 
-.hot .container .item-1 .card-inf,.hot .container .item-3 .card-inf{
+.hot .container .item:nth-of-type(odd) .card-inf{
     border-radius: 0 30px 30px 0;
     
 }
@@ -303,7 +304,7 @@ body{
 }
 
 .hot .container .item .card-inf a h4{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10%;
 }
 
@@ -323,6 +324,7 @@ body{
     margin-top: 8%;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .hot .container .item .card-inf .price .price-num{
@@ -334,6 +336,7 @@ body{
 .hot .container .item .card-inf .price .price-num{
     font-size: 1.8rem;
     color:var(--imcolor2);
+    font-weight: 400;
 
 }
 
