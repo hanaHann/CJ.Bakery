@@ -268,23 +268,22 @@
         display:inline-block;
     }
 
-    #new-dessert:target::before{
-        content:"";
-        height: 80px;
-        display: block;
-    }
-
-    #hot-dessert:target::before{
-        content:"";
-        height: 80px;
-        display: block;
-    }
-
+    #new-dessert:target::before,
+    #hot-dessert:target::before,
     #story:target::before{
         content:"";
-        height: 80px;
+        height: 20px;
         display: block;
     }
+
+    #form:target::before{
+        content:"";
+        height: 90px;
+        display: block;
+    }
+
+
+   
 
 
 
@@ -421,14 +420,12 @@
    
 
     h2 .wrap{
-        /* border: 1px solid #000; */
+        /* border: 1px solid    #000; */
         width: 100%;
-        margin-top: 140px;
+        margin-top: 120px;
         margin-bottom: 50px;
         
     }
-
-
 
     h2 .wrap .title{
         margin: auto;
@@ -474,27 +471,29 @@
         /* border: 1px solid rgb(49, 46, 46); */
         margin: auto;
         width: 100%;
-       
-        
+    
     }
 
 
     .title-2-1 .wrap,.title-2-2 .wrap{
-        background-color: var(--color3);
+        /* background-color: var(--color3); */
         border-radius: 30px;
         text-align: center;
         /* box-shadow: var(--box-shadowsmall); */
+        margin-bottom: 0;
     }
 
     .title-2-1 .wrap{
-        border:2px solid var(--color3);
+        /* border:2px solid var(--color3); */
         border-radius: 30px;
-        background-color: white;
+        /* background-color: var(--color3); */
         
     }
 
     .title-2-1 .wrap p,.title-2-2 .wrap p{
         font-size: 1.4rem;
+        font-weight: 400;
+        
     }
 
     .title-2-2 .wrap p{
@@ -727,7 +726,7 @@
     }
 
     .btn-5-1,.btn-5-1 button{
-        background-color: var(--color1);
+        background-color: var(--color2);
     }
 
     .btn-5-2,.btn-5-2 button{
@@ -794,12 +793,32 @@
 
     }
     .transtitle {
-        transform: rotate(-20deg);
+        transform: rotate(-30deg);
     }
 
     .title-shot{
-        animation:shakeY 3s infinite;
+        animation:moveup .5s infinite;
     }
+    @-webkit-keyframes moveup{
+        0%{
+            transform: translateY(0%);
+        }
+        25%{
+            transform: translateY(10%);
+        }
+        50%{
+            transform: translateY(20%);
+        }
+
+        75%{
+            transform: translateY(10%);
+        }
+
+        100%{
+            transform: translateY(0%);
+        }
+    }
+    
 
 
 
@@ -808,10 +827,12 @@
     .ig-post {
         /* border: 1px solid #000; */
         width: 100%;
-
+        background-color:var(--color3);
+        padding: 35px 0 8px 0;
     }
 
     .ig-post .wrap {
+   
         /* border: 1px solid #000; */
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -833,18 +854,20 @@
     }
 
     .ig-post .pic img{
+        /* border: 1px solid #000; */
         width: 100%;
         height: 100%;
         position: absolute;
         object-fit: cover;
         background-color: var(--color2);
         /* opacity: .2; */
+        vertical-align: top;
         
     }
 
     .ig-post .pic::after,.ig-post .follow::after{
         content:"";
-        background-color: rgba(15, 15, 15, 0);
+        /* background-color: rgba(15, 15, 15, 0); */
         position: absolute;
         width: 100%;
         height: 100%;
@@ -886,7 +909,7 @@
     }
 
     .ig-post .follow .inf{
-        /* border: 1px solid #000; */
+        /* border: 1xpx solid #000; */
         right:2%;
         bottom: 0%;
     }

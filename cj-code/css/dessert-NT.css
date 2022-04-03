@@ -18,7 +18,8 @@ body{
 
 
 
-.dessert-page2 #moder{
+.dessert-page2 #moder,.dessert-page2 #bear,
+.dessert-page2 #soft,.dessert-page2 #scon{
     /* border: 5px solid red; */
     display: none;
  
@@ -28,10 +29,9 @@ body{
 /* /////////////////小導覽列///////////////// */
 
 .dessert-page2 .summary .nav-btn-2{
-    /* border: 1px solid #000; */
     margin-bottom: 8%;
 }
-.dessert-page2 .nav-btn-2 :first-child{
+.dessert-page2-1 .summary .nav-btn-2 :first-child .btn-2{
     color:white;  
     background-color: var(--color2);
     border:5px solid var(--color3);
@@ -143,6 +143,7 @@ body{
     color: var(--color1);
     letter-spacing: .2em;
     text-indent: 0.2em;
+    outline: none;
  
     
 
@@ -172,15 +173,20 @@ body{
 
 }
 
+.dessert-page2 main .container .item:last-of-type{
+    margin-bottom: 0%;
+}
+
 
 .dessert-page2 main .container .item .pic{
     border: 5px solid white;
     width: 53%;
-    padding-bottom: 56%;
     position: relative;
     overflow: hidden;
-
+    border-radius: 0 80px 0 80px;
 }
+
+
 
 .dessert-page2 main .container .item .pic img{
     width: 100%;
@@ -189,14 +195,13 @@ body{
     object-fit: cover;
 }
 
-.dessert-page2 main .container .item:nth-child(1) .pic :first-child{
+.dessert-page2 main #snow .item:nth-child(1) .pic :first-child{
    transform: scale(1.4);
 }
 
 .dessert-page2 main .container .item .inf{
     /* border: 3px solid red; */
     width: 47%;
-
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -230,7 +235,7 @@ body{
 
 .dessert-page2 main .container .item .inf .food-in {
     /* border: 1px solid #000; */
-    margin-bottom: 18%;
+    margin-bottom: 10%;
 }
 
 .dessert-page2 main .container .item .inf .food-in .title {
@@ -242,11 +247,11 @@ body{
 
 .dessert-page2 main .container .item .inf .food-in .title .line{
     /* border: 1px solid #000; */
-    width: 90px;
+    width: 70px;
     border-radius: 6px;
-    height: 12px;
-    background: radial-gradient(var(--imcolor2), var(--imcolor2) 3px, transparent 3px, transparent);
-    background-size: 15px 100%;
+    height: 10px;
+    background: radial-gradient(var(--imcolor2), var(--imcolor2) 2px, transparent 2px, transparent);
+    background-size: 10px 100%;
 }
 
 .dessert-page2 main .container .item .inf .food-in .title :nth-child(2){
@@ -268,8 +273,7 @@ body{
     background-color:white;
     aspect-ratio:1 / 1;
     border-radius: 50%;
-    padding: 10px;
-    margin: 10px 20px;
+    margin: 15px 25px;
     box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
@@ -280,7 +284,7 @@ body{
 
 .dessert-page2 main .container .item .inf ul li .circle img{
     /* border: 1px solid #000; */
-    width: 80%;
+    width:60%;
 }
 
 .dessert-page2 main .container .item .inf ul li p{
@@ -351,6 +355,139 @@ body{
 
 .dessert-page2 .eat-advice .inf :nth-child(2){
     font-size: 1rem;
+    margin-bottom: 2%;
+}
+
+
+/* /////////////////冷藏甜點（第二頁）///////////////// */
+
+.dessert-page2-2 #basque
+,.dessert-page2-2 #tira
+,.dessert-page2-2 #brownie{
+    /* border: 5px solid red; */
+    display: none;
+ 
+}
+
+/* /////////////////小導覽列///////////////// */
+
+
+.dessert-page2-2 .nav-btn-2 :nth-child(2) .btn-2{
+    color:white;  
+    background-color: var(--color2);
+    border:5px solid var(--color3);
+}
+
+/* /////////////////客製化甜點（第三頁）///////////////// */
+
+.dessert-page2-3 #giftbox{
+    /* border: 5px solid red; */
+    display: none;
+ 
+}
+
+/* /////////////////小導覽列///////////////// */
+
+
+.dessert-page2-3 .nav-btn-2 :nth-child(3) .btn-2{
+    color:white;  
+    background-color: var(--color2);
+    border:5px solid var(--color3);
+}
+
+
+/* /////////////////表單///////////////// */
+
+.question{
+    width: 100%;
+    margin-bottom: 8%;
+    margin-top: 2%;
+}
+
+.question form{
+    /* border: 1px solid #000; */
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: var(--box-shadow);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.question form .cake-inf,
+.question form .date,
+.question form .person-inf,
+.question form .textarea{
+    /* border: 1px solid blue; */
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+}    
+
+
+.question form  .cake-inf .flavor,.question form .person-inf .inf{
+    /* border: 1px solid #000; */
+    margin-right: 2%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.question form label,.question form p{
+    /* border: 1px solid red; */
+    width: 80px;
+    padding: 0 5px 0 0;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .1em;
+    text-indent: 0.1em;
+    line-height: 1.8em;
+    color:var(--wcolor);
+
+}
+
+.question form input,.question form select,.question form textarea{
+    width: 160px;
+    border: 2px solid var(--color2);
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    color:var(--color3);
+}
+
+.question input::-webkit-input-placeholder, .question textarea::-webkit-input-placeholder{
+    color:var(--color3);
+    padding: 5px;
+}
+
+.question form textarea{
+    resize: none;
+    width: calc(100% - 80px);
+    height: 100px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.question button{
+    border:0;
+    background-color: transparent;
+    margin: auto;
+}
+
+
+.question button .btn-1{
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+
+
+.question .title-2-1 .wrap p{
+    color:var(--imcolor1)
+}
+
+.question .title-2-1 :last-child{
+    text-align: center;
     margin-bottom: 2%;
 }
 

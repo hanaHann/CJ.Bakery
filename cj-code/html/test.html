@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .item1,.item2{
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <select name="" id="selection">
+      <option value="snow">雪Q餅</option>
+      <option value="moder">瑪德蓮</option>
+      <option value="brownie">布朗尼</option>
+      <option value="bear">小熊餅乾</option>
+      <option value="soft">軟餅乾</option>
+      <option value="scon">司康</option>
+      <option value="horse">馬林糖</option>
+    </select>
+
+    <div class="item1" id="snow">雪雪雪雪雪</div>
+    <div class="item1" id="moder">馬馬馬馬馬馬</div>
+  </div>
+
+  <script>
+    window.addEventListener("load",function(){
+      var dessert = document.getElementById("selection");
+      var snow = document.getElementById("snow");
+      var moder = document.getElementById("moder");
+
+      dessert.addEventListener("change",function(){
+        console.log("換了");
+
+      if(dessert.value == "snow"){
+        snow.style.display="block";
+        moder.style.display="none";
+      }
+
+      else if(dessert.value == "moder"){
+        moder.style.display="block";
+        snow.style.display="none";
+        
+      }
+      })
+
+
+    })
+  </script>
+  
+</body>
+</html>

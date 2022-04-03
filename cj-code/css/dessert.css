@@ -1,13 +1,11 @@
 /* /////////////////背景圖///////////////// */
 body{
-    /* border: 1px solid #000; */
+    /* border: 5px solid #000; */
     width: 100%;
     background-image: url(../../texture/bcg4.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 0 200px;
-    background-position: bottom;
-    z-index: 10;
+    background-position: 10px 200px;
     position: relative;
 }
 
@@ -23,7 +21,7 @@ body{
 .dessert-page1 main .container{
     background-color: white;
     /* border: 1px solid #000; */
-    border-radius: 30px;
+    border-radius: 60px;
     padding: 10px;
     margin-top: 40px;
     box-shadow: var(--box-shadow);
@@ -33,25 +31,25 @@ body{
 .dessert-page1  main .wrap .container .item{
     /* border: 2px solid red; */
     /* width: 100%; */
-    margin: 70px 0;
+    margin: 5% 0;
     
 }
 
 .dessert-page1  main .container .item .column .fa-circle-chevron-left,
 .dessert-page1  main .container .item .column .fa-circle-chevron-right{
     /* border: 1px solid #000; */
-    margin-bottom: -20%;
     margin: auto;
     position: absolute;
-    top: 30%;
+    top:50%;
+    transform: translateY(-50%);
 }
 .dessert-page1 .fa-circle-chevron-right{
-    left:100%;
+    right:-20%;
     transform: translateX(65%);
 }
 
 .dessert-page1 .fa-circle-chevron-left{
-    right:100%;
+    left:-20%;
     transform: translateX(-65%);
 }
 
@@ -59,7 +57,7 @@ body{
     /* border: 1px solid #000; */
     display: flex;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 2%;
 }
 
 
@@ -67,7 +65,6 @@ body{
     /* border: 2px solid purple; */
     width: 85%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 80px;
     margin: auto;
@@ -76,31 +73,30 @@ body{
 .dessert-page1  main .container .item .column ul li{
     /* border: 1px solid #000; */
     width: 30%;
-    position: relative;
 }
 
 
 .dessert-page1  main .container .item .column ul li .pic{
     width: 100%;
-    padding-bottom: 80%;
+    padding-bottom: 100%;
     position: relative;
 
 }
 
 .dessert-page1  main .container .item .column ul li img:nth-of-type(1){
+    /* border: 1px solid #000; */
     width: 100%;
-    border-radius: 20px;
+    height: 100%;    
     vertical-align: top;
     position: absolute;
-    height: 100%;
     object-fit: cover;
     transition: .4s;
 }
 
 .dessert-page1  main .container .item .column ul li img:nth-of-type(2){
     position: absolute;
-    left:1%; 
-    width: 50px;
+    left:0%; 
+    width: 70px;
 }
 
 .dessert-page1  main .container .item .column ul li  img:hover{
@@ -110,24 +106,47 @@ body{
 
 .dessert-page1  main .container .item .column ul li .pic .title-shot{
     position: absolute;
-    top:-85px;
-    left:-45px;
+    top:-115px;
+    left:-65px;
    
 }
 
 .dessert-page1 main .container .item .column ul li{
-    /* border: 1px solid #000; */
+    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.dessert-page1 main .container  .item .column ul li .inf{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.dessert-page1 main .container .item .column ul li p:first-of-type{
+    /* border: 1px solid #000; */
+    flex-grow: 1;
+    margin: 3% 0;
+}
+
+
+.dessert-page1 main .container .item .column ul li p:last-of-type{
+    font-weight: 400;
+    font-size: 1.2rem;
+    color:var(--imcolor2)
 }
 
 .dessert-page1 main .container .item .column ul li .name{
     /* border: 1px solid #000; */
-    margin-top: 1em;
+    margin-top: 1.2%;
+    margin-bottom: 2.5%;
     font-size: 1.4rem;
+    font-weight: 200;
     position: relative;
-    text-align: center;
     display: inline;
 }
 
