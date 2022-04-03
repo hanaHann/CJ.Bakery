@@ -30,9 +30,11 @@
 
 .notice .step .container .card{
     /* border: 1px solid #000; */
+    border-radius: 40px;
     width: 31%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
  
 }
 
@@ -66,7 +68,7 @@
 }
 
 .notice .step .container .card:first-of-type  .title{
-    top:20px;
+    top:40px;
 }
 
 .notice .step .container .card:nth-of-type(2)  .title{
@@ -75,7 +77,7 @@
 }
 
 .notice .step .container .card:nth-of-type(3)  .title{
-    bottom:20px;
+    bottom:40px;
 }
 
 .notice .step .container .card .inf{
