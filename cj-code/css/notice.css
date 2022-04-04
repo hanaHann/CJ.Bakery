@@ -1,10 +1,10 @@
-body{
+.notice{
     width: 100%;
-    background-image: url(../../texture/bcg3.png),
+    background-image: url(../../texture/bcg5.png),
     url("../../texture/bcg dot.svg"),
     url("../../texture/bcg-sq.svg");
     background-repeat: no-repeat;
-    background-position: 0% 20%, 0% 1400px , 100% 600px;
+    background-position: 0% 30%, 0% 1400px , 100% 600px;
     background-size: 100%, 10% , 3%;
     z-index: 10;
 }

@@ -3,7 +3,13 @@
 .activity{
     /* border: 1px solid #000; */
     width: 100%;
-    background-image: url(../../texture/bcg3.png);
+    background-image: url(../../texture/bcg6.png),
+    url("../../texture/bcg dot.svg"),
+    url("../../texture/bcg-sq.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 20%, 0% 1100px , 100% 400px;
+    background-size: 100%, 10% , 3%;
+
 }
 
 .activity .container{
@@ -129,13 +135,13 @@
 
 .activity .container .item .box:nth-of-type(2) .pic {
     background-image: url(../../pic/CDD4D3F1-D54E-4BA3-A812-5CDCD417E66C_1_105_c.jpeg);
-    opacity: .2;
+    opacity: .8;
 }
 
 .activity .container .item .box:nth-of-type(3) .pic {
     background-image: url(../../pic/LINE_ALBUM_220306_26.jpg);
     background-position: -120px -230px;
-    opacity: .2;
+    opacity: .8 ;
 
 }
 
@@ -159,6 +165,7 @@
     text-align: center;
     font-weight: 500;
     color:var(--imcolor1);
+    color:white;
     
 }
 
@@ -182,6 +189,11 @@
     text-align: center;
     font-weight: 400;
 
+}
+
+.activity .container .item .box:nth-of-type(2) .inf  .btn-3,
+.activity .container .item .box:nth-of-type(3) .inf  .btn-3{
+    background-color: white;
 }
 
 .activity .container .item .box .num{
