@@ -1,59 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
 
-  <style>
-    .item1,.item2{
-      display: none;
-    }
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ.Bakery</title>
 
-  </style>
+    <!-- /////////////////網頁小圖示///////////////// -->
+
+    <link rel="shortcut icon" href="../../pic/favicon_io/favicon.ico">
+
+    <!-- /////////////////字型///////////////// -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500&family=Rambla&family=Saira+Condensed:wght@200;300;400&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- /////////////////fontawesome///////////////// -->
+    <link rel="stylesheet" href="../../fontawesome-free-6.1.0-web/css/all.css">
+    <link rel="stylesheet" href="../../fontawesome-free-6.1.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../fontawesome-free-6.1.0-web/webfonts/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- /////////////////css///////////////// -->
+
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/test.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    
+
+    
+ 
+
+  
 </head>
-<body>
 
-  <div class="box">
-    <select name="" id="selection">
-      <option value="snow">雪Q餅</option>
-      <option value="moder">瑪德蓮</option>
-      <option value="brownie">布朗尼</option>
-      <option value="bear">小熊餅乾</option>
-      <option value="soft">軟餅乾</option>
-      <option value="scon">司康</option>
-      <option value="horse">馬林糖</option>
-    </select>
+<body class="dessert-page2 dessert-page2-1">
 
-    <div class="item1" id="snow">雪雪雪雪雪</div>
-    <div class="item1" id="moder">馬馬馬馬馬馬</div>
+    <!-- /////////////////上方內容-介紹///////////////// -->
+    <div class="summary">
+      <div class="wrap">
+      <!-- 標題形式一 -->
+          <h2>
+              <div class="title-1">
+                  <div class="wrap">
+                      <div class="title">
+                          <div class="line"></div>
+                          <div class="middle">
+                              <p>DESSERT</p>
+                              <p>甜點一覽</p>
+                          </div>
+                          <div class="line"></div>
+                      </div>
+                  </div>
+              </div>
+          </h2>
+      <!-- 次要nav一 -->
+          <div class="nav-btn-2">
+              <a href="../html/dessert-NT.html">
+                  <button class="btn-2">常溫甜點</button>
+              </a>
+              <a href="../html/dessert-cold.html">
+                  <button class="btn-2">冷藏甜點</button>
+              </a>
+              <a href="../html/dessert-special.html">
+                  <button class="btn-2">節慶禮盒&客製化甜點</button>
+              </a>
+          
+          </div>
+      <!-- 二欄卡片介紹一 -->
+          <div class="introduce">
+              <div class="pic">
+                  <img src="../../pic/bearbear.jpg" alt="">
+              </div>
+              <div class="inf-container">
+                  <div class="inf">
+                      <h3>燕麥小熊餅乾</h3>
+                      <p>今年最夯的熊型餅乾<br>經果反覆調整終於變成闆娘喜歡的樣子<br>不僅適合當點心也適合當早餐<br>小小一片健康又可愛</p>
+                      <p>
+                  </div>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div> 
+    <!-- /////////////////主要內容///////////////// --> 
+    <main>
+      <select name="" id="selection">
+          <option disabled hidden selected>請選擇</option>
+          <option value="snow">雪Q餅</option>
+          <option value="moder">瑪德蓮</option>
+          <option value="bear">小熊餅乾</option>
+          <option value="soft">軟餅乾</option>
+      </select>
+
+      <script src="../js/selection.js"></script>
+
+      <!-- 主要二欄式甜點-雪Q餅一 -->
+      <div class="container" id="snow" >
+        <div class="item">
+            <div class="wrap">
+              <div class="pic">
+                  <img src="../../pic/snow-ori.jpg" alt="">
+              </div>
+              <div class="inf">
+                  <h3>經典蔓越梅</h3>
+                  <p>濃郁の100%生乳奶香味，夾上酸酸甜甜的蔓越莓果肉，放入口中細細品嚐。酥香厚實不黏牙的口感，讓您一口接著一口都無法停下來。</p>
+                  <div class="food-in">
+                      <div class="title">
+                          <div class="line"></div>
+                          <p>營養成分表</p>
+                          <div class="line"></div>
+                      </div>
+                      <ul>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/egg.png" alt="">
+                              </div>
+                              <p>雞蛋</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                              <img src="../../texture/icon/some.png" alt="">
+                              </div>
+                              <p>麵粉</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/cookie.png" alt="">
+                              </div>
+                              <p>餅乾</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/flower.png" alt="">
+                              </div>
+                              <p>棉花糖</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/sugar.png" alt="">
+                              </div>
+                              <p>砂糖</p>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="price">
+                      <div class="detail">
+                          <p>8個入</p>
+                          <p>$320</p>
+                      </div>
+                      <form class="btn-5-1" action="">
+                          <label for=""> </label>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                          <button>加入購物車</button>
+                      </form>
+                  </div>
+                  <div class="price">
+                      <div class="detail">
+                          <p>12個入</p>
+                          <p>$450</p>
+                      </div>
+                      <form class="btn-5-1" action="">
+                          <label for=""> </label>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                          <button>加入購物車</button>
+                      </form>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="wrap">
+              <div class="pic">
+                  <img src="../../pic/snow.jpg" alt="">
+              </div>
+              <div class="inf">
+                  <h3>OREO可可</h3>
+                  <p>多層次的餅乾裹上棉花糖及奶粉香，外面灑上苦味的純可可粉，讓整塊雪Ｑ餅甜度剛剛好。
+                      </p>
+                  <div class="food-in">
+                      <div class="title">
+                          <div class="line"></div>
+                          <p>營養成分表</p>
+                          <div class="line"></div>
+                      </div>
+                      <ul>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/egg.png" alt="">
+                              </div>
+                              <p>雞蛋</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                              <img src="../../texture/icon/some.png" alt="">
+                              </div>
+                              <p>麵粉</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/cookie.png" alt="">
+                              </div>
+                              <p>餅乾</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/flower.png" alt="">
+                              </div>
+                              <p>棉花糖</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/sugar.png" alt="">
+                              </div>
+                              <p>砂糖</p>
+                          </li>
+                          <li>
+                              <div class="circle">
+                                  <img src="../../texture/icon/chocolate.png" alt="">
+                              </div>
+                              <p>oreo</p>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="price">
+                      <div class="detail">
+                          <p>8個入</p>
+                          <p>$350</p>
+                      </div>
+                      <form class="btn-5-1" action="">
+                          <label for=""> </label>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                          <button>加入購物車</button>
+                      </form>
+                  </div>
+                  <div class="price">
+                      <div class="detail">
+                          <p>12個入</p>
+                          <p>$480</p>
+                      </div>
+                      <form class="btn-5-1" action="">
+                          <label for=""> </label>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                          <button>加入購物車</button>
+                      </form>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+    </main>  
+
+
+
+    <!-- /////////////////食用建議///////////////// -->
+    <div class="eat-advice">
+      <div class="wrap">
+          <div class="inf">
+              <p>:: 食用建議 ::</p>
+              <p>常溫5天/冷藏14，最佳賞味期2-3天
+                  </p>
+
+              <p>:: 食用方式 ::</p>
+              <p>冷藏取出直接吃/冷藏取出後讓甜點在室溫休息5-10分鐘<br>
+                  冷藏取出後放入烤箱180度5-10分鐘</p>
+
+
+          </div>
+      </div>
+  </div>
+      
+
+  <!-- /////////////////IG貼文///////////////// -->
+  <div class="ig-post">
+      <div class="wrap">
+          <a href="">
+              <div class="pic">
+                  <img src="../../pic/LINE_ALBUM_220317_36.jpg" alt="">
+
+              </div>
+          </a>
+          <a href="">
+              <div class="pic">
+                  <img src="../../pic/LINE_ALBUM_220306_15.jpg" alt="">
+                  
+              </div>
+          </a>
+          <a href="">
+              <div class="pic">
+                  <img src="../../pic/LINE_ALBUM_220306_4.jpg" alt="">
+                  
+              </div>
+          </a>
+          <a href="">
+              <div class="pic">
+                  <img src="../../pic/LINE_ALBUM_220317_41.jpg" alt="">
+              </div>
+          </a>
+          <a href="">
+              <div class="pic">
+                  <img src="../../pic/LINE_ALBUM_220317_20.jpg" alt="">
+                  
+              </div>
+          </a>
+          <a href="">
+              <div class="pic">
+                  <img src="../../pic/LINE_ALBUM_220317_5.jpg" alt="">
+                  
+              </div>
+          </a>
+          <a href="">
+              <div class="follow">
+                  <i class="fab fa-instagram"></i>
+                  <div class="inf">
+                      <p>#follow us</p>
+                      <p>#CJ.Bakery</p>
+                  </div>
+              </div>
+          </a>
+          <a href="">
+              <div class="pic">
+                  <img src="../../pic/LINE_ALBUM_220317_1.jpg" alt="">
+              </div>
+          </a>
+      </div>
   </div>
 
-  <script>
-    window.addEventListener("load",function(){
-      var dessert = document.getElementById("selection");
-      var snow = document.getElementById("snow");
-      var moder = document.getElementById("moder");
+  <!-- /////////////////footer///////////////// -->
 
-      dessert.addEventListener("change",function(){
-        console.log("換了");
+  <footer>
+      <div class="wrap">
+          <div class="container">
+              <div class="bar">
+                  <a href="#new-dessert">NEW IN</a>
+                  <p>|</p>
+                  <a href="#hot-dessert">HOT</a>
+                  <p>|</p>
+                  <a href="./dessert.html">SELL</a>
+                  <p>|</p>
+                  <a href="#story">ABOUT</a>
+                  <p>|</p>
+                  <a href="../html/selection.html">SELECTION</a>
+                  <p>|</p>
+                  <a href="./notice.html">NOTICE</a>
+                  <p>|</p>
+                  <a href="./notice.html">ACTIVITY</a>
+              </div>
+              <div class="inf">
+                  <div class="ig">
+                      <a href="https://www.instagram.com/cj.bakery_/" target=_blank>
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://www.instagram.com/cj.bakery_/" target=_blank class="some">Instagram</a>
+                  </div>
+                  <div class="line">
+                      <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank>
+                          <i class="fa-brands fa-line"></i>
+                      </a>
+                      <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank class="some">
+                          Line
+                      </a>
+                  </div>
+              </div>
 
-      if(dessert.value == "snow"){
-        snow.style.display="block";
-        moder.style.display="none";
-      }
+              <div class="box">
+                  <p>©CJ.Bakery</p>
+              </div>
 
-      else if(dessert.value == "moder"){
-        moder.style.display="block";
-        snow.style.display="none";
-        
-      }
-      })
+              <div class="final">
+                  <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理。</p>
+              </div>
+          </div>
+      </div>
+  </footer>
 
 
-    })
-  </script>
-  
+
+    
 </body>
 </html>

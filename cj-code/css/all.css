@@ -76,7 +76,7 @@
     --box-shadow:5px 5px 10px #b9b9b9;
     --box-shadowsmall:2px 2px 3px #b9b9b9;
 /* 變數----邊界寬度 */
-    --width-:1280px;
+    --width-:1200px;
 }
 
 /* css */
@@ -110,7 +110,7 @@
     .wrap{
         /* border: 2px solid orange; */
         width:var(--width-);
-        max-width:calc(1280 / 1440 * 100%);
+        max-width:calc(1200 / 1440 * 100%);
         margin: auto;
         padding: 0 80px;
         margin-bottom: 2%;

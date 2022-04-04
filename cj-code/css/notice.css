@@ -1,3 +1,14 @@
+body{
+    width: 100%;
+    background-image: url(../../texture/bcg3.png),
+    url("../../texture/bcg dot.svg"),
+    url("../../texture/bcg-sq.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 20%, 0% 1400px , 100% 600px;
+    background-size: 100%, 10% , 3%;
+    z-index: 10;
+}
+
 .notice .bcg{
     position: relative;
     border: 1px solid #000;
