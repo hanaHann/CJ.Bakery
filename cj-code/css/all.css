@@ -401,7 +401,8 @@ footer .container .box{
 footer .container .box p{
     /* border:1px solid purple; */
     color:var( --imcolor2);
-    font-size: .6rem;
+    font-size: .5rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 footer .container  .final{
@@ -528,7 +529,7 @@ h2 .wrap .title .middle p:last-child{
     color: var(--color2);
     font-size:1.2rem;
     font-weight: 400;
-    margin-top: -15px;
+    margin-top: -22px;
 }
 
 
@@ -625,6 +626,7 @@ h2 .wrap .title .middle p:last-child{
         border-radius: 15px 0px 0px 15px;
         padding: 35px 8px;
         right:0;
+        transition: .5s;
     }
 
     .btn-aside-1 i,.btn-aside-2 i{
@@ -640,7 +642,7 @@ h2 .wrap .title .middle p:last-child{
     }
 
     .btn-aside-1:hover{
-        background-color: var(--imcolor2);
+        background-color: var(--imcolor1);
     }
 
     .btn-aside-2{
@@ -650,7 +652,7 @@ h2 .wrap .title .middle p:last-child{
     }
 
     .btn-aside-2:hover{
-        color:var(--imcolor2);
+        color:var(--imcolor1);
     }
 
     .btn-aside-3{
@@ -680,14 +682,13 @@ h2 .wrap .title .middle p:last-child{
 
 .btn-1,.btn-1-2{
     display:inline-block;
-    padding: 8px 30px;
+    padding: 8px 25px;
     margin: 10px;
     border-radius: 25px;      
     text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size:1.2rem;
+    font-size:1.4rem;
     font-weight: 400;
-    box-shadow: var(--box-shadow);
     transition: .5s;
 }
 
@@ -698,8 +699,8 @@ h2 .wrap .title .middle p:last-child{
 }
 
 .btn-1-2{
-    border:2px solid var(--imcolor2);
-    color:var(--imcolor2);
+    border:2px solid var(--imcolor1);
+    color:var(--imcolor1);
     background-color:white;
 
 }
@@ -711,8 +712,9 @@ h2 .wrap .title .middle p:last-child{
 }
 
 .btn-1-2:hover{ 
-    background-color:var(--color1);
-    color:white;
+    /* background-color:var(--imcolor2); */
+    /* color:white; */
+    box-shadow: var(--box-shadow);
 }
 
 
@@ -767,10 +769,10 @@ h2 .wrap .title .middle p:last-child{
 .btn-3{
     border-radius: 25px;
     display: inline-block;
-    font-size:1.4rem;
+    font-size:1.2rem;
     text-align: center;
     font-weight: 500;
-    padding: 3px 22px;
+    padding: 3px 20px;
     color:var(--imcolor2);  
     /* background-color: var(--color3); */
     border:2px solid var(--color1);
