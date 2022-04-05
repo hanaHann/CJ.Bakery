@@ -934,7 +934,7 @@ form .fa-cart-shopping{
     /* border: 1px solid #000; */
     width: 100%;
     background-color:var(--color3);
-    padding: 35px 0 8px 0;
+    padding: 35px 10px 8px 10px;
 }
 
 .ig-post .wrap {
@@ -1010,18 +1010,19 @@ form .fa-cart-shopping{
 
 .ig-post .follow i {
     font-size: 3rem;
-    left:2%;
-    top:2%;
+    left:5%;
+    top:5%;
     
 }
 
 .ig-post .follow .inf{
-    /* border: 1xpx solid #000; */
-    right:2%;
+    /* border: 2xpx solid #000; */
+    right:5%;
     bottom: 0%;
 }
 
 .ig-post .follow .inf p{
+    /* border: 1px solid #000; */
     color:white;
     font-size: 1.5rem;
     font-family: 'M PLUS Rounded 1c', sans-serif;
