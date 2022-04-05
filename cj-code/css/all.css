@@ -104,6 +104,7 @@ li:hover{
 
 body{
     background-color: var(--bcg-color);
+    position: relative;
         
 }
 
@@ -168,7 +169,7 @@ p{
 
 
 .wrap{
-    width:95%;
+    width:90%;
     margin: auto;
     margin-bottom: 2%;
 }
@@ -324,49 +325,40 @@ nav  .fa-cart-shopping:hover{
 
 
 /* ---------------footer--------------- */
+
+
 footer{
     /* border: 1px solid #000; */
     width: 100%;
-    padding-bottom: 25%;
+    min-height: 140px;
     background-image: url(../../texture/footer.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
-    position: relative;
+    display: flex;
 }
-
-
-
 footer .container {
-    /* border:1px solid blue; */
+    /* border:2px solid blue; */
+    padding-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    position: absolute;
-    bottom:0;
-    right:0;
-    left:0;
-    
 }
-
 footer .container .inf{
-    /* border: 1px solid #000; */
+    /* border: 2px solid #000; */
     display: flex;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     justify-content: space-between;
 }
-
 footer .container .ig,   footer .container .line{
     /* border: 1px solid #000; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-
 footer .container .bar a:hover,
 footer .container .line .fa-line:hover,
 footer .container .ig .fa-instagram:hover,
@@ -375,60 +367,39 @@ footer .container .some:hover{
     color:white;
 
 }
-
 footer .container .ig{
-    margin-right: 20px;
+    margin-right: 10px;
 }
-
 footer .container .ig a ,   footer .container .line a {
     transition: .5s;
-    color:var(--imcolor2);
-    font-size:1.2rem;
+    color:var(--color2);
+    font-size:.8rem;
     transition: .5s;
+    font-family: 'Yusei Magic', sans-serif;
 }
-
 footer .container .ig .fa-instagram,
 footer .container .line .fa-line{
-    font-size: 30px;
+    font-size: 20px;
     /* border:1px solid red; */
     text-align: center;
-    color:var(--imcolor2);
-    margin-right: 8px;
+    color:var(--color2);
+    margin-right: 4px;
     transition: .5s;
 }
-
-
 footer .container .bar {
     /* border:1px solid green; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:none;
 }
-
-footer .container .bar a{
-    /* border:1px solid orange; */
-    margin: 20px 20px;
-    transition: .5s;
-    color:var(--imcolor2);  
-}
-
-footer .container .bar p{
-    color:var(--imcolor2); 
-}
-
-
-
 footer .container .box{
     /* border:1px solid blue; */
     text-align: center;
     font-size:1rem;
     font-weight:100;
 }
-
 footer .container .box p{
     /* border:1px solid purple; */
-    color:var( --color3);
-    
+    color:var( --imcolor2);
+    font-size: .6rem;
 }
 
 footer .container  .final{
@@ -438,15 +409,76 @@ footer .container  .final{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
-
 footer .container  .final p{
+    /* border: 1px solid #000; */
     text-align: center;
-    font-size: .5rem;
+    font-size: .1rem;
+    line-height:1rem;
     color:var( --color3);
 }
 
+
+@media screen and (min-width:1200px){
+    footer{
+        /* border: 1px solid #000; */
+        min-height: 420px;
+    }
+
+    footer .container {
+        /* border:1px solid blue; */
+        width: 100%;
+    }
+
+    footer .container .inf{
+        margin-bottom: 8%;
+    }
+    footer .container .ig{
+        margin-right: 20px;
+    }
+    footer .container .ig a ,   footer .container .line a {
+        font-size:1rem;
+    }
+    footer .container .ig .fa-instagram,
+    footer .container .line .fa-line{
+    font-size: 25px;
+    }
+
+    footer .container .bar {
+        /* border:1px solid green; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .container .bar a{
+        /* border:1px solid orange; */
+        margin: 20px 20px;
+        transition: .5s;
+        color:var(--color2);  
+        font-family: 'Yusei Magic', sans-serif;
+    }
+
+    footer .container .bar p{
+        /* border: 1px solid #000; */
+        font-size:1rem ;
+        color:var(--color2)
+    }
+
+    footer .container .box p{
+        /* border: 1px solid #000; */
+        color:var( --color3);
+        font-size: 1.2em;
+        margin-top: -10%;
+        margin-bottom: 10%;
+    }
+
+    footer .container  .final p{
+        font-size: 1rem;
+    }
+
+    
+}
 
 
 /* /////////////////標題形式一///////////////// */
@@ -565,7 +597,7 @@ h2 .wrap .title .middle p:last-child{
 
 /* /////////////////側邊按鈕///////////////// */
 
-.btn-aside-1,.btn-aside-2{
+.btn-aside-1,.btn-aside-2,.btn-aside-3{
     display: none;
 }
 
@@ -904,7 +936,7 @@ form .fa-cart-shopping{
 
     /* border: 1px solid #000; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     justify-content: space-between;
     gap:15px;
 }
@@ -912,7 +944,6 @@ form .fa-cart-shopping{
 .ig-post .follow{
     background-color: var(--imcolor2);
 }
-
 
 .ig-post .pic, .ig-post .follow{
     /* border: 1px solid #000; */
@@ -933,6 +964,8 @@ form .fa-cart-shopping{
     vertical-align: top;
     
 }
+
+
 
 .ig-post .pic::after,.ig-post .follow::after{
     content:"";
@@ -991,6 +1024,13 @@ form .fa-cart-shopping{
 
 
 
+@media screen and (min-width:1200px){
+    .ig-post .wrap {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+
+}
 
 
 
