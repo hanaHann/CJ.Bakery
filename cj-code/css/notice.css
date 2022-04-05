@@ -79,11 +79,11 @@
     padding: 15px 20px;
     background-color: white;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     opacity: .8;
     color:var(--imcolor1);
-    font-weight: 300;
-    font-family: 'Yusei Magic', sans-serif;
+    font-weight: 500;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .notice .step .container .card:first-of-type  .title{
@@ -109,6 +109,8 @@
 }
 
 .notice .step .container .card .inf :first-child{
+    /* border: 1px solid #000; */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 1.8rem;
     margin-bottom: 20px;
     font-weight: 400;

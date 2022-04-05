@@ -231,8 +231,8 @@
 
 .dessert-page2 main .container .item .inf h3{
     border: 1px solid var(--color2);
-    color:var(--imcolor1);
-    font-size: 1.7rem;
+    color:var(--imcolor1);  
+    font-size: 1.8rem;
     margin: 0 30px 10px 30px;
     
 }
@@ -314,6 +314,7 @@
 
 .dessert-page2 main .container .item .inf .price p {
     color:var(--imcolor1);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 1.8rem;
     font-weight: 500;
     margin-right: 20px;

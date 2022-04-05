@@ -82,6 +82,8 @@ body{
         margin-bottom: 5%;
         font-size: 1.5rem;
         text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: 400;
         color:var(--wcolor);
     }
 
@@ -170,6 +172,7 @@ body{
     color:var(--imcolor1);
     font-size:1.2rem;
     margin-left: -80px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .new-dessert .wrap .container .item .main p{
     /* border:1px solid blue; */
@@ -241,6 +244,7 @@ body{
         /* border: 1px solid #000; */
         font-size:1.8rem;
         margin: 0 20px;
+        /* font-family: 'M PLUS Rounded 1c', sans-serif; */
     }
     .new-dessert .wrap .container .item .main p{
         /* border:1px solid blue; */
@@ -364,6 +368,7 @@ body{
     font-size: 1rem;
     text-align: left;
     margin-bottom: 10%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 
 }
 
@@ -390,7 +395,7 @@ body{
     display: flex;
     margin-top: 8%;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     
 }
 
@@ -401,9 +406,11 @@ body{
 
 .hot .container .item .card-inf .price .price-nt,
 .hot .container .item .card-inf .price .price-num{
+    /* border: 1px solid #000; */
     font-size: 1rem;
     color:var(--imcolor2);
     font-weight: 400;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 
 }
 
@@ -411,6 +418,8 @@ body{
     /* border: 1px solid #000; */
     font-size: .8rem;
     animation: moveright .5s infinite;
+    line-height: 1.5rem;
+    vertical-align: bottom;
 }
 
 @-webkit-keyframes moveright{
@@ -555,9 +564,10 @@ body{
 }
 
 .about .wrap .inf :first-child{
+    /* border: 1px solid #000; */
     font-size:1.6rem;
     color:var(--imcolor2);
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .about .wrap .inf :nth-child(2){
@@ -631,15 +641,15 @@ body{
 
 /* /////////////////食材嚴選///////////////// */
 
-.selection{
-    /* border:1px solid blu e;    */
+/* .selection{
+    border:1px solid blu e;   
     width: 100%;
     margin: auto;
 
 }
 
 .selection .container {
-    /* border: 1px solid #000; */
+    border: 1px solid #000;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -659,7 +669,7 @@ body{
 }
 
 .selection .container .item p{
-    /* border:1px solid red; */
+    border:1px solid red;
     font-size:1.2rem;
     text-align: center;
     font-weight: 400;
@@ -667,7 +677,7 @@ body{
 }
 
 .selection .container .item .pic p{
-    /* border:1px solid red; */
+    border:1px solid red;
    text-align: center;
    font-size: var(--p2-fz);
    position: absolute;
@@ -697,7 +707,7 @@ body{
 }
 
 .selection .container .item .pic{
-    /* border:1px solid orange; */
+    border:1px solid orange;
     aspect-ratio: 6 / 8;
     background-repeat: no-repeat;
     background-size: cover;
@@ -736,7 +746,7 @@ body{
 .selection .container .item .pic:hover p{
     opacity: .8;
 }
-
+ */
 
 
 
