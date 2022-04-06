@@ -567,6 +567,7 @@ body{
     display: block;
     object-fit: cover;
     z-index: -1;
+    
 }
 
 .about .wrap .inf :first-child{
