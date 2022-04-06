@@ -84,18 +84,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor:url(../../texture/cursor.svg),auto;
-    /* cursor:url(../../texture/cursor/abpfn-0in5w-001.ico),auto; */
     background-repeat: no-repeat;
     list-style: none;
 }
-
-*:active{
-    cursor:url(../../texture/active.svg),auto;
-    /* cursor:url(../../texture/cursor/a3mk9-27o0z-001.ico),auto; */
-}
-
-
 
 a:hover , img:hover , [class*="btn-"]:hover, i:hover ,button:hover,
 li:hover{

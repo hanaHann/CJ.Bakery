@@ -1,0 +1,230 @@
+
+/* /////////////////上方///////////////// */
+.activity{
+    /* border: 1px solid #000; */
+    width: 100%;
+    background-image: url(../texture/bcg6.png),
+    url(../texture/bcg\ dot.svg),
+    url(../texture/bcg-sq.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 20%, 0% 1100px , 100% 400px;
+    background-size: 100%, 10% , 3%;
+
+}
+
+.activity .container{
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+}
+
+.activity .container .banner{
+    /* border: 1px solid orange; */
+    margin-bottom: 5%;
+}
+
+.activity .container .banner .pic{
+    /* border: 1px solid #000; */
+    border-radius: 30px;
+    width: 100%;
+    padding-bottom: 45%;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity .container .banner .pic .pic-item{
+    /* border: 1px solid #000; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+}
+
+.activity .container .banner .pic .pic-item{
+    background-image: url(../pic/S__25436725.jpg);
+    background-position: 0px -170px;
+}
+
+.activity .container .banner .inf{
+    /* border: 1px solid #000; */
+    border-radius: 0 0px 40px 0;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    box-shadow: var(box-shadow);
+} 
+
+.activity .container .banner .inf .num{
+    /* width: 25%; */
+    padding: 0 20px;
+    font-size: 4rem;
+    font-family: 'Yusei Magic', sans-serif;
+    text-align: center;
+    color:white;
+    background-color: var(--color2);
+}
+
+.activity .container .banner .inf h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0 30px;
+    color:var(--imcolor1);
+}
+
+.activity .container .banner .pic .btn-3{
+    position: absolute;
+    right:4%;
+    bottom:10%;
+    background-color: white;
+}
+
+/* /////////////////下方///////////////// */
+
+.activity .container .item {
+    /* border: 1px solid #000; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+}
+
+.activity .container .item .box{
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    position: relative;
+}
+
+.activity .container .item .box{
+    animation:bounceInUp 3s ;
+    transition: .3s;
+}
+
+.activity .container .item .box:first-of-type{
+    animation: bounceInLeft 3s ;
+   
+}
+
+.activity .container .item .box:hover{
+    transform:rotate(5deg);
+}
+
+.activity .container .item .box:first-of-type:hover{
+    transform:rotate(-5deg);
+}
+
+.activity .container .item :first-child{
+    grid-column-start: 1;
+    grid-row-start:1 ;
+    grid-row-end:3 ;
+}
+
+.activity .container .item .box .pic{
+    width: 100%;
+    padding-bottom: 80%;
+    border-radius: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.activity .container .item .box:nth-of-type(odd) .pic {
+    height: 100%;
+    background-color: white;
+}
+
+
+.activity .container .item .box:nth-of-type(2) .pic {
+    background-image: url(../pic/CDD4D3F1-D54E-4BA3-A812-5CDCD417E66C_1_105_c.jpeg);
+    opacity: .8;
+}
+
+.activity .container .item .box:nth-of-type(3) .pic {
+    background-image: url(../pic/LINE_ALBUM_220306_26.jpg);
+    background-position: -120px -230px;
+    opacity: .8 ;
+
+}
+
+.activity .container .item .box .inf{
+    width: 100%;
+    height: 100%;
+    padding: 10% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top:0;
+}
+
+
+.activity .container .item .box .inf h3{
+    /* border: 1px solid #000; */
+    margin: 60px 25px;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+    color:var(--imcolor1);
+    color:white;
+    
+}
+
+.activity .container .item .box:first-of-type .inf h3{
+    /* border: 1px solid #000; */
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+    color:var(--imcolor1);
+}
+
+
+
+
+.activity .container .item .box:first-of-type .inf p{
+    font-size: 1.4rem;
+    margin: 20px 20px ;
+    padding: 5px 20px;
+    color:var(--color2);
+    margin-bottom:2% ;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+.activity .container .item .box:nth-of-type(2) .inf  .btn-3,
+.activity .container .item .box:nth-of-type(3) .inf  .btn-3{
+    background-color: white;
+}
+
+.activity .container .item .box .num{
+    border-radius:40px 0px 20px 0px ;
+    padding: 0 20px;
+    position: absolute;
+    top:0;
+    left:0;
+    font-size: 4rem;
+    font-family: 'Yusei Magic', sans-serif;
+    background-color:var(--color2);
+    color:white;
+}
+
+.activity .container .item .describe{
+    /* border: 1px solid #000; */
+    flex-grow: 1;
+    padding: 0 40px;
+}
+
+.activity .container .item .detail {
+    padding: 20px;
+    font-size: 1.4rem;
+    text-align: left;
+    margin-bottom:50px ;
+    color:var(--wcolor);
+    font-weight: 200;
+}
+
+
+
+
+
+

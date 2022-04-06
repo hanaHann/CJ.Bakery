@@ -171,6 +171,7 @@
 }
 
 .dessert-page2 main .container .item:nth-of-type(even){
+    /* border: 1px solid #000; */
     background-image: url(../../texture/right.png);
     background-size: 50%;
     background-position:bottom right;

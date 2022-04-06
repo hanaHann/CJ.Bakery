@@ -1,0 +1,171 @@
+/* /////////////////背景圖///////////////// */
+body{
+    /* border: 5px solid #000; */
+    width: 100%;
+    background-image: url(../texture/bcg5.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 10px 200px;
+    position: relative;
+}
+
+.dessert-page1{
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+
+/* /////////////////主要內容///////////////// */
+
+
+
+.dessert-page1 main .container{
+    background-color: white;
+    /* border: 1px solid #000; */
+    border-radius: 60px;
+    padding: 10px;
+    margin-top: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+
+.dessert-page1  main .wrap .container .item{
+    /* border: 2px solid red; */
+    /* width: 100%; */
+    margin: 5% 0;
+    
+}
+
+.dessert-page1  main .container .item .column .fa-circle-chevron-left,
+.dessert-page1  main .container .item .column .fa-circle-chevron-right{
+    /* border: 1px solid #000; */
+    margin: auto;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.dessert-page1 .fa-circle-chevron-right{
+    right:-20%;
+    transform: translateX(65%);
+}
+
+.dessert-page1 .fa-circle-chevron-left{
+    left:-20%;
+    transform: translateX(-65%);
+}
+
+.dessert-page1  main .container .item .column{
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+
+.dessert-page1  main .container .item .column ul{
+    /* border: 2px solid purple; */
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    margin: auto;
+}
+
+.dessert-page1  main .container .item .column ul li{
+    /* border: 1px solid #000; */
+    width: 30%;
+}
+
+
+.dessert-page1  main .container .item .column ul li .pic{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+
+}
+
+.dessert-page1  main .container .item .column ul li img:nth-of-type(1){
+    /* border: 1px solid #000; */
+    width: 100%;
+    height: 100%;    
+    vertical-align: top;
+    position: absolute;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.dessert-page1  main .container .item .column ul li img:nth-of-type(2){
+    position: absolute;
+    left:5%;
+    top:5%; 
+    width: 26px;
+}
+
+.dessert-page1  main .container .item .column .pic img:first-of-type:hover{
+    transform: translateY(-10px);
+    opacity: .8;
+}
+
+.dessert-page1  main .container .item .column ul li .pic .title-shot{
+    position: absolute;
+    top:-115px;
+    left:-65px;
+   
+}
+
+.dessert-page1 main .container .item .column ul li{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.dessert-page1 main .container  .item .column ul li .inf{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.dessert-page1 main .container .item .column ul li p:first-of-type{
+    /* border: 1px solid #000; */
+    flex-grow: 1;
+    margin: 3% 0;
+}
+
+
+.dessert-page1 main .container .item .column ul li p:last-of-type{
+    /* border: 1px solid #000; */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color:var(--imcolor2)
+}
+
+.dessert-page1 main .container .item .column ul li .name{
+    /* border: 1px solid blue; */
+    margin-top: 1.2%;
+    margin-bottom: 2.5%;
+    font-size: 1.4rem;
+    position: relative;
+    display: inline;
+}
+
+.dessert-page1 main .container .item .column ul li .name::after{
+    /* border: 1px solid #000; */
+    content:" ";
+    height: 15px;
+    width: 100%;
+    background-image: url(../texture/Waves.svg);
+    background-repeat: repeat-x;
+    background-position: center;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    right:50%;
+    text-align: center;
+    transform: translateX(-50%);
+
+
+}
