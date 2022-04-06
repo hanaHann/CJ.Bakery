@@ -604,6 +604,7 @@ h2 .wrap .title .middle p:last-child{
 
 .btn-aside-1,.btn-aside-2,.btn-aside-3{
     display: none;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 @media screen and (min-width:1200px){
@@ -620,6 +621,7 @@ h2 .wrap .title .middle p:last-child{
         position: fixed;
         align-items: center;
         justify-content: center;
+
     }
 
     .btn-aside-1,.btn-aside-2{
