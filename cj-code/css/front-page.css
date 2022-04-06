@@ -542,7 +542,7 @@ body{
 }
 
 .about .wrap .inf{
-    /* border: 1px solid #000; */
+    border: 1px solid #000;
     width: 100%;
 }
 
@@ -551,9 +551,15 @@ body{
 
 
 }
+
+.about  .video-frame{
+    /* border: 2px solid red; */
+    left:0;
+}
+
 .about .video-frame video{
     margin: auto;
-    /* border:3px solid purple; */
+    border:3px solid purple;
     width: 95%;
     margin-bottom: 2%;
     border-radius:80px 10px 80px 10px ;
@@ -598,11 +604,6 @@ body{
         text-align: right;
         padding-bottom: 120px;
     
-    }
-
-    .about  .video-frame{
-        /* border: 2px solid red; */
-        left:0;
     }
 
     .about .video-frame video{
