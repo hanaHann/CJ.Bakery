@@ -1,6 +1,4 @@
 
-
-
 window.addEventListener("load",function(){
 
     var dessert = document.getElementById("selection");
