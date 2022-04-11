@@ -87,21 +87,21 @@ p{
 /* 手機 */
 .wrap{
     /* border: 1px solid #000; */
-    width:90%;
+    width:88%;
     margin: auto;
 }
 /* 平板直 */
 @media screen and (min-width:768px){
     .wrap{
         /* border: 3px solid purple; */
-        min-width:calc(720 / 768 * 100%);
+        min-width:calc(700 / 768 * 100%);
     }
 }
 /* 平板橫 */
 @media screen and (min-width:992px){
     .wrap{
         /* border: 3px solid blue; */
-        min-width:calc(960 / 992 * 100%);
+        min-width:calc(920 / 992 * 100%);
     }
 }
 /* 平板pro+電腦 */
@@ -211,17 +211,16 @@ nav .right-icon :nth-of-type(2){
     margin-left: 8px;
 }
 nav ul:nth-of-type(2) li a{
+    /* border: 1px solid #000; */
     color:var(--imcolor1);
     display:block;
     margin-bottom: 15px;
-
 }
 nav .logo {
     /* border: 1px solid #000; */
     position: absolute;
     left:50%;
     transform: translateX(-50%);
-
 }
 nav .logo a {
     display: block;
@@ -412,22 +411,23 @@ footer ul:nth-of-type(1) li a p{
 
 
 /* /////////////////標題形式一///////////////// */
-h2 .wrap{
+h2{
     /* border: 1px solid    #000; */
-    width: 100%;
     margin-top: 10%;
     margin-bottom: 5%;
     
 }
-h2 .wrap .title{
+
+h2 .title-1{
+    /* border: 1px solid #000; */
     margin: auto;
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
-h2 .wrap .line{
-    /* border:1px solid red; */
+h2 .title-1 .line{
+    /* border:1px solid red ; */
     width: 65px;
     height: 15px;
     border-radius: 5px;
@@ -435,14 +435,12 @@ h2 .wrap .line{
     background-size: 15px 100%;
 }
 
-h2 .wrap .middle{
+h2 .title-1 .middle{
     /* border:2px solid red; */
-    width: 100%;
-    margin: 0 2%;
     text-align: center;
+    margin: 0 10px;
 }
-
-h2 .wrap .title .middle p:first-child{
+h2 .title-1 .middle p:first-child{
     /* border:1px solid red; */
     font-size:2rem;
     font-weight: 500;
@@ -451,7 +449,7 @@ h2 .wrap .title .middle p:first-child{
     text-shadow: var(--box-shadowsmall);
 }
 
-h2 .wrap .title .middle p:last-child{
+h2 .title-1 .middle p:last-child{
     /* border:1px solid blue; */
     color: var(--color2);
     font-size:1rem;
@@ -461,28 +459,44 @@ h2 .wrap .title .middle p:last-child{
 
 
 @media screen and (min-width:768px){
-    h2 .wrap{
+    h2{
         margin-top: 120px;
         margin-bottom: 50px;
     }
-
-}
-
-
-@media screen and (min-width:1200px){
-
-    h2 .wrap .line{
+    h2 .title-1 .line{
+        /* border:1px solid red ; */
+        width: 80px;
+    }
+    h2 .title-1 .middle p:first-child{
         /* border:1px solid red; */
-        width: 100px;
+        font-size:2.4rem;
+    }
+    
+    h2 .title-1 .middle p:last-child{
+        /* border:1px solid blue; */
+        font-size:1.4rem;
+    }
+}
+@media screen and (min-width:1200px){
+    h2 .title-1 .line{
+        /* border:1px solid red ; */
+        width: 120px;
     }
 
-    h2 .wrap .title .middle p:first-child{
+
+    h2 .title-1 .middle p:first-child{
         font-size:3rem;
     }
 
-    h2 .wrap .title .middle p:last-child{
+   h2 .title-1 .middle p:last-child{
         font-size:1.5rem;
     }
+    h2 .title-1 .middle{
+        /* border:2px solid red; */
+        text-align: center;
+        margin: 0 15px;
+    }
+    
 
 }
 
@@ -496,10 +510,7 @@ h2 .wrap .title .middle p:last-child{
     margin: auto;
     width: 100%;
     margin-bottom: 2%;
-
 }
-
-
 .title-2-1 .wrap,.title-2-2 .wrap{
     /* background-color: var(--color3); */
     border-radius: 30px;
@@ -507,28 +518,20 @@ h2 .wrap .title .middle p:last-child{
     /* box-shadow: var(--box-shadowsmall); */
     margin-bottom: 0;
 }
-
 .title-2-1 .wrap{
     /* border:2px solid var(--color3); */
     border-radius: 30px;
-    
 }
-
 .title-2-1 .wrap p,.title-2-2 .wrap p{
     font-weight: 400;
-    font-size: 1.6rem;
-    
+    font-size: 1.6rem;   
 }
-
 .title-2-2 .wrap p{
     color:white;
 }
-
 .title-2-1 .wrap p{
     color:var(--color3);
 }
-
-
 
 /* /////////////////側邊按鈕///////////////// */
 
@@ -541,7 +544,6 @@ h2 .wrap .title .middle p:last-child{
     .btn-aside-1,.btn-aside-2{
         display: block;
     }
-
     .btn-aside-1,.btn-aside-2,.btn-aside-3{
         /* border:1px solid red; */
         /* writing-mode: vertical-rl;   */
@@ -551,42 +553,34 @@ h2 .wrap .title .middle p:last-child{
         position: fixed;
         align-items: center;
         justify-content: center;
-
     }
-
     .btn-aside-1,.btn-aside-2{
         border-radius: 15px 0px 0px 15px;
         padding: 35px 8px;
         right:0;
         transition: .5s;
     }
-
     .btn-aside-1 i,.btn-aside-2 i{
         /* border: 1px solid #000; */
         font-size: 1.6rem;
         text-align: center;
     }
-
     .btn-aside-1{
         top:120px;
         background-color:var(--color1);
         color:white;
     }
-
     .btn-aside-1:hover{
         background-color: var(--imcolor1);
     }
-
     .btn-aside-2{
         top: 230px;
         background-color:white;
         color:var(--color1);
     }
-
     .btn-aside-2:hover{
         color:var(--imcolor1);
     }
-
     .btn-aside-3{
         /* border: 1px solid #000; */
         width: 50px;
@@ -600,13 +594,9 @@ h2 .wrap .title .middle p:last-child{
         flex-direction: column;
         animation: pulse .5s infinite;
     }
-
     .btn-aside-3 i{
         font-size: 1rem;
-    }
-        
-
-
+    } 
 }
 
 
@@ -751,9 +741,6 @@ h2 .wrap .title .middle p:last-child{
 
 /* /////////////////按鈕五///////////////// */
 
-form{
-    /* border: 1px solid #000; */
-}
 
 .btn-5-1 , .btn-5-2{
     /* background-color: #000; */
@@ -851,7 +838,7 @@ form .fa-cart-shopping{
 .title-shot{
     animation:moveup .5s infinite;
 }
-@-webkit-keyframes moveup{
+@keyframes moveup{
     0%{
         transform: translateY(0%);
     }
@@ -883,9 +870,7 @@ form .fa-cart-shopping{
     /* padding: 35px 10px 8px 10px; */
     margin-top: 50px;
     margin-bottom: 100px;
-
 }
-
 .ig-post .wrap {
     /* border: 1px solid #000; */
     display: grid;
@@ -894,11 +879,9 @@ form .fa-cart-shopping{
     justify-content: space-between;
     gap:20px;
 }
-
 .ig-post .follow{
     background-color: var(--imcolor2);
 }
-
 .ig-post .pic, .ig-post .follow{
     /* border: 1px solid #000; */
     width:100%;
@@ -906,7 +889,6 @@ form .fa-cart-shopping{
     position: relative; 
     overflow: hidden;
 }
-
 .ig-post .pic img{
     /* border: 1px solid #000; */
     width: 100%;
@@ -916,11 +898,7 @@ form .fa-cart-shopping{
     background-color: var(--color2);
     /* opacity: .2; */
     vertical-align: top;
-    
 }
-
-
-
 .ig-post .pic::after,.ig-post .follow::after{
     content:"";
     /* background-color: rgba(15, 15, 15, 0); */
@@ -933,59 +911,81 @@ form .fa-cart-shopping{
     justify-content: center;
     letter-spacing: .1rem;
     text-indent: .1rem;
-    
 }
-
-.ig-post .pic:hover::after,.ig-post .follow:hover::after{
-    /* border: 1px solid #000; */
-    content:"";
-    background-color: rgba(15, 15, 15, 0.5);
-    color:white;
-    text-align:center;
-    font-size: 1.2rem;
-    transition: background-color 1s;
-    
-}
-
 .ig-post .pic:hover::after{
     content:"查看貼文";
 }
-
 .ig-post .follow i , .ig-post .follow .inf {
     position: absolute;
     color:white;
-
 }
-
 .ig-post .follow i {
-    font-size: 3rem;
+    font-size: 1.8rem;
     left:5%;
     top:5%;
-    
 }
-
 .ig-post .follow .inf{
     /* border: 2xpx solid #000; */
     right:5%;
     bottom: 0%;
 }
-
 .ig-post .follow .inf p{
     /* border: 1px solid #000; */
     color:white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 400;
 }
+@media screen and (min-width:768px){
+    .ig-post .wrap {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .ig-post .follow i {
+        font-size: 2.8rem;
+    }
+    .ig-post .follow .inf p{
+        font-size: 1.4rem;
+    }
+    .ig-post a:nth-of-type(7){
+        /* border: 5px solid #000; */
+        grid-column: 1 / 3;
+    }
+    .ig-post .follow{
+        /* border: 1px solid #000; */
+        width:100%;
+        padding-bottom: 50%;
+    }
 
-
+}
 
 @media screen and (min-width:1200px){
     .ig-post .wrap {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    
-
+    .ig-post .follow i {
+        font-size: 3rem;
+    }
+    .ig-post .follow .inf p{
+        font-size: 1.5rem;
+    }
+    .ig-post .pic:hover::after,.ig-post .follow:hover::after{
+        /* border: 1px solid #000; */
+        content:"";
+        background-color: rgba(15, 15, 15, 0.5);
+        color:white;
+        text-align:center;
+        font-size: 1.2rem;
+        transition: background-color 1s;
+    }
+    .ig-post a:nth-of-type(7){
+        /* border: 5px solid #000; */
+        grid-column: 1 / 2;
+    }
+    .ig-post .follow{
+        /* border: 1px solid #000; */
+        width:100%;
+        padding-bottom: 100%;
+    }
 }
 
 

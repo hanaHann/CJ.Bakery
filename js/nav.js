@@ -3,7 +3,7 @@ window.addEventListener("load",function(){
     var newin = document.getElementById("newIn");
     var hot = document.getElementById("hot");
     var dessert = document.getElementById("dessert");
-    var story = document.getElementById("story");
+    var story = document.getElementById("story-title");
     var selection = document.getElementById("selection");
     var notice = document.getElementById("notice");
     var activity = document.getElementById("activity");
