@@ -82,7 +82,12 @@ p{
     height: 90px;
     display: block;
 }
-
+input{
+    outline: none;
+}
+button:hover, i:hover{
+    cursor: pointer;
+}
 
 /* 手機 */
 .wrap{
@@ -107,6 +112,346 @@ p{
     .wrap{
         min-width:calc(1200 / 1440 * 100%);
     }
+}
+
+/* /////////////////燈箱///////////////// */
+/* 直的 */
+@media (orientation: portrait ){
+    #lightbox-bcg{
+        position: fixed;
+        top:0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        z-index: 10;
+        opacity: .8;
+        display: none;
+    }
+    .lightbox{
+        border: 3px solid var(--color2);
+        background-color: white;
+        border-radius: 40px;
+        width: 80%;
+        /* max-height: 60vh; */
+        padding: 20px;
+        position: fixed;
+        top:20%;
+        transform: translateY(-20%);
+        left:50%;
+        transform: translateX(-50%);
+        z-index: 11;
+        display: flex;
+        align-items: center;
+        display: none;
+    }
+    .lightbox .frame{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .lightbox .fa-xmark{
+        color: white;
+        font-size: 1.4rem;
+        background-color: var(--color2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        position: absolute;
+        right:-8px;
+        top:-8px;
+    }
+    .lightbox .frame .pic{
+        width: 100%;
+        aspect-ratio: 1.8 / 1;
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    
+    .lightbox .frame .inf{
+        /* border: 1px solid #000; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .lightbox .frame .inf h4{
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color:var(--imcolor1)
+    }
+    .lightbox .frame .inf h4+p{
+        flex-grow: 1;
+        font-size: .8rem;
+        margin-bottom: 10px;
+    }
+    .lightbox .frame .inf p:nth-of-type(2){
+        /* border: 1px solid #000; */
+        font-size: 1.6rem;
+    }
+    .lightbox .frame .pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .lightbox .frame .detail,
+    .lightbox .frame .num,
+    .lightbox .frame .flavor,
+    .lightbox .frame .num-block{
+        /* border: 1px solid rgb(204, 114, 114); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .lightbox .frame .num-block input,
+    .lightbox .frame .detail input{
+        border: 0px;
+        width: 50px;
+        height: 30px;
+        margin: 0 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        color:var(--imcolor1);
+        font-family: 'Yusei Magic', sans-serif;
+    }
+    .lightbox .frame .detail-price{
+        display: flex;
+        align-items: center;
+    }
+    .lightbox .frame .num{
+        /* border: 1px solid #000; */
+        margin: 10px 0;
+    }
+    .lightbox .frame .num i{
+        color:var(--imcolor2);
+        font-size: 1rem;
+    }
+    .lightbox .frame .flavor p,
+    .lightbox .frame .num p{
+        font-size: 1rem;
+    }
+    .lightbox .frame .flavor{
+        /* border: 5px solid #000; */
+        align-items: flex-start;
+    }
+    .lightbox .frame .flavor button{
+        border: 0px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color:white;
+        background-color: var(--color2);
+        font-size: .7rem;
+    }
+    .lightbox .frame .flavor button:nth-of-type(1){
+        margin-right: 10px;
+    }
+    .lightbox .frame .detail p{
+        font-size: 1.2rem;
+        font-family: 'Yusei Magic', sans-serif;
+        color:var(--imcolor1);
+    }
+    
+    .lightbox .frame .detail .btn-5-1{
+        border-radius: 15px;
+        padding: 5px 20px;
+    }
+    
+    .lightbox .frame .detail .btn-5-1 button{
+        /* border: 1px solid #000; */
+        font-size: .8rem;
+    }
+    
+}
+/* 橫的 */
+@media ( orientation: landscape ){
+    #lightbox-bcg{
+        position: fixed;
+        top:0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        z-index: 10;
+        opacity: .8;
+        display: none;
+    }
+    .lightbox{
+        border: 3px solid var(--color2);
+        background-color: white;
+        border-radius: 40px;
+        width: 60%;
+        padding: 2%;
+        /* aspect-ratio: 1.8 / 1; */
+        position: fixed;
+        top:20vh;
+        left:50%;
+        transform: translateX(-50%);
+        z-index: 11;
+        display: flex;
+        align-items: center;
+        display: none;
+    }
+    .lightbox .frame{
+        display: flex;
+        flex-direction: row;
+    }
+    .lightbox .fa-xmark{
+        color: white;
+        font-size: 1.4rem;
+        background-color: var(--color2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        position: absolute;
+        right:-8px;
+        top:-8px;
+    }
+    .lightbox .frame .pic,
+    .lightbox .frame .inf{
+        /* border: 1px solid #000; */
+        border-radius: 0;
+        width: 50%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+    .lightbox .frame .inf{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 20px;
+    }
+    .lightbox .frame .inf h4{
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color:var(--imcolor1)
+    }
+    .lightbox .frame .inf h4+p{
+        flex-grow: 1;
+        font-size: 1.2rem;
+    }
+    .lightbox .frame .inf p:nth-of-type(2){
+        /* border: 1px solid #000; */
+        font-size: 1.6rem;
+    }
+    .lightbox .frame .pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .lightbox .frame .detail,
+    .lightbox .frame .num,
+    .lightbox .frame .flavor,
+    .lightbox .frame .num-block{
+        /* border: 1px solid #000; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .lightbox .frame .num-block input,
+    .lightbox .frame .detail input{
+        border: 0px;
+        border-radius:15px;
+        width: 70px;
+        height: 30px;
+        margin: 0 20px;
+        text-align: center;
+        font-size: 1.6rem;
+        color:var(--imcolor1);
+        font-family: 'Yusei Magic', sans-serif;
+    }
+    .lightbox .frame .detail-price{
+        display: flex;
+        align-items: center;
+    }
+    .lightbox .frame .num{
+        margin: 10px 0;
+    }
+    .lightbox .frame .num i{
+        color:var(--imcolor2);
+        font-size: 1.5rem;
+    }
+    .lightbox .frame .flavor p,
+    .lightbox .frame .num p{
+        font-size: 1.2rem;
+    }
+    .lightbox .frame .flavor button{
+        border: 0px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color:white;
+        background-color: var(--color2);
+        font-size: 1rem;
+    }
+    .lightbox .frame .flavor button:nth-of-type(1){
+        margin-right: 10px;
+    }
+    .lightbox .frame .detail p{
+        font-size: 1.8rem;
+        font-family: 'Yusei Magic', sans-serif;
+        color:var(--imcolor1);
+    }
+    
+    .lightbox .frame .detail .btn-5-1 {
+        border-radius:15px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .lightbox .frame .detail .btn-5-1 i{
+        margin-right: 10px;
+    }
+    
+    .lightbox .frame .detail .btn-5-1 button{
+        /* border: 1px solid #000; */
+        font-size: 1.2rem;
+        display: block;
+    }
+    .lightbox .frame .flavor-opt button:hover{
+        opacity: .9;
+    }
+
+}
+
+
+
+/* /////////////////我的最愛燈箱///////////////// */
+
+
+.add-heart,.remove-heart{
+    /* border: 1px solid #000; */
+    aspect-ratio: 4 / 1;
+    border-radius: 20px;
+    width: 30%;
+    padding: 40px;
+    position: fixed;
+    background-color: rgba(255, 255, 255,0.8);
+    top:40%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.add-heart i,.remove-heart i{
+    color: var(--imcolor1);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+.add-heart p,.remove-heart p{
+    text-align: center;
+    color: var(--imcolor1);
+    font-size: 1.2rem;
 }
 
 /* ---------------導覽列--------------- */
@@ -422,7 +767,7 @@ footer ul:nth-of-type(1) li a p{
 
 /* /////////////////標題形式一///////////////// */
 h2{
-    border: 1px solid    #000;
+    /* border: 1px solid    #000; */
     margin-top: 20%;
     margin-bottom: 10%;
 }
@@ -1023,63 +1368,67 @@ form .fa-cart-shopping{
 
 /* /////////////////導覽列變化///////////////// */
 
-.dessert-page2 nav .wrap li:nth-child(4) a:before,
-.dessert-page1 nav .wrap li:nth-child(4) a:before{
-    border: 1px solid #000;
-    content:"";
-    display: inline-block;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 3px;
-    width: 3px;
-    height: 3px;
-    margin-right: 5px;
-    text-align: center;
-    top:50%;
-    transform: translateY(-50%);
-}  
-.notice nav .wrap li:nth-child(7) a:before{
-    border: 1px solid #000;
-    content:"";
-    display: inline-block;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 3px;
-    width: 3px;
-    height: 3px;
-    margin-right: 5px;
-    text-align: center;
-    top:50%;
-    transform: translateY(-50%);
-    
-}  
-.activity nav .wrap li:nth-child(8) a:before{
-    border: 1px solid #000;
-    content:"";
-    display: inline-block;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 3px;
-    width: 3px;
-    height: 3px;
-    margin-right: 5px;
-    text-align: center;
-    top:50%;
-    transform: translateY(-50%);
-    
-}  
-.selection nav .wrap li:nth-child(9) a:before{
-    border: 1px solid #000;
-    content:"";
-    display: inline-block;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 3px;
-    width: 3px;
-    height: 3px;
-    margin-right: 5px;
-    text-align: center;
-    top:50%;
-    transform: translateY(-50%);
-    
-}  
+@media screen and (min-width:768px){
+    .dessert-page2 nav .wrap li:nth-child(4) a:before,
+    .dessert-page1 nav .wrap li:nth-child(4) a:before{
+        border: 1px solid #000;
+        content:"";
+        display: inline-block;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+    }  
+    .notice nav .wrap li:nth-child(7) a:before{
+        border: 1px solid #000;
+        content:"";
+        display: inline-block;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        
+    }  
+    .activity nav .wrap li:nth-child(8) a:before{
+        border: 1px solid #000;
+        content:"";
+        display: inline-block;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        
+    }  
+    .selection nav .wrap li:nth-child(9) a:before{
+        border: 1px solid #000;
+        content:"";
+        display: inline-block;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        
+    }  
+}
+
+

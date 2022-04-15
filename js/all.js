@@ -52,8 +52,6 @@ window.addEventListener("load",function(){
         activity.innerText=("ACTIVITY");
     }
 
-
-
     newin.addEventListener("mouseover",navMouseoverNewin);
     newin.addEventListener("mouseout",navMouseoutNewin);
     hot.addEventListener("mouseover",navMouseoverHot);
@@ -72,35 +70,145 @@ window.addEventListener("load",function(){
     })
 
 
+// 我要購買-燈箱
+window.addEventListener("load",function(){
+    let cart = document.querySelectorAll(`.container .fa-cart-shopping`);
+    let buyLightbox = document.getElementById("lightbox");
+    let closeBtn = document.getElementById("closebtn");
+    let cartAdd = document.getElementById("lightbox-joincart");
+    let flavorOpt = document.querySelectorAll(`.flavor-opt button`);
+    let lightboxImg = document.getElementById("lightbox-img");
+    let lightboxPrice = document.getElementById("lightbox-price");
+    let minus = document.getElementById("fa-minus");
+    let plus = document.getElementById("fa-plus");
+    let lightboxNum = document.getElementById("lightbox-num");
+    let lightboxBcg = document.getElementById("lightbox-bcg");
+
+
+    for(let i=0 ; i <cart.length ; i++){
+        cart[i].addEventListener("click",function(){
+            buyLightbox.style.display="block";
+            lightboxBcg.style.display="block";
+        })
+        closeBtn.addEventListener("click",function(){
+            buyLightbox.style.display="none";
+            lightboxBcg.style.display="none";
+        })
+        cartAdd.addEventListener("click",function(){
+            buyLightbox.style.display="none";
+            lightboxBcg.style.display="none";
+        })    
+    }
+    flavorOpt[0].addEventListener("click",function(){
+        lightboxImg.src="../pic/snow-ori.jpg";
+        lightboxPrice.value="320";
+        lightboxNum.value = 1;
+    })
+    flavorOpt[1].addEventListener("click",function(){
+        lightboxImg.src="../pic/snow-ch.jpg";
+        lightboxPrice.value="360";
+        lightboxNum.value = 1;
+    })
+
+    minus.addEventListener("click",function(){
+        if(lightboxNum.value == 1){
+            lightboxNum.value ==1 
+        }else{
+            lightboxNum.value --;
+        }
+    })
+    plus.addEventListener("click",function(){
+        lightboxNum.value ++;
+    })
+
+})
+
+// 我的收藏
+
+window.addEventListener("load",function(){
+    let heart = document.getElementsByClassName("heart");   //所有愛心
+    console.log(heart)
+    let removeHeart = document.getElementById("remove-heart");  //已移除收藏燈箱
+    let addHeart = document.getElementById("add-heart");    //已加入收藏燈箱
+    let lightboxBcg = document.getElementById("lightbox-bcg");  //背景遮罩
+
+    for(let i=0 ; i<heart.length ; i++){
+        heart[i].addEventListener("click",function(){
+            console.log(heart[i])
+            if(this.title=="加入收藏"){
+                addHeart.style.visibility="visible"
+                this.src="../texture/heart2.png";        //換圖片
+                this.title="取消收藏";
+                lightboxBcg.style.display="block";       //背景遮罩
+                lightboxBcg.style.opacity=".3"           //背景遮罩
+                setTimeout(function(){                      //時間到自動關閉
+                    addHeart.style.visibility="hidden"
+                    lightboxBcg.style.display="none";
+                    
+                },800)
+
+            }
+            else if (this.title="取消收藏"){
+                removeHeart.style.visibility="visible"
+                this.src="../texture/heart1.png";         //換圖片
+                this.title="加入收藏";
+                lightboxBcg.style.display="block";        //背景遮罩
+                lightboxBcg.style.opacity=".3"            //背景遮罩
+                setTimeout(function(){                      //時間到自動關閉
+                    removeHeart.style.visibility="hidden"
+                    lightboxBcg.style.display="none";
+                },800)
+                
+            }
+            
+        })
+    }
+})
+
+
+
+
 // 手機版footer
 
 window.addEventListener("load",function(){
     let screenWidth = screen.width;
-   
 
     if (screenWidth < 768){
         console.log("小魚")
-
         window.addEventListener("scroll",function(){
-            var scroolTop = document.documentElement.scrollTop || document.body.scrollTop;
-            
-            var scrollFunc = function (e) {  
-                e = e || window.event;  
-            }
-            window.onmousewheel = document.onmousewheel = scrollFunc;
-            
-            console.log("scrollValue",scroolTop)
             console.log("scrollY",window.scrollY)
-            console.log("window.innerHeight",window.innerHeight)
-            console.log("e.wheelDelta",e.wheelDelta)
 
-            if(document.documentElement.scroll >= scroolTop){
-                let footer = document.getElementById("footer")
+            document.addEventListener("wheel",function(e){
+            wheelDelta =parseInt( e.deltaY )
+            console.log("wheelDelta",wheelDelta)
+
+            let footer = document.getElementById("footer")
+            if(wheelDelta > 0){ 
                 footer.classList.add("footer-hidden");
                 }else{
                     footer.classList.remove("footer-hidden");
                 }
+            
+            })
         })
+
+        // document.addEventListener("wheel",function(e){
+        //     console.log("hihihih")
+        //     wheelDelta = e.deltaY
+        //     console.log(wheelDelta)
+        //     if(wheelDelta > 0){
+        //         console.log(">0")
+                
+        //         let footer = document.getElementById("footer")
+        //         footer.classList.add("footer-hidden");
+        //         }else{
+        //             footer.classList.remove("footer-hidden");
+        //         }
+
+        // } ); 
+        
+        
+    
     
     }
 

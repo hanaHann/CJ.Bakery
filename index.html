@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
     <title>CJ.Bakery</title>
 
     <!-- /////////////////網頁小圖示///////////////// -->
@@ -29,6 +31,9 @@
      rel="stylesheet"
      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
      />
+    <!-- /////////////////aos///////////////// -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -303,12 +308,11 @@
     <div class="wrap">
     
         <div class="container">
-
-        <!-- 熱賣甜點＿內容section1 -->
-            <div class="item">
+            <!-- 熱賣甜點＿內容section1 -->
+            <div class="item" >
             
                 <div class="card-pic">
-                    <img src="./texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
+                    <img src="./texture/heart1.png" alt="" title="加入收藏" class="heart">
 
                     <a href="./dessert-NT.html#moder">
                         <img src="./pic/ma.jpg" alt="">
@@ -334,33 +338,11 @@
                 </div>
 
             </div>
-
-            <script>
-                function switchFavorite(){
-                var heart = document.getElementById("heart");
-
-                if(heart.title=="加入收藏"){
-                    heart.src="./texture/heart2.png";
-                    heart.title="取消收藏";
-                    console.log("成功");
-                }
-                else if (heart.title="取消收藏"){
-                    heart.src="./texture/heart1.png";
-                    heart.title="加入收藏";
-                    console.log("成功了");
-
-            }
-
-
-        }
-            heart.addEventListener("click",switchFavorite);
-            </script>
-        
-        <!-- 熱賣甜點＿內容section2 -->
+            <!-- 熱賣甜點＿內容section2 -->
             <div class="item">
 
                 <div class="card-pic">
-                    <img src="./texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
+                    <img src="./texture/heart1.png" alt="" title="加入收藏" class="heart">
                     <a  href="dessert-cold.html#brownie"><img src="./pic/LINE_ALBUM_220317_20.jpg" alt=""></a>
                 
                 </div>
@@ -378,11 +360,11 @@
                     </div>
                 </div>
             </div>
-        <!-- 熱賣甜點＿內容section3 -->
+            <!-- 熱賣甜點＿內容section3 -->
             <div class="item">
             
                 <div  class="card-pic">
-                    <img src="./texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
+                    <img src="./texture/heart1.png" alt="" title="加入收藏" class="heart">
                     
                     <a href="dessert-NT.html#bear">
                         <img src="./pic/LINE_ALBUM_220306_16.jpg" alt="">
@@ -404,11 +386,11 @@
                     </div>
                 </div>
             </div>
-        <!-- 熱賣甜點＿內容section4 -->
+             <!-- 熱賣甜點＿內容section4 -->
             <div class="item">
 
                 <div class="card-pic">
-                    <img src="./texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
+                    <img src="./texture/heart1.png" alt="" title="加入收藏" class="heart">
                     <a href="dessert-cold.html#basque" >
                         <img src="./pic/LINE_ALBUM_220317_6.jpg" alt="">
                     </a>
@@ -433,7 +415,17 @@
 
     </div>
 </div>
-
+<!-- /////////////////燈箱背景遮罩///////////////// -->
+<div id="lightbox-bcg"></div>
+<!-- /////////////////加入收藏燈箱///////////////// -->
+<div class="add-heart" id="add-heart">
+    <i class="fa-solid fa-check"></i>
+    <p>已加入願望清單</p>
+</div>
+<div class="remove-heart" id="remove-heart">
+    <i class="fa-solid fa-check"></i>
+    <p>已移除</p>
+</div>
 <!-- /////////////////關於我們///////////////// -->
 <div class="about" id="story">
     <!-- 關於我們－標題-->
@@ -679,7 +671,16 @@
 </footer>
 
 
+
+
 <!-- /////////////////js///////////////// -->
 <script src="./js/all.js"></script>
+<!-- /////////////////aos///////////////// -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+
 </body>
 </html>
