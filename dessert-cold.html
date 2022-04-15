@@ -13,11 +13,11 @@
     <link rel="shortcut icon" href="./pic/favicon_io/favicon.ico">
 
     <!-- /////////////////字型///////////////// -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;700&family=Noto+Sans+TC:wght@100;300;500&family=Saira+Condensed:wght@200;300;400&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700&family=Noto+Sans+TC:wght@100;300;500&family=Saira+Condensed:wght@200;300;400&family=Yusei+Magic&display=swap" rel="stylesheet">
 
+ 
     <!-- /////////////////fontawesome///////////////// -->
     <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
 
@@ -58,7 +58,7 @@
     <h1>CJ.Bakery</h1>
     <nav>
         <div class="logo">
-            <a href="index.html"><img src="./texture/logo4.png" alt=""></a>
+            <a href="/index.html"><img src="./texture/logo4.png" alt=""></a>
         </div>
         
         <div class="wrap">
@@ -70,18 +70,8 @@
                 <span></span>
                 <span></span>
             </label>
-
-
         
-            <div class="right-icon">
-                <a href="https://www.instagram.com/cj.bakery_/">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://line.me/R/ti/p/@054pbzqi">
-                    <i class="fa-brands fa-line"></i>
-                </a>
-            </div>
-            
+            <!-- 電腦版選單 -->
             <ul>
                 <li>
                     <a href="">
@@ -102,8 +92,16 @@
                 </li>
             
             </ul>
-
+            <!-- 手機版選單 -->
             <ul>
+                <div class="right-icon">
+                    <a href="https://www.instagram.com/cj.bakery_/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://line.me/R/ti/p/@054pbzqi">
+                        <i class="fa-brands fa-line"></i>
+                    </a>
+                </div>
                 <li>
                     <a href="index.html#new-dessert"  class="nav-a" id="newIn">NEW IN</a>
                 </li>
@@ -129,21 +127,21 @@
         </div>
     </nav>
     <script src="./js/nav.js"></script>
-
+    <!-- 最新甜點－標題-->
+    <h2>
+    <div class="title-1">
+        <div class="line"></div>
+        <div class="middle">
+            <p>DESSERT</p>
+            <p>甜點一覽</p>
+        </div>
+        <div class="line"></div>
+    </div>
+    </h2>
 <!-- /////////////////上方內容-介紹///////////////// -->
     <div class="summary">
         <div class="wrap">
-       <!-- 最新甜點－標題-->
-        <h2>
-        <div class="title-1">
-            <div class="line"></div>
-            <div class="middle">
-                <p>DESSERT</p>
-                <p>甜點一覽</p>
-            </div>
-            <div class="line"></div>
-        </div>
-        </h2>
+    
         <!-- 麵包屑 -->
         <div class="bread">
             <a href="./index.html">首頁</a>
@@ -173,14 +171,30 @@
     
         <!-- 按鈕按鈕按鈕 -->
         <div class="nav-btn-2">
-            <button class="btn-2" id="btn-box">盒子系列</button>
-            <button class="btn-2" id="btn-brownie">布朗尼</button>
-            <button class="btn-2" id="btn-basque">巴斯克</button>
-            <button class="btn-2" id="btn-tira">提拉米蘇</button>
-            <button class="btn-2" id="btn-onebite">一口戚風</button>
+            <button class="btn-2">
+                <img src="./texture/iconhand/box.png" alt="">
+                <p> 盒子系列</p>
+            </button>
+            <button class="btn-2">
+                <img src="./texture/iconhand/bron.png" alt="">
+                <p> 布朗尼</p>
+            </button>
+            <button class="btn-2">
+                <img src="./texture/iconhand/baseq.png" alt="">
+                <p> 巴斯克</p>
+            </button>
+            <button class="btn-2">
+                <img src="./texture/iconhand/tira.png" alt="">
+                <p> 提拉米蘇</p>
+            </button>
+            <button class="btn-2">
+                <img src="./texture/iconhand/onebite.png" alt="">
+                <p>一口戚風</p>
+ 
+            </button>
         </div>
         <!-- 主要二欄式甜點-盒子系列一 -->
-        <div class="container" id="boxsweet" >
+        <div class="container">
             
             <div class="item">
                 <div class="wrap">
@@ -369,7 +383,7 @@
 
         </div>
         <!-- 主要二欄式甜點-布朗尼一 -->
-        <div class="container" id="brownie" >
+        <div class="container">
             <div class="item">
                 <div class="wrap">
                     <div class="pic">
@@ -433,7 +447,7 @@
             </div>
         </div>
         <!-- 主要二欄式甜點-巴斯克一 -->
-        <div class="container" id="basque" >
+        <div class="container">
             <div class="item">
                 <div class="wrap">
                     <div class="pic">
@@ -500,7 +514,7 @@
             
         </div>
         <!-- 主要二欄式甜點-提拉米蘇一 -->
-        <div class="container" id="tira" >
+        <div class="container">
             <div class="item">
                 <div class="wrap">
                     <div class="pic">
@@ -565,7 +579,7 @@
             </div>                  
         </div>
            <!-- 主要二欄式甜點-一口戚風一 -->
-        <div class="container" id="onebite" >
+        <div class="container">
             <div class="item">
                 <div class="wrap">
                     <div class="pic">
@@ -835,31 +849,33 @@
         <div class="wrap">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="./index.html">
                         <i class="fa-solid fa-house"></i>
                         <p>首頁</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./dessert.html">
+                        <i class="fa-solid fa-cookie"></i>
+                        <p>甜點一覽</p>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p>購物車</p>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="#">
                         <i class="fa-regular fa-heart"></i>
                         <p>我的收藏</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <p>購物車</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-cookie"></i>
-                        <p>甜點一覽</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
+                    <a href="#">
                         <i class="fa-solid fa-user"></i>
                         <p>會員專區</p>
                     </a>
@@ -906,8 +922,10 @@
                 <li>
                     <a href="notice.html">ACTIVITY</a>
                 </li>
+                
             </ul>
             
+
             <div class="cj">
                 <p>©CJ.Bakery</p>
                 <a href="https://www.instagram.com/cj.bakery_/" target=_blank>

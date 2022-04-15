@@ -11,173 +11,372 @@
     <link rel="shortcut icon" href="./pic/favicon_io/favicon.ico">
 
     <!-- /////////////////字型///////////////// -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700&family=Noto+Sans+TC:wght@100;300;500&family=Saira+Condensed:wght@200;300;400&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;700&family=Noto+Sans+TC:wght@100;300;500&family=Saira+Condensed:wght@200;300;400&family=Yusei+Magic&display=swap" rel="stylesheet">
 
     <!-- /////////////////fontawesome///////////////// -->
     <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
-
     <!-- /////////////////css///////////////// -->
 
-    <link rel="stylesheet" href="./css/navtest.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <!-- /////////////////動畫///////////////// -->
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-     />
- 
-    
-</head>
-<body class="index">
+    <link rel="stylesheet" href="./css/all.css">
+    <!-- <link rel="stylesheet" href="./css/navtest.css"> -->
 
+    <!-- /////////////////動畫///////////////// -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-<!-- /////////////////最新甜點///////////////// -->
+    <style>
+            .container{
+                background-color: white;
+                /* border: 1px solid #000; */
+                border-radius: 60px;
+                padding: 10px;
+                margin-top: 40px;
+                box-shadow: var(--box-shadow);
+            }
+            .column{
+                position: relative;
+            }
 
-<div class="new-dessert" id="new-dessert">
-    <!-- 最新甜點－標題-->
-    <h2>
-        <div class="title-1">
-            <div class="wrap">
-                <div class="title">
-                    <div class="line"></div>
-                    <div class="middle">
-                        <p>NEW IN</p>
-                        <p>最新甜點</p>
-                    </div>
-                    <div class="line"></div>
-                </div>
-            </div>
-        </div>
-    </h2>
-    <!-- 最新甜點第一列 -->
-    <div class="wrap">
+            .slider {
+                /* border: 1px solid #000; */
+                width: 90%;
+                margin: auto;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .list {
+                /* border: 1px solid rgb(183, 46, 46); */
+                width: 99%;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 80px;
+                margin: auto;
+                left: 0;
+            }
+            li{
+                /* border: 2px solid rgb(47, 152, 136); */
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+            }
+            li .pic{
+                border: 2px solid pink;
+                margin-bottom: 10px;
+            }
+
+            li .inf{
+                /* border: 2px solid blue; */
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                flex-grow: 1;
+            }
+            .pic{
+                /* border: 1px solid #000; */
+                aspect-ratio: 1 / 1;
+                position: relative;
+                overflow: hidden;
+                /* opacity: .2; */
+            }
+            ul li .pic img:first-of-type{
+                width: 100%;
+                height: 100%;
+                object-fit:cover;
+            }
+            ul li .inf h3+p{
+                /* border: 1px solid #000; */
+                flex-grow: 1;
+                margin: 3% 0;
+            }
+            .price{
+                width: 100%;
+                /* border: 1px solid #000; */
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-grow: 1;
+                
+            }
+            .fa-circle-chevron-left,
+            .fa-circle-chevron-right{
+                /* border: 1px solid #000; */
+                margin: auto;
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            .fa-circle-chevron-right{
+                right:0px;
+            }
+            .fa-circle-chevron-left{
+                left:0px;
+            }
+            ul li .name{
+                /* border: 1px solid #000; */
+                position: relative;
+            }
+            ul li .name::after{
+                /* border: 1px solid #000; */
+                content:" ";
+                height: 15px;
+                width: 100%; 
+                background-image: url(../texture/Waves.svg);
+                background-repeat: repeat-x;
+                background-position: center;
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                right:50%;
+                text-align: center;
+                transform: translateX(-50%);
+            }
+            ul li .price p{
+                /* border: 1px solid #000; */
+                font-family: 'M PLUS Rounded 1c', sans-serif;
+                font-weight: 400;
+                font-size: 1.2rem;
+                color:var(--imcolor2)
+            }
+            ul li .price i{
+                font-size: 1.4rem;
+                color:var(--imcolor2);
+                transition: .2s;
+
+            }
+            ul li .pic .title-shot{
+                /* position: absolute;
+                top:-115px;
+                left:-65px; */
+                z-index: 100;
+            }
         
-        <div class="head">
-            <div class="num">
-                <p>01</p>
-            </div>
+                    
 
-            <div class="title">
-                <img src="./texture/line.svg" alt="">
-                <a href="./dessert-cold.html#onebite">
-                    <h3>草莓戚風三明治</h3>
-                </a>
-                <img src="./texture/Line 2.svg" alt="">
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="word">
-                <div class="title">
-                    <img src="./texture/line.svg" alt="">
-                    <a href="./dessert-cold.html#onebite">
-                        <h3>草莓戚風三明治</h3>
-                    </a>
-                    <img src="./texture/Line 2.svg" alt="">
-                </div>
-                
-                <div class="inf">
-                    <p>新鮮的草莓加上特製草莓鮮奶油</p>
-                    <p>搭配鬆軟的原味戚風體</p>
-                    <p>口感綿密 甜而不膩</p>
-                </div>
-            </div>
+    </style>
 
-            <a href="dessert-cold.html#onebite" class="pic">
-                <img src="./pic/LINE_ALBUM_220306_30.jpg" alt="">
-            </a>
-        </div>
+</head>
+<body class="dessert-page1">
 
-    </div>
-
-    <!-- 最新甜點第二列 -->
-    <div class="wrap">
+<!-- /////////////////內容///////////////// -->
+    <main>
+        <div class="wrap">
     
-        <div class="head">
-            <div class="num">
-                <p>02</p>
-            </div>
+            <!-- 主要內容 -->
+            <div class="container">
+                <!-- 標題形式2 -->
+                <div class="title-2-1">
+                    <div class="wrap">
+                        <p>:: 常溫甜點 ::</p>
+                    </div>
+                </div>
+                <!-- 分欄畫面 -->
+                <div class="column">
+                        <i class="fa-solid fa-circle-chevron-right dIcon next" id="btn-next"></i>
+                        <i class="fa-solid fa-circle-chevron-left dIcon prev" id="btn-pre" ></i>
+                    <div class="slider">
+                        <ul class="list">
+                            <li>
+                                <div class="pic">
+                                    <img src="./pic/snow.jpg" alt="">
+                                    <img src="./texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
+                                    <div class="transtitle">
+                                        <div class="title-shot">
+                                            <p>人氣熱銷</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inf">
+                                    <h3 class="name">雪Q餅</h3>
+                                    <p>酥香厚實不黏牙的口感，讓您一口接著一口都無法停下來。</p>
+                                    <div class="price">
+                                        <p>NT $ 320~480</p>
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <img src="./pic/ma.jpg" alt="">
+                                    <img src="./texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
+                                </div>
+                                <div  class="inf">
+                                    <h3 class="name">瑪德蓮</h3>
+                                    <p>法國傳統的貝殼形狀小蛋糕，奶油的香氣加上鬆軟的口感，簡單好吃非常受歡迎。</p>
+                                    <div class="price">
+                                        <p>NT $ 55~65</p>
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic">
+                    
+                                    <img src="./pic/soft.jpg" alt="">
+                                    <img src="./texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
+                                </div>
+                                <div class="inf">
+                                    <h3 class="name">軟餅乾</h3>
+                                    <p>有別於一般酥脆的餅乾的既定印象，軟餅乾的口感體濕潤柔軟，加熱後與餅乾完美融合。</p>
+                                    <div class="price">
+                                        <p>NT $ 65~70</p>
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                            </li>
+                            <li>
+                                <div class="pic">
 
-            <div class="title">
-                <img src="./texture/line.svg" alt="">
-                <a href="./dessert-cold.html#onebite">
-                    <h3>草莓伯爵瑪德蓮</h3>
-                </a>
-                <img src="./texture/Line 2.svg" alt="">
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="word">
-                <div class="title">
-                    <img src="./texture/line.svg" alt="">
-                    <a href="./dessert-cold.html#onebite">
-                        <h3>草莓伯爵瑪德蓮</h3>
-                    </a>
-                    <img src="./texture/Line 2.svg" alt="">
+                                    <img src="./pic/soft.jpg" alt="">
+                       
+                                </div>
+                                <div class="inf">
+                                    <h3 class="name">軟餅乾</h3>
+                                    <p>有別於一般酥脆的餅乾的既定印象，軟餅乾的口感體濕潤柔軟，加熱後與餅乾完美融合。</p>
+                                    <div class="price">
+                                        <p>NT $ 65~70</p>
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <img src="./pic/soft.jpg" alt="">
+                                    <img src="./texture/heart1.png" alt="" id="heart" title="加入收藏" class="heart">
+                                </div>
+                                <div class="inf">
+                                    <h3 class="name">軟餅乾</h3>
+                                    <p>有別於一般酥脆的餅乾的既定印象，軟餅乾的口感體濕潤柔軟，加熱後與餅乾完美融合。</p>
+                                    <div class="price">
+                                        <p>NT $ 65~70</p>
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 標題形式2 -->
+                <div class="title-2-1">
+                    <div class="wrap">
+                        <p>:: 冷藏甜點 ::</p>
+                    </div>
                 </div>
                 
-                <div class="inf">
-                    <p>圓圓胖胖外型的瑪德蓮</p>
-                    <p>搭配冬季限定的草莓</p>
-                    <p>扎實而綿密的口感又帶點酸甜的滋味</p>
-                </div>
+                
             </div>
-
-            <a href="dessert-NT.html#moder" class="pic">
-                <img src="./pic/LINE_ALBUM_220306_26.jpg" alt="">
-            </a>
+      
         </div>
+    </main>
 
-    </div>
-     <!-- 最新甜點第三列 -->
-     <div class="wrap">
+    <script src="./js/jquery-3.6.0.js"></script> 
+    <script>
+
+    $(function() {
+    slider();
+    });
+
+    //隨螢幕縮放
+    $(window).resize(function () {
+    slider();
+    });
+
+    function slider() {
+
+    var gNum = 0;		//組數的初始值
+    var dX = 0; 		//水平座標位置
+    var divWidth = $(".slider").width(); 	//外層寬度
+    var ulNum; 						//為總組數 
+    var liLength = $(" .slider .list li ").length; 	//li的數量 所有的圖片數量
+    var ulWidth;
+    var liWidth;
+
     
-        <div class="head">
-            <div class="num">
-                <p>03</p>
-            </div>
 
-            <div class="title">
-                <img src="./texture/line.svg" alt="">
-                <a href="./dessert-cold.html#onebite">
-                    <h3>草莓一口戚風</h3>
-                </a>
-                <img src="./texture/Line 2.svg" alt="">
-            </div>
-        </div>
+    console.log(divWidth)
+    $(".status").html("");
 
-        <div class="container">
-            <div class="word">
-                <div class="title">
-                    <img src="./texture/line.svg" alt="">
-                    <a href="./dessert-cold.html#onebite">
-                        <h3>草莓一口戚風</h3>
-                    </a>
-                    <img src="./texture/Line 2.svg" alt="">
-                </div>
-                
-                <div class="inf">
-                    <p>原本市集/季節限定的草莓口味</p>
-                    <p>即日起到二月底都有在官網限量販售</p>
-                    <p>激發你的甜食味蕾</p>
-                </div>
-            </div>
-          
+        if ($(window).width() < 768) {
+            liWidth = divWidth;	//假設li的寬度為 等於 爸爸寬度 只呈現一個
+            ulNum = liLength;	//假設圖片總數5個 , 只呈現一個
+        }else if ($(window).width() <= 960) {
+            liWidth = divWidth / 2;		//呈現兩個
+            ulNum = liLength  / 2;		//呈現兩個
+        }else if ($(window).width() <= 1200) {
+            liWidth = divWidth / 3;		//呈現兩個
+            ulNum = liLength  / 3;		//呈現兩個
+        }else {
+            liWidth = divWidth / 4;		//呈現四個
+            ulNum = liLength / 4;		//呈現四個
+        }
 
-            <a href="dessert-cold.html#onebite" class="pic">
-                <img src="./pic/one-straw.jpg" alt="">
-            </a>
-        </div>
+        $(".slider .list li").css("width", liWidth);
+        ulWidth = liWidth * liLength;			//ul的寬度
+        $(".slider ul").css("width", ulWidth);
 
-    </div>
+        if (ulNum <= 1) {
+            $(".dIcon.next").hide();
+            $(".dIcon.prev").hide();
+        }else {
+            $(".dIcon.next").show();
+            $(".dIcon.prev").show();
+        }
 
-</div>
+    leftAnimate();
 
+    function leftAnimate() {
+        $(".slider ul").stop().animate({ "left": dX }, 700);
+    }
 
+    $(".next").click(function () {
+        if (gNum < ulNum - 1) {
+        gNum++;
+        dX = gNum * divWidth * -1;
+        } else {
+        gNum = 0;
+        dX = 0;
+        }
+        leftAnimate();
+        showDot(gNum);
+    });
 
+    $(".prev").click(function () {
+        if (gNum > 0) {
+        gNum--;
+        dX = gNum * divWidth * -1;
+        }
+        leftAnimate();
+        showDot(gNum);
+    });
+
+    $(".dot").click(function () {
+        var point = $(this).index();
+        dX = point * divWidth * -1;
+        showDot(point);
+        leftAnimate();
+        });
+    }
+    </script>
+    
 </body>
 </html>
