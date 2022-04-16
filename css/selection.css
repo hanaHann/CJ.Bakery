@@ -1,0 +1,152 @@
+
+/* /////////////////食材嚴選///////////////// */
+.selection .wrap{
+    /* border: 1px solid #000; */
+}
+.selection .container {
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.selection .container .item{
+    /* border: 1px solid #000; */
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.selection .container .item .inf{
+    /* border: 1px solid #000; */
+}
+.selection .container .item p{
+    /* border: 1px solid #000; */
+    font-size:1.2rem;
+    text-align: center;
+    font-weight: 400;
+}
+.selection .container .item .pic p{
+    display: none;
+}
+.selection .container .item:nth-child(2) .pic p,
+.selection .item:nth-child(3) .pic p{
+    bottom:0px;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+.selection .container .item:first-child .pic p,
+.selection .item:nth-child(4) .pic p{
+    top:0%;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+.selection .container .item .pic{
+    aspect-ratio: 4.5 / 3;
+    border-radius: 60px 60px 0 0;
+    margin-top: 20px;
+    position: relative;
+    box-shadow: var(--box-shadowsmall);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.selection .container .item .pic img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.selection .container .item+p{
+    /* border: 1px solid #000; */
+    text-align: center;
+
+}
+
+
+@media screen and (min-width:768px){
+    
+    .selection .container {
+        /* border: 1px solid #000; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+    .selection .container .item{
+        border:3px s olid red;
+        width: 22%;
+        margin-bottom: 40px;
+    }
+    .selection .container .item:nth-last-of-type(odd){
+        margin-top: 120px;
+    }
+    .selection .container .item p{
+        /* border:1px solid red; */
+        font-size:1.2rem;
+        text-align: center;
+        font-weight: 400;
+    }
+    .selection .container .item .pic p{
+        /* border:1px solid red; */
+        width: 100%;
+        text-align: center;
+        font-size: var(--p2-fz);
+        position: absolute;
+        background-color: white;
+        line-height: 30px;
+        opacity: 0;
+        transition: 2s;
+        padding: 5px;
+    }
+    .selection .container .item:nth-child(2) .pic p,
+    .selection .item:nth-child(3) .pic p{
+        bottom:0px;
+        left: 0;
+        right: 0;
+        height: 80px;
+    }
+    .selection .container .item:first-child .pic p,
+    .selection .item:nth-child(4) .pic p{
+        top:0%;
+        left: 0;
+        right: 0;
+        height: 80px;
+    }
+    .selection .container .item .pic{
+        aspect-ratio: 6 / 8;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        box-shadow: var(--box-shadow);
+        margin-bottom: 40px;
+    }
+    .selection .container .item:nth-of-type(1) .pic{
+        border-radius:5% 5% 66% 12% / 5% 5% 46% 12%  ;
+    }
+    .selection .container .item:nth-of-type(2) .pic{
+        border-radius:40% 40% 5% 5% / 40% 40% 5% 5%;
+    }
+    .selection .container .item:nth-of-type(3) .pic{
+        border-radius:5% 5% 40% 40% / 5% 5% 40% 40%;
+    }
+    .selection .container .item:nth-of-type(4) .pic{
+        border-radius:12% 66% 5% 5% / 12% 46% 5% 5% 
+    }
+    .selection .container .item .pic p{
+        display: block;
+    }
+    .selection .container .item+p{
+        display: none;
+    }
+    .selection .container .item .pic:hover p{
+        opacity: .8;
+    }
+    
+
+}
+
+
+
