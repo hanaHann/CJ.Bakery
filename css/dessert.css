@@ -141,15 +141,6 @@ body{
     color:var(--imcolor2);
     transition: .2s;
 }
-.dessert-page1 .container .list .heart{
-    /* border: 1px solid #000; */
-    width: 27px;
-    height: 25px;
-    position: absolute;
-    top:5%;
-    left:5%;
-    cursor: pointer;
-}
 .dessert-page1 .container  ul li .title-shot{
     /* border: 1px solid #000; */
     position: absolute;
@@ -283,14 +274,6 @@ body{
         font-size: 1.4rem;
         color:var(--imcolor2);
         transition: .2s;
-    }
-    .dessert-page1 .container .list .heart{
-        /* border: 1px solid #000; */
-        width: 37px;
-        height: 35px;
-        position: absolute;
-        top:2%;
-        left:2%;
     }
     .dessert-page1 .container  ul li .title-shot{
         /* border: 1px solid #000; */

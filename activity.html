@@ -55,18 +55,28 @@
             TOP
         </a>
     </div>
-<!-- /////////////////導覽列///////////////// -->
+<!-- /////////////////導覽列///////////////// -->  
     <h1>CJ.Bakery</h1>
     <nav>
+        <div class="logo">
+            <a href="/index.html"><img src="./texture/logo4.png" alt=""></a>
+        </div>
+        
         <div class="wrap">
-            <div class="logo">
-                <a href="index.html"><img src="./texture/logo4.png" alt=""></a>
-            </div>
-            
+            <input type="checkbox" id="check">
+
+            <label for="check">
+                <!-- <i class="fa-solid fa-bars"></i> -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        
+            <!-- 電腦版選單 -->
             <ul>
                 <li>
                     <a href="">
-                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
                     </a>
                 </li>
 
@@ -83,197 +93,279 @@
                 </li>
             
             </ul>
-
+            <!-- 手機版選單 -->
             <ul>
-                <li class="en">
-                    <a href="#">NEW IN</a>
+                <div class="right-icon">
+                    <a href="https://www.instagram.com/cj.bakery_/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://line.me/R/ti/p/@054pbzqi">
+                        <i class="fa-brands fa-line"></i>
+                    </a>
+                </div>
+                <li>
+                    <a href="index.html#new-dessert"  class="nav-a" id="newIn">NEW IN</a>
                 </li>
-                <li class="ch">
-                    <a href="index.html#new-dessert" >最新甜點</a>
+                <li>
+                    <a href="index.html#hot-dessert"  class="nav-a" id="hot">HOT</a>
                 </li>
-
-                <li  class="en">
-                    <a href="#">HOT</a>
+                <li>
+                    <a href="dessert.html"  class="nav-a" id="dessert">DESSERT</a>
                 </li>
-                <li class="ch">
-                    <a href="index.html#hot-dessert" >熱賣甜點</a>
+                <li>
+                    <a href="index.html#story" class="nav-a" id="story-title" >STORY</a>
                 </li>
-
-                <li  class="en">
-                    <a href="#">DESSERT</a>
+                <li>
+                    <a href="selection.html" class="nav-a" id="selection">SELECTION</a>
                 </li>
-                <li class="ch">
-                    <a href="dessert.html">甜點一覽</a>
+                <li>
+                    <a href="notice.html" class="nav-a" id="notice">NOTICE</a>
                 </li>
-
-                <li  class="en">
-                    <a href="#" >STORY</a>
-                </li>
-                <li class="ch">
-                    <a href="./index.html#story" >關於我們</a>
-                </li>
-
-                <li  class="en">
-                    <a href="#">SELECTION</a>
-                </li>
-                <li class="ch">
-                    <a href="selection.html">食材嚴選</a>
-                </li>
-
-                <li  class="en">
-                    <a href="#">NOTICE</a>
-                </li>
-                <li  class="ch">
-                    <a href="notice.html" >訂購事項</a>
-                </li>
-
-                <li  class="en">
-                    <a href="#">ACTIVITY</a>
-                </li>
-                <li  class="ch">
-                    <a href="activity.html" >最新活動</a>
+                <li>
+                    <a href="activity.html" class="nav-a" id="activity">ACTIVITY</a>
                 </li>
             </ul>
         </div>
     </nav>
+    <script src="./js/nav.js"></script>
+    <!--最新活動－標題-->
+    <h2>
+        <div class="title-1">
+            <div class="line"></div>
+            <div class="middle">
+                <p>ACTIVITY</p>
+                <p>最新活動</p>
+            </div>
+            <div class="line"></div>
+        </div>
+    </h2>
 <!-- /////////////////內容///////////////// -->
     <main>
         <div class="wrap">
-            <!-- 標題形式1 -->
-        <h2>
-            <div class="title-1">
-                <div class="wrap">
-                    <div class="title">
-                        <div class="line"></div>
-                        <div class="middle">
-                            <p>ACTIVITY</p>
-                            <p>最新活動</p>
+            <div class="container">
+                <div class="banner">
+                    <div class="pic">
+                        <div class="pic-item">
+
                         </div>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </h2>
-
-        <div class="container">
-            <div class="banner">
-                <div class="pic">
-                    <div class="pic-item">
-
-                    </div>
-                    <div class="inf">
-                        <div class="num">01</div>
-                        <h3>盒子戚風上市中</h3>
-                    </div>
-                    <a href="#" class="btn-3">MORE</a>
-                </div>
-            </div>
-
-            
-
-            <div class="item">
-                
-                <div class="box">
-                    <div class="pic">
-                        
-                    </div>
-                    <div class="inf">
-                        <h3>簡簡聯名禮盒4/9<br>準時開賣</h3>
-                        <div class="describe">
-                            <p>小熊餅乾*2 / 一口戚風*1 <br>/ 達克瓦滋*2 / 瑪德蓮*1
-                            <br></p>
-                            <div class="detail">
-                            與全台第一個甜點電商平台聯名合作推出之「達克瓦滋」禮盒，一口氣嚐遍來自台北、嘉義、台南、高雄、花蓮...等獨具風格的8家人氣甜點名店，獻給在家安心防疫，同時懷念在各個甜點店逗留渡過午後時光的你！
-                            
-                            </div>
+                        <div class="inf">
+                            <div class="num">01</div>
+                            <h3>盒子戚風上市中</h3>
                         </div>
-                        
                         <a href="#" class="btn-3">MORE</a>
                     </div>
-                    <div class="num">02</div>
-                </div>
-
-                <div class="box">
-                    <div class="pic">
-                        
-                    </div>
-                    <div class="inf">
-                        <h3>5/25台北圓山甜點市集<br>開始報名</h3>
-
-                        <a href="#" class="btn-3">MORE</a>
-                    </div>
-                    <div class="num">03</div>
-                </div>
-
-
-                <div class="box">
-                    <div class="pic">
-                        
-                    </div>
-                    <div class="inf">
-                        <h3>草莓系列甜點<br>限時限量販售中</h3>
-                
-                        <a href="#" class="btn-3">MORE</a>
-                    </div>
-                    <div class="num">03</div>
                 </div>
 
                 
 
-                
+                <div class="item">
                     
+                    <div class="box">
+                        <div class="pic">
+                            
+                        </div>
+                        <div class="inf">
+                            <h3>簡簡聯名禮盒4/9<br>準時開賣</h3>
+                            <div class="describe">
+                                <p>小熊餅乾*2 / 一口戚風*1 <br>/ 達克瓦滋*2 / 瑪德蓮*1
+                                <br></p>
+                                <div class="detail">
+                                與全台第一個甜點電商平台聯名合作推出之「達克瓦滋」禮盒，一口氣嚐遍來自台北、嘉義、台南、高雄、花蓮...等獨具風格的8家人氣甜點名店，獻給在家安心防疫，同時懷念在各個甜點店逗留渡過午後時光的你！
+                                
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="btn-3">MORE</a>
+                        </div>
+                        <div class="num">02</div>
+                    </div>
+
+                    <div class="box">
+                        <div class="pic">
+                            
+                        </div>
+                        <div class="inf">
+                            <h3>5/25台北圓山甜點市集<br>開始報名</h3>
+
+                            <a href="#" class="btn-3">MORE</a>
+                        </div>
+                        <div class="num">03</div>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="pic">
+                            
+                        </div>
+                        <div class="inf">
+                            <h3>草莓系列甜點<br>限時限量販售中</h3>
+                    
+                            <a href="#" class="btn-3">MORE</a>
+                        </div>
+                        <div class="num">03</div>
+                    </div>
+
+                    
+
+                    
+                        
+                </div>
             </div>
-        </div>
-    
         </div>
 
     </main>
+<!-- /////////////////IG貼文///////////////// -->
+    <div class="ig-post">
+        <div class="wrap">
+            <a href="">
+                <div class="pic">
+                    <img src="./pic/LINE_ALBUM_220317_36.jpg" alt="">
+
+                </div>
+            </a>
+            <a href="">
+                <div class="pic">
+                    <img src="./pic/LINE_ALBUM_220306_15.jpg" alt="">
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="pic">
+                    <img src="./pic/LINE_ALBUM_220306_4.jpg" alt="">
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="pic">
+                    <img src="./pic/LINE_ALBUM_220317_41.jpg" alt="">
+                </div>
+            </a>
+            <a href="">
+                <div class="pic">
+                    <img src="./pic/LINE_ALBUM_220317_20.jpg" alt="">
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="pic">
+                    <img src="./pic/LINE_ALBUM_220317_5.jpg" alt="">
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="follow">
+                    <i class="fab fa-instagram"></i>
+                    <div class="inf">
+                        <p>#follow us</p>
+                        <p>#CJ.Bakery</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="pic">
+                    <img src="./pic/LINE_ALBUM_220317_1.jpg" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+
 <!-- /////////////////footer///////////////// -->
 
     <footer>
-        <div class="container">
-            <div class="bar">
-                <a href="#new-dessert">NEW IN</a>
-                <p>|</p>
-                <a href="#hot-dessert">HOT</a>
-                <p>|</p>
-                <a href="./dessert.html">SELL</a>
-                <p>|</p>
-                <a href="#story">ABOUT</a>
-                <p>|</p>
-                <a href="selection.html">SELECTION</a>
-                <p>|</p>
-                <a href="./notice.html">NOTICE</a>
-                <p>|</p>
-                <a href="./notice.html">ACTIVITY</a>
-            </div>
-            <div class="inf">
-                <div class="ig">
-                    <a href="https://www.instagram.com/cj.bakery_/" target=_blank>
-                        <i class="fab fa-instagram"></i>
+        <div class="wrap">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <p>首頁</p>
                     </a>
-                    <a href="https://www.instagram.com/cj.bakery_/" target=_blank class="some">Instagram</a>
-                </div>
-                <div class="line">
-                    <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank>
-                        <i class="fa-brands fa-line"></i>
+                </li>
+                <li>
+                    <a href="./dessert.html">
+                        <i class="fa-solid fa-cookie"></i>
+                        <p>甜點一覽</p>
                     </a>
-                    <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank class="some">
-                        Line
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p>購物車</p>
                     </a>
-                </div>
-            </div>
+                </li>
+            
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>我的收藏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <p>會員專區</p>
+                    </a>
+                </li>
+            
+            </ul>
+            <ul class="nav">
+                <li>
+                    <a href="#new-dessert">NEW IN</a>
+                </li>
+                <li>
+                    <p>|</p>
+                </li>
+                <li>
+                    <a href="#hot-dessert">HOT</a>  
+                </li>
+                <li>
+                    <p>|</p>
+                </li>
+                <li>
+                    <a href="dessert.html">SELL</a>
+                </li>
+                <li>
+                    <p>|</p>
+                </li>
+                <li>
+                    <a href="#story">ABOUT</a>
+                </li>
+                <li>
+                    <p>|</p>
+                </li>
+                <li>
+                    <a href="selection.html">SELECTION</a>
+                </li>
+                <li>
+                    <p>|</p>
+                </li>
+                <li>
+                    <a href="notice.html">NOTICE</a>
+                </li>
+                <li>
+                    <p>|</p>
+                </li>
+                <li>
+                    <a href="notice.html">ACTIVITY</a>
+                </li>
+                
+            </ul>
+            
 
-            <div class="box">
+            <div class="cj">
                 <p>©CJ.Bakery</p>
-            </div>
-
-            <div class="final">
-                <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理。</p>
+                <a href="https://www.instagram.com/cj.bakery_/" target=_blank>
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://line.me/R/ti/p/@054pbzqi" target=_blank>
+                    <i class="fa-brands fa-line"></i>
+                </a>
             </div>
         </div>
+        <div class="final">
+            <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理。</p>
+        </div>
     </footer>
-
 
 
 

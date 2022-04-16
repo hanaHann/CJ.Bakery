@@ -1529,4 +1529,25 @@ form .fa-cart-shopping{
     }  
 }
 
-
+/* ////////////////愛心收藏///////////////// */
+.dessert-page1 .container .list .heart,
+.dessert-page2 .container .item .heart{
+    /* border: 1px solid #000; */
+    width: 27px;
+    height: 25px;
+    position: absolute;
+    top:5%;
+    left:5%;
+    cursor: pointer;
+}
+@media screen and (min-width:768px){
+    .dessert-page1 .container .list .heart,
+    .dessert-page2 .container .item .heart{
+        /* border: 1px solid #000; */
+        width: 37px;
+        height: 35px;
+        position: absolute;
+        top:2%;
+        left:2%;
+    }
+}

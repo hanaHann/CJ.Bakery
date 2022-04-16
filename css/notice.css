@@ -27,112 +27,162 @@
 
 /* /////////////////訂購步驟///////////////// */
 
-.notice .step .container{
+.notice .step .wrap{
     /* border: 1px solid #000; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     position: relative;
 }
-.notice .step .container .card{
+.notice .step .wrap .card{
     /* border: 1px solid #000; */
     border-radius: 40px;
     width: 100%;
-    aspect-ratio: 1 / 1.2;
+    margin-bottom: 15%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     overflow: hidden;
     transition: .4s;
-    margin-bottom: 15%;
 }
-.notice .step .container .card .pic{
+.notice .step .wrap .card .pic{
     /* border: 1px solid #000; */
     width: 100%;
+    aspect-ratio: 2 / 1.2;
     position: relative;
     overflow: hidden;
 }
-.notice .step .container .card .pic img{
+.notice .step .wrap .card .pic img{
     width: 100%;
     height: 100%;
-    /* position: absolute; */
     object-fit: cover;
 }
-.notice .step .container .card  .title{
+.notice .step .wrap .card  .title{
     position: absolute;
     width: 100%;
     padding: 15px 20px;
-    background-color: white;
-    text-align: center;
     font-size: 1rem;
-    opacity: .8;
-    color:var(--imcolor1);
     font-weight: 500;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    color:var(--imcolor1);
+    background-color: white;
+    opacity: .8;
 }
-
-.notice .step .container .card:first-of-type  .title{
+.notice .step .wrap .card:first-of-type  .title{
     top:40px;
 }
-
-.notice .step .container .card:nth-of-type(2)  .title{
+.notice .step .wrap .card:nth-of-type(2)  .title{
     top:50%;
     transform: translateY(-50%);
 }
-
-.notice .step .container .card:nth-of-type(3)  .title{
+.notice .step .wrap .card:nth-of-type(3)  .title{
     bottom:40px;
 }
-
-.notice .step .container .card .inf{
-    border: 1px solid #000;
-    aspect-ratio: 1 / 1.2;
-    background-color: white;
-    padding: 30px 30px 50px 30px;
-    flex-grow: 1;
-    transition:.5s;
-    animation: opcaity 2s 1s;
+.notice .step .wrap .card .inf{
     border-radius: 40px;
-    position: absolute;
+    padding: 30px 30px 50px 30px;
+    transition:.5s;
+    background-color: white;
     object-fit: cover;
-    right:-10000px;
-    display: none;
     transition: 2s;
+    flex-grow: 1;
 }
-
-.notice .step .container .card .show{
+.notice .step .wrap .card .show{
     right:0px;
     display: block;
     transition: 2s;
 }
-
-
-
-.notice .step .container .card .inf :first-child{
+.notice .step .wrap .card .inf :first-child{
     /* border: 1px solid #000; */
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size:1rem;
+    /* font-size:1rem; */
     margin-bottom: 20px;
     font-weight: 400;
 }
-
-.notice .step .container .card .inf :nth-child(2){
-    opacity: 0.2;
+.notice .step .wrap .card .inf :nth-child(2){
     transition: 1s;
+    color:var(--w2color);
 }
-.notice .step .container .card:hover > .inf p:nth-of-type(2){
-    /* border: 1px solid #000; */
-    opacity: 1;
-}
-.notice .step .container .card .inf :first-child{
+.notice .step .wrap .card .inf :first-child{
     text-align: center;
 }
+
+@media screen and (min-width:768px){
+   
+    .notice .step .wrap .card{
+        aspect-ratio: 2.8  / 1;
+        flex-direction: row;
+        margin-bottom: 5%;
+    }
+    .notice .step .wrap .card .pic{
+        width: 40%;
+        transition: 1s;
+    }
+    .notice .step .wrap .card .pic img{
+        position: absolute;
+    }
+    .notice .step .wrap .card .title{
+        padding: 15px 70px;
+        font-size: 1.8rem;
+    }
+    .notice .step .wrap .card .inf{
+        border-radius: 0 40px 40px 0;
+        width: 60%;
+        position: relative;
+        right:0;
+        transition:.5s;
+        animation: opcaity 2s 1s;
+        overflow:scroll;
+        object-fit: cover;
+    }
+    .notice .step .wrap .card .inf :first-child{
+        font-size:1rem;
+    }
+    .notice .step .wrap .card .inf :nth-child(2){
+        font-size: .9rem;
+    }
+    .notice .step .wrap .card:hover{
+        box-shadow: var(--box-shadow);
+    }
+    .notice .step .wrap .card .inf :first-child{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .notice .step .wrap .card:first-of-type  .title{
+        top:80px;
+    }
+    .notice .step .wrap .card:nth-of-type(2)  .title{
+        top:50%;
+        transform: translateY(-50%);
+    }
+    .notice .step .wrap .card:nth-of-type(3)  .title{
+        bottom:80px;
+    }
+
+}
+
+@media screen and (min-width:1200px){
+    .notice .step .wrap .card .title{
+        font-size: 2rem;
+    }
+    .notice .step .wrap .card .inf :first-child{
+        font-size:1rem;
+    }
+    .notice .step .wrap .card .inf :nth-child(2){
+        font-size: 1.2rem;
+    }
+    .notice .step .wrap .card .inf :first-child{
+        font-size: 1.8rem;
+    }
+
+}
+
 /* /////////////////FAQ///////////////// */
 
 .faq .wrap {
     /* border: 1px solid #000; */
     margin-bottom: 8%;
 }
-
 .faq .wrap h2{
     /* border: 1px solid #000; */
     font-size: 4rem;
@@ -141,7 +191,6 @@
     text-shadow: var(--box-shadowsmall);
     
 }
-
 .faq .wrap h2::after{
     content:"";
     background-color: var(--imcolor1);
@@ -151,8 +200,6 @@
     bottom: 0;
     left:0;
 }
-
-
 .faq .wrap .item{
     border-radius: 20px;
     /* background-color: var(--color3); */
@@ -162,29 +209,22 @@
     margin: 3% 0 0 0 ;
     position: relative;
 }
-
-
 .faq .wrap input{
     display: none;
     z-index: -10;
 }
-
 .faq .wrap .inf-hidden{
     display: none;
     padding: 30px;
     width: 98%;
     /* background-color:rgba(231,212,171,.9 );  */
     background-color: rgba(255, 255, 255, 0.8);
-
 }
-
 .faq .wrap .item p:first-of-type{
     color:var(--imcolor1);
     font-size: 1.2rem;
     font-weight: 400;
 }
-
-
 .faq .wrap .item form i{
     /* border: 1px solid #000; */
     position: absolute;
@@ -194,19 +234,14 @@
     font-size: 1.5rem;
     color:var(--imcolor1);
 }
-
 .faq .wrap input:checked ~.inf-hidden {
     /* border: 1px solid #000; */
     display: block;
     margin: auto;
-
 }
-
 .faq .wrap .item .inf-hidden{
     color:var(--imcolor1);
 }
-
-
 @media screen and (min-width:768px){
     .notice{
         width: 100%;
@@ -233,110 +268,6 @@
         right:0;
         top:1200px;
         
-    }
-    
-    /* /////////////////訂購步驟///////////////// */
-    .notice .step{
-        /* border: 1px solid #000; */
-    }
-    
-    .notice .step .container{
-        /* border: 1px solid #000; */
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .notice .step .container .card{
-        /* border: 1px solid #000; */
-        border-radius: 40px;
-        width: 31%;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        transition: .4s;
-     
-    }
-    
-    .notice .step .container .card:hover{
-        /* border: 1px solid #000; */
-        box-shadow:var(--box-shadow);
-    }
-    
-    
-    
-    .notice .step .container .card .pic{
-        /* border: 1px solid #000; */
-        aspect-ratio: 6 / 7.5;
-            /* width: 100%;
-            padding-bottom: 99%; */
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .notice .step .container .card .pic img{
-        width: 100%;
-        height: 100%;
-        /* position: absolute; */
-        object-fit: cover;
-    }
-    
-    .notice .step .container .card  .title{
-        position: absolute;
-        width: 100%;
-        padding: 15px 20px;
-        background-color: white;
-        text-align: center;
-        font-size: 2rem;
-        opacity: .8;
-        color:var(--imcolor1);
-        font-weight: 500;
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-    }
-    
-    .notice .step .container .card:first-of-type  .title{
-        top:40px;
-    }
-    
-    .notice .step .container .card:nth-of-type(2)  .title{
-        top:50%;
-        transform: translateY(-50%);
-    }
-    
-    .notice .step .container .card:nth-of-type(3)  .title{
-        bottom:40px;
-    }
-    
-    .notice .step .container .card .inf{
-        background-color: white;
-        padding: 30px 30px 50px 30px;
-        flex-grow: 1;
-        transition: .5s;
-        animation: opcaity 2s 1s ;
-     
-    }
-    
-    .notice .step .container .card .inf :first-child{
-        /* border: 1px solid #000; */
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        font-weight: 400;
-    
-    }
-    
-    .notice .step .container .card .inf :nth-child(2){
-        opacity: 0.2;
-        transition: 1s;
-    }
-    
-    .notice .step .container .card:hover > .inf p:nth-of-type(2){
-        /* border: 1px solid #000; */
-        opacity: 1;
-    }
-    
-    
-    .notice .step .container .card .inf :first-child{
-        text-align: center;
     }
     
     /* /////////////////FAQ///////////////// */
