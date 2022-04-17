@@ -58,6 +58,10 @@
     bottom:10%;
     background-color: white;
 }
+.activity .container .banner .pic .btn-3,
+.activity .item .inf .btn-3{
+    font-size: 1rem;
+}
 @media screen and (min-width:768px){
     .activity{
         /* border: 1px solid #000; */
@@ -80,8 +84,13 @@
         font-size: 4rem;
     }
     .activity .container .banner .inf h3{
+        border: 1px solid #000;
         font-size: 1.8rem;
     }
+    .activity .container .banner .pic .btn-3,
+    .activity .item .inf .btn-3{
+    font-size: 1.2rem;
+}
 
 }
 
@@ -108,7 +117,7 @@
 }
 .activity .container .item .box .pic{
     width: 100%;
-    padding-bottom: 80%;
+    padding-bottom: 65%;
     border-radius: 40px;
     box-shadow: var(--box-shadowsmall);
 }
@@ -126,9 +135,10 @@
     opacity: .8 ;
 }
 .activity .container .item .box .inf{
+    /* border: 2px solid #000; */
     width: 100%;
     height: 100%;
-    padding: 10% 4%;
+    padding: 18% 4%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -138,7 +148,7 @@
 }
 .activity .container .item .box .inf h3{
     /* border: 1px solid #000; */
-    margin: 60px 25px;
+    margin-bottom: 10px;
     font-size: 1.2rem;
     text-align: center;
     font-weight: 500;
@@ -174,6 +184,7 @@
   display: none;
 }
 
+
 @media screen and (min-width:768px){
     .activity .container .item {
         display: grid;
@@ -194,7 +205,11 @@
     .activity .container .item .box .pic{
         box-shadow: var(--box-shadow);
     }
+    .activity .container .item .box .inf{
+        padding: 10% 4%;
+    }
     .activity .container .item .box .inf h3{
+        margin: 60px 25px;
         font-size: 1.8rem;
     }
     .activity .container .item .box:first-of-type .inf p{
