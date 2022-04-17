@@ -60,7 +60,7 @@
     position: absolute;
     width: 100%;
     padding: 15px 20px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: center;
@@ -95,7 +95,7 @@
 .notice .step .wrap .card .inf :first-child{
     /* border: 1px solid #000; */
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    /* font-size:1rem; */
+    font-size:1.2rem;
     margin-bottom: 20px;
     font-weight: 400;
 }
@@ -187,8 +187,8 @@
     margin-bottom: 8%;
 }
 .faq .wrap h2{
-    /* border: 1px solid #000; */
     font-size: 4rem;
+    font-weight: 500;
     position: relative;
     color:var(--imcolor1);
     text-shadow: var(--box-shadowsmall);
