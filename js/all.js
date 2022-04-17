@@ -173,10 +173,12 @@ window.addEventListener("load",function(){
         dessertContainers[0].style.display="block";
         dessertBtns[i].addEventListener("click",function(){
             this.style.backgroundColor="white";
+            this.style.border="2px solid #BD8B65";
             dessertContainers[i].style.display="block";
                 for(let j=0; j<dessertBtns.length; j++){
                     if( i != j){
                         dessertBtns[j].style.backgroundColor="transparent";
+                        dessertBtns[j].style.border="1px solid #d2b48d";
                         dessertContainers[j].style.display="none";
                     }
     

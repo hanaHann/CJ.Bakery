@@ -125,14 +125,17 @@
         padding: 15px 70px;
         font-size: 1.8rem;
     }
+    
     .notice .step .wrap .card .inf{
+        /* border: 1px solid #000; */
         border-radius: 0 40px 40px 0;
         width: 60%;
         position: relative;
         right:0;
         transition:.5s;
         animation: opcaity 2s 1s;
-        overflow:scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
         object-fit: cover;
     }
     .notice .step .wrap .card .inf :first-child{

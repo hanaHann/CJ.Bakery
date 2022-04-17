@@ -31,7 +31,6 @@ body{
     background-color: var(--color2);
     color: white;
     border-radius: 18px;
-    padding: 5px 10px;
     margin: 10px;
     font-size: 1rem;
     cursor: pointer;
