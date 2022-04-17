@@ -45,18 +45,18 @@
 
 
 <!-- /////////////////側邊按鈕///////////////// -->
-        <div class="btn-aside">
-            <a href="https://www.instagram.com/cj.bakery_/" class="btn-aside-1">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://line.me/R/ti/p/@054pbzqi" class="btn-aside-2">
-                <i class="fa-brands fa-line"></i>
-            </a>
-            <a href="#" class="btn-aside-3">
-                <i class="fa-solid fa-chevron-up"></i>
-                TOP
-            </a>
-        </div>
+    <div class="btn-aside">
+        <a href="https://www.instagram.com/cj.bakery_/" class="btn-aside-1">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://line.me/R/ti/p/@054pbzqi" class="btn-aside-2">
+            <i class="fa-brands fa-line"></i>
+        </a>
+        <a href="#" class="btn-aside-3">
+            <i class="fa-solid fa-chevron-up"></i>
+            TOP
+        </a>
+    </div>
 <!-- /////////////////導覽列///////////////// -->  
     <h1>CJ.Bakery</h1>
     <nav>
@@ -518,7 +518,7 @@
                             <div class="btn-5-1" action="">
                                 <label for=""> </label>
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                <button>加入購物車</button>
+                                <button class="cart">加入購物車</button>
                             </div>
                         </div>
                     </div>
@@ -527,7 +527,7 @@
         </div>
 
     </main>  
-    <!-- ///////////////其他問題///////////////// -->
+    <!-- ///////////////表單///////////////// -->
     <div class="question" id="form" > 
         <div class="wrap">
             <!-- 標題形式2 -->
@@ -538,12 +538,12 @@
                 <p>若有需客製化蛋糕，請填寫表單，會有專人為您聯繫。</p>
             </div>
             <form action="">
-                <div class="date">
+                <div class="area date">
                     <label for="">預定日期</label>
                     <input type="date">
                 </div>
 
-                <div class="cake-inf">
+                <div class="area cake-inf">
                     <div class="flavor">
                         <p>蛋糕口味</p>
                         <select name="" id="">
@@ -576,7 +576,7 @@
                     </div>
                 </div>
 
-                <div class="person-inf">
+                <div class="area person-inf">
                     <div class="inf">
                         <label for="">您的姓名</label>
                         <input type="text" placeholder="必填">
@@ -593,7 +593,7 @@
                     </div>
 
                 </div>
-                <div class="textarea">
+                <div class="area textarea">
                     <label for="">其他需求</label>
                     <textarea name="" id="" cols="0" rows="0">
                     </textarea>
@@ -792,6 +792,46 @@
 
 <!-- /////////////////購買燈箱///////////////// -->
 <div id="lightbox-bcg"></div>
+<div class="lightbox" id="lightbox">
+    <i class="fa-solid fa-xmark" id="closebtn"></i>
+    <div class="frame">
+ 
+        <div class="pic">
+            <img src="./pic/snow-ori.jpg" id="lightbox-img">
+        </div>
+        <div class="inf">
+            <h4>雪Q餅</h4>
+            <p>酥香厚實不黏牙的口感，讓您一口接著一口都無法停下來。</p>
+            <div class="flavor">
+                <p>口味</p>
+                <div class="flavor-opt">
+                    <button>經典蔓越莓</button>
+                    <button>OREO可可</button>
+                </div>
+            </div>
+            <div class="num">
+                <p>數量</p>
+                <div class="num-block">
+                    <i class="fa-solid fa-minus" id="fa-minus"></i>
+                    <input type="text" value="1" readonly="readonly" id="lightbox-num">
+                    <i class="fa-solid fa-plus" id="fa-plus"></i>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="detail-price">
+                    <p class="price">NT$</p>
+                    <input type="text" value="320" readonly="readonly" id="lightbox-price">
+                </div>
+                <div class="btn-5-1" action="">
+                    <label for=""> </label>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <button id="lightbox-joincart">加入購物車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
 <!-- /////////////////加入收藏燈箱///////////////// -->
     <div class="add-heart" id="add-heart">
         <i class="fa-solid fa-check"></i>

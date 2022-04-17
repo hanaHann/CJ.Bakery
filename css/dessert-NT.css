@@ -442,6 +442,11 @@
         width: 100px;
         font-size: 1.6rem;
     }
+    .dessert-page2 main .container .item .inf .btn-5-1{
+        /* border: 1px solid #000; */
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
 }
 
 
@@ -500,98 +505,92 @@
     margin-bottom: 8%;
     margin-top: 2%;
 }
-
 .question form{
     /* border: 1px solid #000; */
-    background-color: white;
     border-radius: 40px;
-    box-shadow: var(--box-shadow);
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    background-color: white;
+    box-shadow: var(--box-shadowsmall);
 }
-
-.question form .cake-inf,
-.question form .date,
-.question form .person-inf,
-.question form .textarea{
+.question form .area{
     /* border: 1px solid blue; */
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 10px;
     display: flex;
-}    
-
-
-.question form  .cake-inf .flavor,.question form .person-inf .inf{
+    flex-direction: column;
+    gap:15px;
+}  
+.question form .date{
     /* border: 1px solid #000; */
-    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:0;
+}  
+.question form .textarea{
+    gap:0;
+}
+.question form  .cake-inf .flavor,
+.question form .person-inf .inf{
+    /* border: 1px solid #000; */
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
-
-.question form label,.question form p{
-    /* border: 1px solid red; */
-    width: 80px;
-    padding: 0 5px 0 0;
-    font-size: 1rem;
+.question form input,
+.question form select,
+.question form textarea{
+    border: 2px solid var(--color2);
+    border-radius: 15px;
+    height: 35px;
+    background-color: white;
+    padding: 8px;
+    outline: none;
+    color:var(--color3);
+    flex-grow: 1;
+}
+.question input::-webkit-input-placeholder, .question textarea::-webkit-input-placeholder{
+    color:var(--color3);
+    padding: 5px;
+}
+.question form textarea{
+    resize: none;
+    /* width: 100%; */
+    height: 100px; 
+    display: flex;
+    flex-direction: column;
+}
+.question form .area p,
+.question form .area label{
+    padding-right:10px;
+    font-size: 0.9rem;
     font-weight: 300;
     letter-spacing: .1em;
     text-indent: 0.1em;
     line-height: 1.8em;
     color:var(--wcolor);
-
-}
-
-.question form input,.question form select,.question form textarea{
-    width: 160px;
-    border: 2px solid var(--color2);
-    border-radius: 10px;
-    outline: none;
-    padding: 5px;
-    color:var(--color3);
-}
-
-.question input::-webkit-input-placeholder, .question textarea::-webkit-input-placeholder{
-    color:var(--color3);
-    padding: 5px;
-}
-
-.question form textarea{
-    resize: none;
-    width: calc(100% - 80px);
-    height: 100px; 
-    display: flex;
-    flex-direction: column;
-}
-
+} 
 .question button{
     border:0;
     background-color: transparent;
     margin: auto;
 }
-
-
 .question button .btn-1{
     padding: 3px 15px;
     border-radius: 15px;
     font-size: 1.2rem;
 }
-
-
 .question .title-2-1 .wrap p{
     color:var(--imcolor1)
 }
-
 .question .title-2-1 :last-child{
     text-align: center;
     margin-bottom: 2%;
 }
-
-
-
-
 .introduce .pic .btn-control{
     position: absolute;
     z-index: 20;
@@ -609,7 +608,60 @@
     margin: 0 6px;
     accent-color:var(--color3);
 }
-.introduce .pic .btn-control span:hover{
-    background-color: var(--color3);
-}
 
+@media screen and (min-width:768px){
+    .question form .area{
+        gap:0;
+        flex-direction: row;
+        align-items: center;
+    }    
+    .question form .cake-inf,
+    .question form .person-inf{
+        width: 100%;
+        justify-content: space-between;
+        gap:10px;
+    }
+    .question .flavor ,
+    .question .inf{
+        width: calc(100 / 3 * 100%);
+    }
+    .question form .cake-inf p,
+    .question form .person-inf label{
+        width: 90px;
+    }
+    .question form .area p,
+    .question form .area label{
+        font-size: 1rem;
+    } 
+    .question form .cake-inf select,
+    .question form .person-inf input{
+        width: calc(33.3333% - 90px);
+    }
+    .question form .date label,
+    .question form .textarea label{
+        width: 90px;
+    }
+
+    .introduce .pic .btn-control span:hover{
+        background-color: var(--color3);
+    }
+    
+}
+@media screen and (min-width:1200px){
+    .question form .area{
+        margin-bottom: 25px;
+    }   
+    .question form{
+        box-shadow: var(--box-shadow);
+    }
+    .question form input,
+    .question form select,
+    .question form textarea{
+        height: 45px;
+    }
+    .introduce .pic .btn-control span:hover{
+        background-color: var(--color3);
+    }
+
+
+} 

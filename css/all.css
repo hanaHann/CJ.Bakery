@@ -948,8 +948,6 @@ h2 .title-1 .middle p:last-child{
     /* border: 1px solid rgb(49, 46, 46); */
     margin: auto;
     width: 100%;
-    margin-bottom: 1%;
-    margin-top: 15%;;
 }
 .title-2-1 .wrap,.title-2-2 .wrap{
     /* background-color: var(--color3); */
@@ -1305,7 +1303,6 @@ form .fa-cart-shopping{
     /* border: 1px solid #000; */
     width: 100%;
     background-color:var(--color3);
-    /* padding: 35px 10px 8px 10px; */
     margin-top: 50px;
     margin-bottom: 100px;
 }
@@ -1351,6 +1348,9 @@ form .fa-cart-shopping{
     text-indent: .1rem;
     transition: 1s;
 }
+.ig-post .pic::after{
+    content:"查看貼文";
+}
 .ig-post .follow i , .ig-post .follow .inf {
     position: absolute;
     color:white;
@@ -1373,6 +1373,10 @@ form .fa-cart-shopping{
     font-weight: 400;
 }
 @media screen and (min-width:768px){
+    .ig-post {
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
     .ig-post .wrap {
         /* border: 1px solid #000; */
         grid-template-columns: 1fr 1fr 1fr;
@@ -1412,6 +1416,9 @@ form .fa-cart-shopping{
         text-align:center;
         font-size: 1.2rem;
         transition: background-color 1s;
+    }
+    .ig-post .pic::after{
+        content:"";
     }
     .ig-post .pic:hover::after{
         content:"查看貼文";
@@ -1544,10 +1551,34 @@ form .fa-cart-shopping{
     .dessert-page1 .container .list .heart,
     .dessert-page2 .container .item .heart{
         /* border: 1px solid #000; */
-        width: 37px;
-        height: 35px;
+        width: 30px;
+        height: 28px;
         position: absolute;
         top:2%;
         left:2%;
     }
 }
+@media screen and (min-width:992px){
+    .dessert-page1 .container .list .heart,
+    .dessert-page2 .container .item .heart{
+        /* border: 1px solid #000; */
+        width: 33px;
+        height: 31px;
+        position: absolute;
+        top:2%;
+        left:2%;
+    }   
+}
+@media screen and (min-width:1200px){
+    .dessert-page1 .container .list .heart,
+    .dessert-page2 .container .item .heart{
+        /* border: 1px solid #000; */
+        width: 35px;
+        height: 33px;
+        position: absolute;
+        top:2%;
+        left:2%;
+    }
+
+}
+
