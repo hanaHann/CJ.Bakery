@@ -100,12 +100,12 @@ window.addEventListener("load",function(){
         })    
     }
     flavorOpt[0].addEventListener("click",function(){
-        lightboxImg.src="../pic/snow-ori.jpg";
+        lightboxImg.src="./pic/snow-ori.jpg";
         lightboxPrice.value="320";
         lightboxNum.value = 1;
     })
     flavorOpt[1].addEventListener("click",function(){
-        lightboxImg.src="../texture/120.jpeg";
+        lightboxImg.src="./pic/snow-ch.jpg";
         lightboxPrice.value="360";
         lightboxNum.value = 1;
     })
@@ -137,7 +137,7 @@ window.addEventListener("load",function(){
             console.log(heart[i])
             if(this.title=="加入收藏"){
                 addHeart.style.visibility="visible"
-                this.src="../texture/20201029095925HDCm.jpeg";        //換有愛心的圖片
+                this.src="./texture/heart2.png";        //換有愛心的圖片
                 this.title="取消收藏";
                 lightboxBcg.style.display="block";       //背景遮罩
                 lightboxBcg.style.opacity=".3"           //背景遮罩
@@ -149,7 +149,7 @@ window.addEventListener("load",function(){
             }
             else if (this.title="取消收藏"){
                 removeHeart.style.visibility="visible"
-                this.src="../texture/heart1.png";         //換空心的圖片
+                this.src="./texture/heart1.png";         //換空心的圖片
                 this.title="加入收藏";
                 lightboxBcg.style.display="block";        //背景遮罩
                 lightboxBcg.style.opacity=".3"            //背景遮罩
