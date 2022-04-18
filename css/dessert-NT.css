@@ -38,6 +38,7 @@
     margin-top: 50px;
 }
 .dessert-page2 .summary .introduce .pic{
+    /* border: 1px solid #000; */
     width: 100%;
     box-shadow: var(--box-shadow);
     padding-bottom: 60%;
@@ -119,6 +120,12 @@
     .dessert-page2 .summary .introduce .inf-container .inf p{
         display: block;
         font-size: 1.4rem;
+    }
+    .dessert-page2 .summary .introduce .pic{
+       aspect-ratio: 1.8 / 1;
+    }
+    .dessert-page2 .summary .introduce .inf-container{
+        aspect-ratio: 1.8 / 1;
     }
 
 }

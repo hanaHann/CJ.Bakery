@@ -33,6 +33,7 @@
      />
     <!-- /////////////////aos///////////////// -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </head>
 <body>
@@ -79,7 +80,7 @@
         </label>
     
         <!-- 電腦版選單 -->
-        <ul>
+        <ul class="icon">
             <li>
                 <a href="">
                     <i class="fa-solid fa-arrow-right-to-bracket"></i>
@@ -163,7 +164,9 @@
         </div>
     </h2>
     <!-- 最新甜點第一列 -->
-    <div class="wrap">
+    <div class="wrap" data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" >
         
         <div class="head">
             <div class="num">
@@ -204,7 +207,9 @@
     </div>
 
     <!-- 最新甜點第二列 -->
-    <div class="wrap">
+    <div class="wrap" data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" >
     
         <div class="head">
             <div class="num">
@@ -244,7 +249,9 @@
 
     </div>
      <!-- 最新甜點第三列 -->
-     <div class="wrap">
+     <div class="wrap" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" >
     
         <div class="head">
             <div class="num">
@@ -305,15 +312,19 @@
     
         <div class="container">
             <!-- 熱賣甜點＿內容section1 -->
-            <div class="item" >
+            <div class="item">
             
-                <div class="card-pic">
+                <div class="card-pic" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                     <img src="./texture/heart1.png" alt="" title="加入收藏" class="heart">
 
                     <img src="./pic/ma.jpg" alt="">
                 </div>
 
-                <div class="card-inf">
+                <div class="card-inf" data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                     <a href="./dessert-NT.html#moder">
                         <h4>瑪德蓮</h4>
                         <h4>Madeleine</h4>
@@ -334,11 +345,15 @@
             <!-- 熱賣甜點＿內容section2 -->
             <div class="item">
 
-                <div class="card-pic">
+                <div class="card-pic"  data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                     <img src="./texture/heart1.png" alt="" title="加入收藏" class="heart">
                     <img src="./pic/LINE_ALBUM_220317_20.jpg" alt="">     
                 </div>
-                <div class="card-inf">
+                <div class="card-inf" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                     <a href="">
                         <h4>布朗尼</h4>
                         <h4>Brownie</h4>
@@ -355,13 +370,17 @@
             <!-- 熱賣甜點＿內容section3 -->
             <div class="item">
             
-                <div  class="card-pic">
+                <div  class="card-pic" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                     <img src="./texture/heart1.png" alt="" title="加入收藏" class="heart">
                     
                     <img src="./pic/LINE_ALBUM_220306_16.jpg" alt="">
                 
                 </div>
-                <div class="card-inf">
+                <div class="card-inf" data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                     <a href="dessert-NT.html#bear">
                         <h4>燕麥小熊
                         <h4>Oat Bear</h4>
@@ -381,13 +400,17 @@
              <!-- 熱賣甜點＿內容section4 -->
             <div class="item">
 
-                <div class="card-pic">
+                <div class="card-pic" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                     <img src="./texture/heart1.png" alt="" title="加入收藏" class="heart">
                     <img src="./pic/LINE_ALBUM_220317_6.jpg" alt="">
                     
                 </div>
 
-                <div class="card-inf">
+                <div class="card-inf" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
                     <a href="dessert-cold.html#basque">
                         <h4>巴斯克</h4>
                         <h4>Basque</h4>
@@ -603,7 +626,7 @@
 <!-- /////////////////js///////////////// -->
 <script src="./js/all.js"></script>
 <!-- /////////////////aos///////////////// -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
     AOS.init();
 </script>

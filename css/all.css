@@ -570,7 +570,7 @@ nav .wrap{
     display:flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 nav .logo,nav i{
     z-index: 20;
@@ -680,6 +680,7 @@ nav i {
     font-size: 1.2rem;
     vertical-align: top;
 }
+
 /* 平板橫以上 */
 @media screen and (min-width:992px){
     nav{
@@ -713,7 +714,6 @@ nav i {
         top:5px;
         right:0;
         display: flex;
-        display: none;
     }
     nav .wrap ul:nth-of-type(2){
         /* border:2px solid blue; */
