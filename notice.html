@@ -27,6 +27,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+    <!-- /////////////////aos///////////////// -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 </head>
 <body class="notice">
 
@@ -135,7 +140,7 @@
         <div class="wrap">
             <!-- 三卡片 -->
             <div class="container">
-                <div class="card">
+                <div class="card" data-aos="zoom-in">
                     <div class="pic">
                         <img src="./pic/bearbear.jpg" alt="">
                         <p class="title">STEP1</p>
@@ -145,7 +150,7 @@
                     <p>1.常溫商品可店到店，若是冷藏商品請勿勾選店到店，一律冷藏宅配。下單前請確認商品品項及數量<br><br>2.面交遲到十五分鐘者一律改為宅配，請見諒</p>
                 </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="zoom-in">
                     <div class="pic">
                         <img src="./pic/LINE_ALBUM_220306_23.jpg" alt="">
                         <p class="title">STEP2</p>
@@ -155,7 +160,7 @@
                     <p>1.逢個大節日前（春節、母親節、端午、中秋、聖誕節等各節慶）宅配貨量增加，到貨時間無法保證，容易有延遲、早到貨增加商品受傷機率情況<br><br></p>
                 </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="zoom-in">
                     <div class="pic">
                         <img src="./pic/S__19407099.jpg" alt="">
                         <p class="title">STEP3</p>
@@ -453,6 +458,12 @@
 
 
 <script src="./js/all.js"></script>
+<!-- /////////////////aos///////////////// -->
+
+<script>
+    AOS.init();
+</script>
+
 
     
 </body>
