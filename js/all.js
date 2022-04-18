@@ -105,7 +105,7 @@ window.addEventListener("load",function(){
         lightboxNum.value = 1;
     })
     flavorOpt[1].addEventListener("click",function(){
-        lightboxImg.src="../pic/S__23748766.jpg";
+        lightboxImg.src="../texture/snow-ch.webp";
         lightboxPrice.value="360";
         lightboxNum.value = 1;
     })
@@ -137,7 +137,7 @@ window.addEventListener("load",function(){
             console.log(heart[i])
             if(this.title=="加入收藏"){
                 addHeart.style.visibility="visible"
-                this.src="../texture/ewjwwiq.png";        //換有愛心的圖片
+                this.src="../texture/heart.webp";        //換有愛心的圖片
                 this.title="取消收藏";
                 lightboxBcg.style.display="block";       //背景遮罩
                 lightboxBcg.style.opacity=".3"           //背景遮罩
