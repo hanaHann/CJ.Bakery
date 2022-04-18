@@ -1358,7 +1358,7 @@ form .fa-cart-shopping{
     transition: 1s;
 }
 .ig-post .pic::after{
-    content:"查看貼文";
+    /* content:"查看貼文"; */
 }
 .ig-post .follow i , .ig-post .follow .inf {
     position: absolute;

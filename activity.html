@@ -34,6 +34,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <!-- /////////////////aos///////////////// -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 
 </head>
 
@@ -157,7 +161,9 @@
 
                 <div class="item">
                     
-                    <div class="box">
+                    <div class="box" data-aos="fade-right"
+                    data-aos-offset="500"
+                    data-aos-easing="ease-in-sine">
                         <div class="pic">
                             
                         </div>
@@ -177,7 +183,9 @@
                         <div class="num">02</div>
                     </div>
 
-                    <div class="box">
+                    <div class="box" data-aos="fade-left"
+                    data-aos-offset="500"
+                    data-aos-easing="ease-in-sine">
                         <div class="pic">
                             
                         </div>
@@ -190,7 +198,9 @@
                     </div>
 
 
-                    <div class="box">
+                    <div class="box" data-aos="fade-left"
+                    data-aos-offset="500"
+                    data-aos-easing="ease-in-sine">
                         <div class="pic">
                             
                         </div>
@@ -363,6 +373,13 @@
             <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，僅供學習、展示之用。若有侵權疑慮，您可以私訊 TibaMe-前端設計工程師養成班 ，後續會由專人協助處理。</p>
         </div>
     </footer>
+
+<!-- /////////////////aos///////////////// -->
+
+    <script>
+        AOS.init();
+    </script>
+
 
 
 

@@ -35,6 +35,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <!-- /////////////////aos///////////////// -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
   
 </head>
 
@@ -59,7 +63,7 @@
     <h1>CJ.Bakery</h1>
     <nav>
         <div class="logo">
-            <a href="/index.html"><img src="./texture/logo4.png" alt=""></a>
+            <a href="index.html"><img src="./texture/logo4.png" alt=""></a>
         </div>
         
         <div class="wrap">
@@ -73,7 +77,7 @@
             </label>
         
             <!-- 電腦版選單 -->
-            <ul>
+            <ul class="icon">
                 <li>
                     <a href="">
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
@@ -261,10 +265,10 @@
                 </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item"">
                 <div class="wrap">
                 <div class="pic">
-                    <img src="./pic/snow.jpg" alt="">
+                    <img src="./pic/snow-ch.jpg" alt="">
                     <img src="./texture/heart1.png" alt=""  title="加入收藏" class="heart">
                 </div>
                 <div class="inf">
@@ -1229,5 +1233,11 @@
 <!-- /////////////////js///////////////// -->
 <script src="./js/all.js"></script>
     
+<!-- /////////////////aos///////////////// -->
+
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>

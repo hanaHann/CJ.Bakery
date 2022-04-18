@@ -84,7 +84,7 @@
         font-size: 4rem;
     }
     .activity .container .banner .inf h3{
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         font-size: 1.8rem;
     }
     .activity .container .banner .pic .btn-3,
@@ -92,7 +92,7 @@
     font-size: 1.2rem;
 }
 
-}
+
 
 /* /////////////////下方///////////////// */
 .activity .container .item {
@@ -108,12 +108,8 @@
 }
 .activity .container .item .box{
     /* border: 1px solid #000; */
-    animation:bounceInUp 3s ;
     transition: .3s;
     width: 100%;
-}
-.activity .container .item .box:first-of-type{
-    animation: bounceInLeft 3s ;
 }
 .activity .container .item .box .pic{
     width: 100%;
