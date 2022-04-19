@@ -69,6 +69,32 @@ window.addEventListener("load",function(){
 
     })
 
+// 手機版footer 
+
+window.addEventListener("load",function(){
+    let screenWidth = screen.width;
+
+    if (screenWidth < 768){
+        console.log("小於768");
+        console.log("螢幕寬度" , screenWidth)    
+
+        var lastScrollTop = 0;
+        console.log(lastScrollTop)
+        window.addEventListener("scroll", function(){
+            var st = window.pageYOffset; 
+
+            if (st > lastScrollTop){
+                console.log(st)
+                footer.classList.add("footer-hidden");
+            } else {
+                footer.classList.remove("footer-hidden");
+            }
+            lastScrollTop = st <= 0 ? 0 : st; 
+
+        }, false);
+
+    }
+})
 
 // 我要購買-燈箱
 window.addEventListener("load",function(){
@@ -123,6 +149,22 @@ window.addEventListener("load",function(){
 
 })
 
+// 入口燈箱-燈箱
+window.addEventListener("load",function(){
+    let screenWidth = screen.width;
+    if (screenWidth < 768){
+        let buyLightbox = document.getElementById("lightbox");
+        let closeBtn = document.getElementById("closebtn");
+        let lightboxBcg = document.getElementById("lightbox-bcg");
+        console.log(lightboxBcg);
+        closeBtn.addEventListener("click",function(){
+            buyLightbox.style.display="none";
+            lightboxBcg.style.display="none";
+        });
+    }
+
+});
+
 // 我的收藏
 
 window.addEventListener("load",function(){
@@ -165,7 +207,7 @@ window.addEventListener("load",function(){
 
 //按鈕切換商品頁面
 window.addEventListener("load",function(){
-    var dessertBtns = document.getElementsByClassName("btn-2"); //元素們
+    var dessertBtns = document.getElementsByClassName("btn-item"); //元素們
     var dessertContainers = document.getElementsByClassName("container");
     
     for(let i=0; i<dessertBtns.length; i++){
@@ -190,90 +232,85 @@ window.addEventListener("load",function(){
 // 以下是輪播
 
 window.addEventListener("load",function(){
-    
-    var slidePic = document.getElementById("slidepic");
-    var img = slidePic.querySelector(`.img`);
-    var imgAll = slidePic.querySelectorAll(`.img`);
-    
-    // setInterval(function(){
-    //     slidePic.appendChild(img);
-    
-    // },500)
-    
-    var num = 0;
-    var start = setInterval(function(){
+    let slidePic = document.getElementById("slidepic");
+    let imgAll = slidePic.querySelectorAll(`.img`);
+    let introduce = document.querySelectorAll(".introduce .inf");
+    let num = 0; //宣告當前次數是0
+    imgAll[0].style.display="block"; //初始只有第一張圖
+    introduce[0].style.display="block"; //初始只有第一份文字
+    let start = setInterval(function(){
         num++;
         for(let i=0 ; i<imgAll.length ;i++){
-        imgAll[i].style.display="none"};
-        
+        imgAll[i].style.display="none";
+        introduce[i].style.display="none";
+        btnControlItems[i].style.backgroundColor="#AF6E4D";
+        }; //所有圖片文字都消失
+
         if( num == imgAll.length ){
             num = 0;
         }
-        imgAll[num].style.display="block";
+        imgAll[num].style.display="block"; //時間到的圖片出現
+        introduce[num].style.display="block"//時間到的文字出現
+        btnControlItems[num].style.backgroundColor="white";
+        imgAll[num].classList.add("opacity");
     },2000)
-    
-    var slidePic = document.getElementById("slidepic");
-    var btnControlItems = document.querySelectorAll(".btn-control span");
-    console.log(btnControlItems[0])
-    
-    for(let j=0 ; j<btnControlItems.length ; j++){
-        //點擊一下時清除輪播
-        btnControlItems[j].addEventListener("click",function(){clearInterval(start)});
-        //點擊時換按鈕顏色
-        btnControlItems[j].addEventListener("click",function(){
-            this.style.backgroundColor="white";
-        })
-       
-    }
 
+    let btnControlItems = document.querySelectorAll(".btn-control span");
+    按鈕事件
+    for(let a=0 ; a<btnControlItems.length ; a++){
+        for(let j=0 ; j<btnControlItems.length ; j++){
+            //點擊一下時清除輪播
+            btnControlItems[j].addEventListener("click",function(){clearInterval(start)});
+            btnControlItems[j].addEventListener("click",function(){
+                imgAll[j].style.display="block";  //點到對應按鈕的圖片顯示
+                introduce[j].style.display="block"; //點到對應按鈕的文字顯示
+                if( a != j){
+                    imgAll[a].style.display="none";  //其他圖片關起來
+                    introduce[a].style.display="none"; //其他文字關起來
 
-})
-
-// 手機版footer not
-
-window.addEventListener("load",function(){
-    let screenWidth = screen.width;
-
-    if (screenWidth < 768){
-        console.log("小魚")
-        window.addEventListener("scroll",function(){
-            console.log("scrollY",window.scrollY)
-
-            document.addEventListener("wheel",function(e){
-            wheelDelta =parseInt( e.deltaY )
-            console.log("wheelDelta",wheelDelta)
-
-            let footer = document.getElementById("footer")
-            if(wheelDelta > 0){ 
-                footer.classList.add("footer-hidden");
-                }else{
-                    footer.classList.remove("footer-hidden");
                 }
-            
+                console.log(imgAll[a])
+            });
+            //點擊時換按鈕顏色
+            btnControlItems[j].addEventListener("click",function(){
+                this.style.backgroundColor="white";
+                console.log("點擊按鈕")
+                if( a != j){
+                    btnControlItems[a].style.backgroundColor="#AF6E4D"; //按鈕以外變回原本顏色
+                }
             })
-        })
+        }
 
-        // document.addEventListener("wheel",function(e){
-        //     console.log("hihihih")
-        //     wheelDelta = e.deltaY
-        //     console.log(wheelDelta)
-        //     if(wheelDelta > 0){
-        //         console.log(">0")
-                
-        //         let footer = document.getElementById("footer")
-        //         footer.classList.add("footer-hidden");
-        //         }else{
-        //             footer.classList.remove("footer-hidden");
-        //         }
 
-        // } ); 
-        
-        
-    
-    
     }
+
+  
 
 
 })
 
+// 滑鼠
 
+
+// window.addEventListener("load",function(){
+//     let newCursor = document.getElementById("cursor");
+//     console.log(cursor);
+//     let cursorBear = document.getElementById("cursor-bear");
+//     let cursorBearImg = document.getElementById("cursor-bear-img");
+//     let allLink = document.querySelectorAll("a")
+//     console.log(allLink)
+
+//     $("html").mousemove(function(e){
+//         console.log(e.pageX+", "+e.pageY);
+//         console.log("位置",cursor.style)
+//         // newCursor.style.top=e.pageY + "px";
+//         // newCursor.style.left=e.pageX + "px";
+//         cursorBear.style.top=e.pageY + 10 + "px";
+//         cursorBear.style.left=e.pageX + 10  + "px";
+//     })
+//     // allLink[i].addEventListener("mouseover",function(){
+//     //     console.log("hover囉")
+//     //     cursorBear.style.border="2px"
+//     // });
+ 
+// })

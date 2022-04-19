@@ -1,46 +1,35 @@
-
- /* //////////////////背景圖////////////////// */
-
- body{
-    width: 100%;
-    position: relative;
+/* /////////////////入口燈箱///////////////// */
+.index #lightbox-bcg{
+    /* display: block; */
 }
-.bcg-pic{
-    display: none;
+.index .lightbox{
+    display: block;
+    top:25%;
 }
 
- @media screen and (min-width:992px){
-    body{
-        background-image: url(../texture/bcg3.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: 0 900px;
-        z-index: 10;
-    }
+.index .start-frame{
+    padding: 50px 20px;
+}
+.index .start-frame :first-child{
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.index .start-frame p{
+    text-align: center;
+}
 
-    .bcg-pic{
-        display: block;
+@media screen and (min-width:768px){
+    .index .lightbox{
+        display: none;
     }
-
-    .bcg-pic .pic-sq img{
-        /* border: 2px solid #000; */
-        position: absolute;
-        right:0;
-        top:15%;
+    .index #lightbox-bcg{
+        display: none;
     }
-    
-    .bcg-pic .pic-dot img{
-        /* border: 2px solid #000; */
-        position: absolute;
-        left:0;
-        top:30%;
-    }
- }
+}
 
 
  /* //////////////////banner////////////////// */
-
-
  .banner{
     border: 1px solid transparent;
     width: 100%;
@@ -66,9 +55,6 @@
     vertical-align: top;
     width: 100%;
 }
-.banner .pic img:hover{
-    cursor:url(./texture/cursor.svg),auto;
-}
 .banner .wrap .frame p{
     display: none;
 }
@@ -91,6 +77,7 @@
         min-height: 500px;
     }
     .banner .wrap .frame{
+        /* border: 1px solid #000; */
         margin-top: 80px;
         display: flex;
         flex-direction: column;
@@ -110,7 +97,7 @@
         font-size: 1.6rem;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-weight: 300;
-        color:var(--wcolor);
+        color:var(--w2color);
         margin-bottom: 15px;
     }
     .banner .frame :nth-child(2) {
@@ -127,8 +114,34 @@
 @media screen and (min-width:992px){
     .banner .wrap .frame{
         width: calc(470 / 1280 *100%);
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .banner .wrap .frame::after{
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        opacity: .5;
+        background-color:white;
+        transition: all 1s ease;
+        overflow: hidden;
+    
+    }
+    .banner .wrap .frame:hover::after {
+        left: 0;
+        width: 100%;
     }
 
+}
+@media screen and (min-width:1200px){
+    .banner{
+        background-attachment:fixed;
+    }
 }
 
 
@@ -181,12 +194,12 @@
     aspect-ratio: 1.3 /1;
     width: 100%;
     overflow: hidden;
+    box-shadow: var(--box-shadowsmall);
 }
 .new-dessert .wrap .container .pic img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: var(--box-shadow);
 }
 .new-dessert .wrap .num p{
     /* border: 1px solid #000; */
@@ -283,6 +296,7 @@
     }
     .new-dessert .container .pic{
         width: 50%;
+        box-shadow: var(--box-shadow);
     }
     .new-dessert .wrap:nth-of-type(odd) .container{
         flex-direction: row-reverse;
@@ -391,7 +405,7 @@
 .hot .container .item .card-pic{
     /* border:2px solid green; */
     width: 53%;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadowsmall);
     position: relative;
     overflow: hidden;
 }
@@ -400,7 +414,7 @@
     width: 46%;
     min-height: 120px;
     padding: 15px 25px;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadowsmall);
     background-color: white;
 }
 .hot .container .item .card-pic :nth-child(2){
@@ -496,14 +510,17 @@
     .hot .container .item .card-pic{
         /* border:1px solid green; */
         width: 58%;
+        box-shadow: var(--box-shadow);
     }
     .hot .container .item .card-inf{
         /* border: 2px solid #000; */
         width: 41%;
         padding: 25px 35px;
+        box-shadow: var(--box-shadow);
     }
     .hot .container .item .heart{
-        position: absolute;        width: 30px;
+        position: absolute;        
+        width: 30px;
     }
     .hot .container .item .card-inf a h4{
         font-size: 1.5rem;

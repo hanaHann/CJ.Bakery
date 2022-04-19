@@ -1,4 +1,4 @@
-
+/* /////////////////root///////////////// */
 :root{
 /* 變數----顏色 */
     --imcolor1:#AF6E4D;
@@ -11,134 +11,34 @@
     --w2color:#949494;
     --bcg-color:#FFF7ED;
 /* 變數----文字大小 */
-/* 手機 */
-    --sm_fz_big1:2.2rem;     /* 48px */
-    --sm_fz_big2:1.4rem;     /* 32px */
-    --sm_fz_t1:1.2rem     /* 29px */ 
-    --sm_fz_t2:1.1rem     /* 24px */
-    --sm_fz_W1:1rem;     /* 19px */ 
-    --sm_fz_w2:0.8rem;     /* 16px */
-    --sm_fz_w3:0.6rem;     /* 13px */
-
-/* 平板 */
-    --md_fz_big1:2.4rem;     /* 38.4px */ 
-    --md_fz_big2:1.6rem;     /* 32px */ 
-    --md_fz_t1:1.4rem     /* 29px */
-    --md_fz_t2:1.3rem     /* 22px */
-    --md_fz_W1:1.2rem;     /* 19px */ 
-    --md_fz_w2:1rem;     /* 16px */  
-    --md_fz_w3:0.8rem;     /* 13px */
-
-/* 電腦 */
-    --xl_fz_big1:3rem;     /* 48px */
-    --xl_fz_big2:2rem;     /* 32px */
-    --xl_fz_t1:1.8rem     /* 29px */ 
-    --xl_fz_t2:1.6rem     /* 24px */
-    --xl_fz_W1:1.5rem;     /* 19px */ 
-    --xl_fz_w2:1.4rem;     /* 16px */ 
-    --xl_fz_w3:1rem;     /* 13px */
-
 /* 變數----陰影 */
     --box-shadow:5px 5px 10px #b9b9b9;
     --box-shadowsmall:2px 2px 3px #b9b9b9;
 /* 變數----邊界寬度 */
     --width-:1200px;
 }
-
-.big-fz{
-    font-size:2.2rem;
-}
-.big-fz2{
-    font-size:1.4rem;
-}
-.t-fz1{
-    font-size: 1.2rem;
-}
-.t-fz2{
-    font-size: 1.1rem;
-}
-.w-fz1{
-    font-size: 1rem;
-}
-.w-fz2{
-    font-size: 0.8rem;
-}
-.w-fz3{
-    font-size: 0.8rem;
-}
-@media screen and (min-width:768px){
-    .big-fz{
-        font-size:2.4rem;
-    }
-    .big-fz2{
-        font-size:1.6rem;
-    }
-    .t-fz1{
-        font-size: 1.4rem;
-    }
-    .t-fz2{
-        font-size: 1.3rem;
-    }
-    .w-fz1{
-        font-size: 1.2rem;
-    }
-    .w-fz2{
-        font-size: 1.2rem;
-    }
-    .w-fz3{
-        font-size: 0.8rem;
-    }
-}
-@media screen and (min-width:1200px){
-    .big-fz{
-        font-size:3rem;
-    }
-    .big-fz2{
-        font-size:2rem;
-    }
-    .t-fz1{
-        font-size: 1.8rem;
-    }
-    .t-fz2{
-        font-size: 1.6rem;
-    }
-    .w-fz1{
-        font-size: 1.5rem;
-    }
-    .w-fz2{
-        font-size: 1.4rem;
-    }
-    .w-fz3{
-        font-size: 1rem;
-    }
-
-}
-
-/* css */
+/* /////////////////css///////////////// */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* cursor:url(../texture/cursor.svg),auto; */
     background-repeat: no-repeat;
     list-style: none;
+    /* cursor:url(../texture/arrow.ico),pointer; */
 }
-/* *:active{
-    cursor:url(../texture/active.svg),auto;
-} */
-/* a:hover , img:hover , [class*="btn-"]:hover, i:hover ,button:hover,
-li:hover{
-    cursor:url(../texture/cursor.svg),auto;
-} */
-
+button:hover, i:hover,a:hover,img:hover{
+    cursor:pointer;
+}
 body{
     background-color: var(--bcg-color);
     position: relative;
     font-family: 'Saira Condensed', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 h1{
     position: fixed;
@@ -157,13 +57,12 @@ h2,h3,h4,h5,h6{
     letter-spacing: .15em;
     text-indent: 0.15em;
     line-height: 1.8em;
-}   
+}
 p{
     font-weight: 200;
     color:var(--wcolor);
     letter-spacing: .1em;
     text-indent: 0.1em;
-    /* margin-right: -0.1em; */
     line-height: 1.8em;
 }
 #new-dessert:target::before,
@@ -181,10 +80,60 @@ p{
 input{
     outline: none;
 }
-button:hover, i:hover{
-    cursor: pointer;
-}
 
+/* ////////////////cursor///////////////// */
+/* #cursor-wrap{
+    position: absolute;
+    opacity: 1;
+    z-index: 40;
+} */
+/* #cursor{ */
+    /* width: 8px;
+    height: 8px;
+    border: 1px solid white;
+    border-radius: 8px;
+    position: absolute;
+    background-color:var(--imcolor1);
+    top:0;
+    left:0;
+    opacity: .7;
+    animation: pulse .2s infinite; */
+/* #cursor-bear{
+    position: absolute;
+    top:20px;
+    left:100px;
+    transform: scale(.8);
+}
+*:active #cursor-bear{
+    transform: scale(.8) rotate(15deg);
+}  */
+
+/* /////////////////背景圖///////////////// */
+@media screen and (min-width:1200px){
+    .dessert-page1,
+    .notice,
+    .activity,
+    .selection{
+        /* border: 1px solid #000; */
+        width: 100%;
+        background-image: url(../texture/bcg6.png),
+        url(../texture/bcg\ dot.svg),
+        url(../texture/bcg-sq.svg);
+        background-repeat: no-repeat;
+        background-position: 0% 200px, 0% 1100px , 100% 400px;
+        background-size: 100%, 10% , 3%;
+    }
+    .index {
+        /* border: 1px solid #000; */
+        width: 100%;
+        background-image: url(../texture/bcg6.png),
+        url(../texture/bcg\ dot.svg),
+        url(../texture/bcg-sq.svg);
+        background-repeat: no-repeat;
+        background-position: 0% 15%, 0% 1400px , 100% 800px;
+        background-size: 100%, 10% , 3%;
+    }
+}
 /* 手機 */
 .wrap{
     /* border: 1px solid #000; */
@@ -209,8 +158,7 @@ button:hover, i:hover{
         min-width:calc(1200 / 1440 * 100%);
     }
 }
-
-/* /////////////////燈箱///////////////// */
+/* /////////////////我要購買燈箱///////////////// */
 /* 直的 */
 @media (orientation: portrait ){
     #lightbox-bcg{
@@ -516,11 +464,7 @@ button:hover, i:hover{
 
 }
 
-
-
 /* /////////////////我的最愛燈箱///////////////// */
-
-
 .add-heart,.remove-heart{
     /* border: 1px solid #000; */
     aspect-ratio: 4 / 1;
@@ -632,18 +576,15 @@ nav #check:checked ~ ul:nth-of-type(2){
     border-radius: 0% 48% 48% 0% / 10% 45% 45% 10% ;
     background-color: white;
     box-shadow: 0px 2px 2px rgb(208, 208, 208);
-
 }
 nav #check:checked  ~ label span:first-of-type{
     top:0;
     bottom:0;
     transform: rotate(45deg);
 }
-
 nav #check:checked  ~ label span:nth-of-type(2){
     display: none;
 }
-
 nav #check:checked  ~ label span:nth-of-type(3){
     top:0;
     bottom:0;
@@ -735,9 +676,6 @@ nav i {
         padding: 0px;
         background-color: transparent;
     }
-    nav ul:nth-of-type(2) li{
-        /* border: 1px solid rgb(246, 12, 12); */
-    }
     nav ul:nth-of-type(2) li a{
         /* border: 1px solid #000; */
         display: inline-block;
@@ -795,15 +733,11 @@ footer ul:nth-of-type(1) li a p{
     font-size: .4rem;
     color:var(--bcg-color);
 }
-
-
-
-
-
 .footer-hidden{
     /* visibility: hidden; */
-    /* position: fixed; */
+    position: fixed;
     bottom: 0;
+    display: none;
 }
 
 @media screen and (min-width:992px){
@@ -980,11 +914,9 @@ h2 .title-1 .middle p:last-child{
 }
 
 @media screen and (min-width:768px){
-
     .title-2-1 .wrap p,.title-2-2 .wrap p{
         font-size: 1.6rem;   
     }
-
 }
 
 /* /////////////////側邊按鈕///////////////// */
@@ -993,7 +925,6 @@ h2 .title-1 .middle p:last-child{
     display: none;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-
 @media screen and (min-width:1200px){
     .btn-aside-1,.btn-aside-2{
         display: block;
@@ -1052,8 +983,6 @@ h2 .title-1 .middle p:last-child{
         font-size: 1rem;
     } 
 }
-
-
 /* /////////////////按鈕一///////////////// */
 
 .btn-1,.btn-1-2{
@@ -1092,25 +1021,15 @@ h2 .title-1 .middle p:last-child{
     .btn-1-2:hover{ 
         /* background-color:var(--imcolor2); */
         /* color:white; */
-        box-shadow: var(--box-shadow);
+        box-shadow: var(--box-shadowsmall);
     }
     .btn-1{
         border:2px solid var(--color3);
     }
     .btn-1-2{
         border:2px solid var(--imcolor1);
-    
     }  
-
 }
-
-
-
-
-
-
-
-
 
 /* /////////////////按鈕三///////////////// */
 
@@ -1126,14 +1045,12 @@ h2 .title-1 .middle p:last-child{
     border:2px solid var(--color1);
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-
 .btn-3:hover{
     /* border:3px solid var(--imcolor2); */
     color: var(--color1);
     /* opacity: .8; */
     
 }
-
 /* /////////////////按鈕四///////////////// */
 .btn-4{
     font-size:1.2rem;
@@ -1146,17 +1063,12 @@ h2 .title-1 .middle p:last-child{
     background-color: white;
     padding: 6px 25px;
     transition: .5s;
-
 }
-
 .btn-4:hover{
     background-color: var(--color2);
     color: white;
 }
-
 /* /////////////////按鈕五///////////////// */
-
-
 .btn-5-1 , .btn-5-2{
     background-color: #000;
     border:0px;
@@ -1192,69 +1104,38 @@ form .fa-cart-shopping{
         color:white;
         display: inline-block;
     }
-    
     .btn-5-1 button,.btn-5-2 button{
         /* border:0px; */
         font-size:1.4rem;
         color:white;
         border:0px;
-    
     }
-    
     .btn-5-1:hover,.btn-5-2:hover{
         opacity: .9;
     }
-    
     .btn-5-1,.btn-5-1 button{
         background-color: var(--color2);
     }
-    
     .btn-5-2,.btn-5-2 button{
         background-color: var(--imcolor2);
     }
-    
     form .fa-cart-shopping{
         color:white;
         font-size: 1.2rem;
     }
 
-
 }
-
-
-/* /////////////////sale標籤///////////////// */
-
-.label-sale{
-    /* border: 1px solid #000; */
-    padding:4px 28px;
-    border-radius: 5px;
-    display: inline-block;
-    text-align: center;
-    font-size:1.6rem;
-    background-color: var(--imcolor1);
-    color:white;
-    box-shadow: var(--box-shadow);
-    transform: rotate(-35deg);
-    transition: 0s;
-}
-
-
-
 /* /////////////////title///////////////// */
-
-
 .title-shot{
     display: flex;
     align-items: center;
 }
-
 .title-shot p{
     color:var(--imcolor1);
     font-size: 1rem;
     text-align: center;
     margin: 0 -5px;
 }
-
 .title-shot::before , .title-shot::after{
     background-repeat: no-repeat;
     background-size: contain;
@@ -1264,22 +1145,18 @@ form .fa-cart-shopping{
     /* border: 1px solid #000; */
     transform: scale(.4);
 }
-
 .title-shot::before{
     content:"";
     background-image: url("../texture/line.svg");
     
 }
-
 .title-shot::after{
     content:"";
     background-image: url("../texture/Line 2.svg");
-
 }
 .transtitle {
     transform: rotate(-30deg);
 }
-
 .title-shot{
     animation:moveup .5s infinite;
 }
@@ -1293,21 +1170,15 @@ form .fa-cart-shopping{
     50%{
         transform: translateY(20%);
     }
-
     75%{
         transform: translateY(10%);
     }
-
     100%{
         transform: translateY(0%);
     }
 }
 
-
-
-
 /* IG-post */
-
 .ig-post {
     /* border: 1px solid #000; */
     width: 100%;
@@ -1357,9 +1228,6 @@ form .fa-cart-shopping{
     text-indent: .1rem;
     transition: 1s;
 }
-.ig-post .pic::after{
-    /* content:"查看貼文"; */
-}
 .ig-post .follow i , .ig-post .follow .inf {
     position: absolute;
     color:white;
@@ -1405,7 +1273,6 @@ form .fa-cart-shopping{
         width:100%;
         padding-bottom: 48%;
     }
-
 }
 @media screen and (min-width:1200px){
     .ig-post .wrap {
@@ -1443,11 +1310,7 @@ form .fa-cart-shopping{
         padding-bottom: 100%;
     }
 }
-
-
-
 /* /////////////////icon///////////////// */
-
 
 [class*="fa-circle-chevron"]{
     background-color:white ;
@@ -1456,22 +1319,17 @@ form .fa-cart-shopping{
     font-size: 22px;
     transition: .5s;
 }
-
 [class*="fa-circle-chevron"]:hover{
     color:var(--imcolor1);
 }
-
 [class*="fa-chevron"]:hover{
     color:var(--imcolor1);
 }
-
 [class*="fa-chevron"]{
     color:var(--imcolor2);
     border-radius:32px ;
     font-size: 32px;
 }
-
-
 @media screen and (min-width:768px){
     [class*="fa-circle-chevron"]{
         border-radius:32px ;
@@ -1511,7 +1369,6 @@ form .fa-cart-shopping{
         text-align: center;
         top:50%;
         transform: translateY(-50%);
-        
     }  
     .activity nav .wrap li:nth-child(8) a:before{
         border: 1px solid #000;
@@ -1526,7 +1383,6 @@ form .fa-cart-shopping{
         text-align: center;
         top:50%;
         transform: translateY(-50%);
-        
     }  
     .selection nav .wrap li:nth-child(9) a:before{
         border: 1px solid #000;
@@ -1541,7 +1397,6 @@ form .fa-cart-shopping{
         text-align: center;
         top:50%;
         transform: translateY(-50%);
-        
     }  
 }
 
@@ -1587,6 +1442,12 @@ form .fa-cart-shopping{
         position: absolute;
         top:2%;
         left:2%;
+        transition: .4s;
+    }
+    .dessert-page1 .container .list .heart:hover,
+    .dessert-page2 .container .item .heart:hover{
+        /* border: 1px solid #000; */
+        transform: scale(1.1);
     }
 
 }

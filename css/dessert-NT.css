@@ -38,41 +38,37 @@
     margin-top: 50px;
 }
 .dessert-page2 .summary .introduce .pic{
-    /* border: 1px solid #000; */
+    /* border: 1px so  lid #000; */
     width: 100%;
-    box-shadow: var(--box-shadow);
-    padding-bottom: 60%;
+    box-shadow: var(--box-shadowsmall);
     border-radius: 10px;
+    aspect-ratio: 5 / 3;
 }
 .dessert-page2 .summary .introduce .inf-container{
     /* border: 1px solid #000; */
     width: 40%;
-    padding-bottom: 10%;
+    padding: 5px 10px;
     background-color:white;
     position: absolute;
-    right: 0%;
-    bottom:0%;
-    transform: translateY(-100%);
     box-shadow: var(--box-shadowsmall);
+    bottom:20px;
+    right:0;
 }
-.dessert-page2 .summary .introduce .inf-container .inf{
+.dessert-page2 .summary .introduce .inf-container .inf,
+.dessert-page2 .summary .introduce .inf-container .pic img{
+    display: none;
+}
+.dessert-page2 .summary .introduce .inf-container .pic img :nth-of-type(1)
+.dessert-page2 .summary .introduce .inf-container .inf :nth-of-type(1){
     /* border: 1px solid #000; */
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    top:0%;
-    bottom:0%;
-    position: absolute;
+    display: block;
+}
+.dessert-page2 .summary .introduce .inf-container .inf p{
+    display: none;
 }
 .dessert-page2 .summary .introduce .inf-container .inf h3{
     font-size: .8rem;
     text-align: center; 
-}
-.dessert-page2 .summary .introduce .inf-container .inf p{
-    display: none;
 }
 .dessert-page2 .summary .introduce .pic{
     position: relative;
@@ -86,25 +82,53 @@
     object-fit: cover;
     transition: .4s;
 }
+
+
 @media screen and (min-width:768px){
+    .dessert-page2 .summary .introduce{
+        /* border: 4px solid #000; */
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    .dessert-page2 .summary .introduce .inf-container .inf{
+        /* border: 1px solid rgb(17, 88, 189); */
+        border-radius: 10px;
+        padding: 40px;
+        width: 100%;
+        position: relative;
+    }
     .dessert-page2 .summary .introduce .pic
     ,.dessert-page2 .summary .introduce .inf-container{
+        /* border: 1px solid #000; */
         box-shadow: var(--box-shadow);
         width: 53%;
-        padding-bottom: 30%;
-        border-radius: 10px;
+        border-radius: 20px;
+        aspect-ratio: 5 / 3;
+    }
+    .dessert-page2 .summary .introduce .pic img{
+        border-radius: 20px;
     }
     .dessert-page2 .summary .introduce .inf-container{
         background-color:white;
         position: absolute;
         right: 0;
-        top: -45px;
+        top: -70px;
+        bottom: 0;
         transform: translateY(0%);
+
+    }
+    .dessert-page2 .summary .introduce .inf-container .inf{
+        padding: 10px 30px;
+    }
+    .dessert-page2 .summary .introduce .inf-container .inf :nth-of-type(1){
+        /* border: 1px solid #000; */
+        display: block;
     }
     .dessert-page2 .summary .introduce .inf-container .inf h3{
         /* border: 1px solid #000; */
-        font-size: 1.6rem;
-        margin-bottom: 20px;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
     }
     .dessert-page2 .summary .introduce .inf-container .inf p{
         display: block;
@@ -113,13 +137,19 @@
 }
 
 @media screen and (min-width:992px){
+    .dessert-page2 .summary .introduce .pic
+    ,.dessert-page2 .summary .introduce .inf-container{
+        aspect-ratio: 2 / 1;
+    }
     .dessert-page2 .summary .introduce .inf-container .inf h3{
         font-size: 2rem;
         margin-bottom: 20px;
     }
     .dessert-page2 .summary .introduce .inf-container .inf p{
-        display: block;
         font-size: 1.4rem;
+    }
+    .dessert-page2 .summary .introduce .inf-container .inf{
+        padding: 20px 50px;
     }
     .dessert-page2 .summary .introduce .pic{
        aspect-ratio: 1.8 / 1;
@@ -131,7 +161,7 @@
 }
 
 /* /////////////////按鈕二///////////////// */
-.nav-btn-2{
+.nav-item{
     /* border: 1px solid #000; */
     width: 90%;
     display: flex;
@@ -140,10 +170,10 @@
     justify-content:space-between;
     align-items: flex-start;
 }
-.dessert-page2-3 .nav-btn-2{
+.dessert-page2-3 .nav-item{
     justify-content:flex-start;
 }
-.nav-btn-2 button{
+.nav-item button{
     border: 1px solid var(--color2);
     border-radius: 15px;
     margin: 10px;
@@ -157,11 +187,11 @@
     color:var(--imcolor2);
     background-color: transparent;
 }
-.nav-btn-2 button img{
+.nav-item button img{
     /* border: 1px solid #000; */
     width: 35px;
 }
-.nav-btn-2 button p{
+.nav-item button p{
     /* border: 1px solid #000; */
     color:var(--imcolor2);
     writing-mode: vertical-lr;
@@ -169,26 +199,26 @@
 }
 
 @media screen and (min-width:768px){
-    .nav-btn-2 button{
+    .nav-item button{
         border-radius: 20px;
         padding: 10px 25px;
         margin: 10px;
         flex-direction: row;
     }
-    .nav-btn-2 button p{
+    .nav-item button p{
         writing-mode: horizontal-tb;;
     }
 }
 
 @media screen and (min-width:1200px){
-    .nav-btn-2{
+    .nav-item{
         display: flex;
         margin: auto;
         align-items: center;
         margin-top: 5%;
         margin-bottom: 5%;
     }
-    .nav-btn-2 button{
+    .nav-item button{
         font-size:1.4rem;
         text-align: center;
         color:var(--imcolor2);
@@ -196,7 +226,7 @@
         margin: 0 30px;
         transition: .5s;
     }
-    .nav-btn-2 a button{
+    .nav-item a button{
         border: 2px solid transparent;
 
     }
@@ -511,7 +541,7 @@
 .question{
     width: 100%;
     margin-bottom: 8%;
-    margin-top: 2%;
+    margin-top: 30%;
 }
 .question form{
     /* border: 1px solid #000; */
@@ -618,6 +648,9 @@
 }
 
 @media screen and (min-width:768px){
+    .question{
+        margin-top: 8%;
+    }
     .question form .area{
         gap:0;
         flex-direction: row;
@@ -656,6 +689,9 @@
     
 }
 @media screen and (min-width:1200px){
+    .question{
+        margin-top: 5%;
+    }
     .question form .area{
         margin-bottom: 25px;
     }   

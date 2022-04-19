@@ -1,29 +1,3 @@
-/* .notice{
-    width: 100%;
-    background-image: url(../texture/bcg5.png),
-    url(../texture/bcg-dot.svg),
-    url(../texture/bcg-sq.svg);
-    background-repeat: no-repeat;
-    background-position: 0% 30%, 0% 1400px , 100% 600px;
-    background-size: 100%, 10% , 3%;
-    z-index: 10;
-} */
-.notice .bcg{
-    position: relative;
-    border: 1px solid #000;
-}
-.notice .dot{
-    position:absolute;
-    left:0;
-    top:900px;
-    z-index: -2;
-}
-.notice .sq{
-    position: absolute;
-    right:0;
-    top:1200px;
-    
-}
 
 /* /////////////////訂購步驟///////////////// */
 
@@ -245,33 +219,7 @@
 .faq .wrap .item .inf-hidden{
     color:var(--imcolor1);
 }
-@media screen and (min-width:768px){
-    .notice{
-        width: 100%;
-        background-image: url(../texture/bcg5.png),
-        url("./texture/bcg dot.svg"),
-        url("./texture/bcg-sq.svg");
-        background-repeat: no-repeat;
-        background-position: 0% 30%, 0% 1400px , 100% 600px;
-        background-size: 100%, 10% , 3%;
-        z-index: 10;
-    }
-    .notice .bcg{
-        position: relative;
-        border: 1px solid #000;
-    }
-    .notice .dot{
-        position:absolute;
-        left:0;
-        top:900px;
-        z-index: -2;
-    }
-    .notice .sq{
-        position: absolute;
-        right:0;
-        top:1200px;
-        
-    }
+
     
     /* /////////////////FAQ///////////////// */
     
