@@ -54,15 +54,6 @@
     bottom:20px;
     right:0;
 }
-.dessert-page2 .summary .introduce .inf-container .inf,
-.dessert-page2 .summary .introduce .inf-container .pic img{
-    display: none;
-}
-.dessert-page2 .summary .introduce .inf-container .pic img :nth-of-type(1)
-.dessert-page2 .summary .introduce .inf-container .inf :nth-of-type(1){
-    /* border: 1px solid #000; */
-    display: block;
-}
 .dessert-page2 .summary .introduce .inf-container .inf p{
     display: none;
 }
@@ -73,6 +64,10 @@
 .dessert-page2 .summary .introduce .pic{
     position: relative;
 }
+.dessert-page2 .summary .introduce .inf-container .inf{
+    opacity: .8;
+    transition:ease 3s .5s;
+}
 .dessert-page2 .summary .introduce .pic img{
     width: 100%;
     border-radius: 10px;
@@ -80,9 +75,31 @@
     position: absolute;
     height: 100%;
     object-fit: cover;
-    transition: .4s;
+    /* opacity: .8; */
+    transition:ease 3s .5s;
 }
-
+.introduce .pic .btn-control{
+    position: absolute;
+    z-index: 5;
+    bottom:10px;
+    display: flex;
+    left:5%;
+}
+.introduce .pic .btn-control span{
+    border: 2px solid white;
+    background-color: var(--imcolor1);
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    accent-color:var(--color3);
+}
+.hide {
+    background-color:aqua;
+    opacity: 0;
+    transition:ease 3s .5s;
+    display: none;
+}
 
 @media screen and (min-width:768px){
     .dessert-page2 .summary .introduce{
@@ -157,8 +174,22 @@
     .dessert-page2 .summary .introduce .inf-container{
         aspect-ratio: 1.8 / 1;
     }
+    .introduce .pic .btn-control span:hover{
+        background-color: var(--color3);
+    }
+    
+    .introduce .pic .btn-control span:hover{
+        background-color: var(--color3);
+    }
+    .introduce .pic .btn-control span{
+        border-radius: 13px;
+        width: 13px;
+        height: 13px;
+        margin: 0 8px;
+    }
 
 }
+
 
 /* /////////////////按鈕二///////////////// */
 .nav-item{
@@ -354,6 +385,8 @@
     font-size: 1rem;
     margin-right: 10px;
 }
+
+
 
 @media screen and (min-width:768px){
     .dessert-page2 main .container .item .pic{
@@ -630,22 +663,7 @@
     text-align: center;
     margin-bottom: 2%;
 }
-.introduce .pic .btn-control{
-    position: absolute;
-    z-index: 5;
-    bottom:10px;
-    display: flex;
-    left:5%;
-}
-.introduce .pic .btn-control span{
-    border: 2px solid white;
-    background-color: var(--imcolor1);
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-    accent-color:var(--color3);
-}
+
 
 @media screen and (min-width:768px){
     .question{
@@ -683,9 +701,6 @@
         width: 90px;
     }
 
-    .introduce .pic .btn-control span:hover{
-        background-color: var(--color3);
-    }
     
 }
 @media screen and (min-width:1200px){
@@ -703,15 +718,7 @@
     .question form textarea{
         height: 45px;
     }
-    .introduce .pic .btn-control span:hover{
-        background-color: var(--color3);
-    }
-    .introduce .pic .btn-control span{
-        border-radius: 13px;
-        width: 13px;
-        height: 13px;
-        margin: 0 8px;
-    }
+   
 
 
 } 

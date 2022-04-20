@@ -231,61 +231,53 @@ window.addEventListener("load",function(){
 
 // 以下是輪播
 
+
 window.addEventListener("load",function(){
-    let slidePic = document.getElementById("slidepic");
-    let imgAll = slidePic.querySelectorAll(`.img`);
+    let imgAll = document.querySelectorAll(`#slidepic .img`);
     let introduce = document.querySelectorAll(".introduce .inf");
+  
     let num = 0; //宣告當前次數是0
-    imgAll[0].style.display="block"; //初始只有第一張圖
-    introduce[0].style.display="block"; //初始只有第一份文字
-    let start = setInterval(function(){
+ 
+    let start=setInterval(function(){
         num++;
         for(let i=0 ; i<imgAll.length ;i++){
-        imgAll[i].style.display="none";
-        introduce[i].style.display="none";
-        btnControlItems[i].style.backgroundColor="#AF6E4D";
+        imgAll[i].classList.add("hide");
+        introduce[i].classList.add("hide");
+        btn[i].style.backgroundColor="#AF6E4D";
         }; //所有圖片文字都消失
 
         if( num == imgAll.length ){
             num = 0;
         }
-        imgAll[num].style.display="block"; //時間到的圖片出現
-        introduce[num].style.display="block"//時間到的文字出現
-        btnControlItems[num].style.backgroundColor="white";
-        imgAll[num].classList.add("opacity");
-    },2000)
+        imgAll[num].classList.remove("hide"); //時間到的圖片出現
+        introduce[num].classList.remove("hide");//時間到的文字出現
+        btn[num].style.backgroundColor="white";
+    },3000)
 
-    let btnControlItems = document.querySelectorAll(".btn-control span");
-    按鈕事件
-    for(let a=0 ; a<btnControlItems.length ; a++){
-        for(let j=0 ; j<btnControlItems.length ; j++){
+
+    let btn = document.querySelectorAll(".btn-control span");
+    // 按鈕事件
+    for(let a=0 ; a<btn.length ; a++){
+        for(let j=0 ; j<btn.length ; j++){
             //點擊一下時清除輪播
-            btnControlItems[j].addEventListener("click",function(){clearInterval(start)});
-            btnControlItems[j].addEventListener("click",function(){
-                imgAll[j].style.display="block";  //點到對應按鈕的圖片顯示
-                introduce[j].style.display="block"; //點到對應按鈕的文字顯示
+            btn[j].addEventListener("click",function(){clearInterval(start)});
+            btn[j].addEventListener("click",function(){
+                imgAll[j].classList.remove("hide");  //點到對應按鈕的圖片顯示
+                introduce[j].classList.remove("hide"); //點到對應按鈕的文字顯示
                 if( a != j){
-                    imgAll[a].style.display="none";  //其他圖片關起來
-                    introduce[a].style.display="none"; //其他文字關起來
-
+                    imgAll[a].classList.add("hide");  //其他圖片關起來
+                    introduce[a].classList.add("hide"); //其他文字關起來
                 }
-                console.log(imgAll[a])
-            });
-            //點擊時換按鈕顏色
-            btnControlItems[j].addEventListener("click",function(){
+                //點擊時換按鈕顏色
                 this.style.backgroundColor="white";
                 console.log("點擊按鈕")
                 if( a != j){
-                    btnControlItems[a].style.backgroundColor="#AF6E4D"; //按鈕以外變回原本顏色
+                    btn[a].style.backgroundColor="#AF6E4D"; //按鈕以外變回原本顏色
                 }
-            })
+            });
         }
 
-
     }
-
-  
-
 
 })
 

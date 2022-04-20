@@ -627,7 +627,7 @@ nav i {
     nav{
         /* border: 4px sol id #000; */
         min-height: 80px;
-        opacity: 0.9;
+        /* opacity: 0.9; */
     }
     nav .wrap{
         /* border: 2px solid rgb(224, 175, 42); */
