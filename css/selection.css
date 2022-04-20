@@ -1,153 +1,217 @@
 
 /* /////////////////食材嚴選///////////////// */
-.selection .wrap{
-    /* border: 1px solid #000; */
-}
-.selection .container {
-    /* border: 1px solid #000; */
+
+.selection .container{
+    /* border: 1px solid #000;   */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
+    margin-bottom: 12%;
 }
-.selection .container .item{
+.selection .container:last-of-type{
+    margin-bottom: 100px;
+}
+.selection .container .bcg{
     /* border: 1px solid #000; */
-    width: 100%;
-    margin-top: 40px;
+    position: absolute;
+    width: 80%;
+    bottom:0;
+    top:0;
+    right:0;
+    z-index: -1;
+    background-image: linear-gradient(to right , var(--bcg-color),var(--color3));
+}
+.selection .container:nth-of-type(even) .bcg{
+    left:0;
+    background-image: linear-gradient(to left , var(--bcg-color),var(--color3));
+}
+.selection .container:nth-of-type(even) .item{
+    /* border: 2px solid purple; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
 }
-.selection .container .item .inf{
-    /* border: 1px solid #000; */
+.selection .container:nth-of-type(odd) .item{
+    /* border: 2px solid purple; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
-.selection .container .item p{
+.selection .container:nth-of-type(even) .pic-area{
     /* border: 1px solid #000; */
-    font-size:1.2rem;
-    text-align: center;
+    padding-left: 10px;
+}
+.selection .container:nth-of-type(odd) .pic-area{
+    padding-right: 10px;
+}
+.selection .container:nth-of-type(even) .pic{
+    border-radius: 0 40px 0 0 ;
+}
+.selection .container:nth-of-type(odd) .pic{
+    border-radius:  40px  0 0 0 ;
+}
+.selection .item .inf{
+    /* border: 1px solid rgb(255, 0, 0); */
+    width: 80%;
+}
+.selection .item .inf p{
+    /* border: 1px solid #000; */
+    font-size: .6rem;
+    color:var(--imcolor2)
+}
+.selection .item .inf p::first-letter{
+    font-size: .9rem;
     font-weight: 400;
+    margin-right: 2px;
 }
-.selection .container .item .pic p{
-    display: none;
+.selection .item .pic-area{
+    /* border: 3px solid red; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:-15px;
 }
-.selection .container .item:nth-child(2) .pic p,
-.selection .item:nth-child(3) .pic p{
-    bottom:0px;
-    left: 0;
-    right: 0;
-    height: 80px;
-}
-.selection .container .item:first-child .pic p,
-.selection .item:nth-child(4) .pic p{
-    top:0%;
-    left: 0;
-    right: 0;
-    height: 80px;
-}
-.selection .container .item .pic{
-    aspect-ratio: 4.5 / 3;
-    border-radius: 60px 60px 0 0;
-    margin-top: 20px;
+.selection .container .pic-area h2{
+    /* border: 1px solid #000; */
+    font-size: .9rem;
+    color:var(--imcolor2);
+    font-weight: 500;;
     position: relative;
-    box-shadow: var(--box-shadowsmall);
-    overflow: hidden;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
-.selection .container .item .pic img{
+.selection .container .pic-area h2::after{
+    content:"";
+    background-color:var(--imcolor2) ;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+}
+.selection .container:nth-of-type(odd) .pic-area h2 {
+    /* border: 1px solid #000; */
+    text-align: right;
+}   
+.selection .container .pic-area .pic{
+    /* border: 2px solid red; */
+    position: relative;
+    aspect-ratio: 1.4 / 1;
+    overflow: hidden;
+}
+.selection .container .pic-area .pic img{
     width: 100%;
     height: 100%;
-    position: absolute;
     object-fit: cover;
 }
-
-.selection .container .item+p{
-    /* border: 1px solid #000; */
-    text-align: center;
-
+.selection .container .pic-area .pic::after{
+    content:"";
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    right:0;
+    top:0;
+    transition: 1s;
+    opacity: .2;
 }
-
-
+.selection .container .pic-area .pic:hover::after{
+    left:0;
+    width: 100%;
+}
 @media screen and (min-width:768px){
-    
-    .selection .container {
-        /* border: 1px solid #000; */
+
+    .selection  .container{
+        margin-bottom: 3%;
+    }
+    .selection  .container .bcg{
+        aspect-ratio:  2.2 / 1;
+        top:10%;
+        /* background-image: linear-gradient(to right , #f7eedb,var(--color3)); */
+        background-image: none;
+        background-color: var(--color3);
+    }
+    .selection .container:nth-of-type(even) .bcg{
+        background-image: none;
+        background-color: var(--color3);
+    }
+    .selection .item .pic-area{
+        width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
+        flex-direction: column;
     }
-    .selection .container .item{
-        border:3px s olid red;
-        width: 22%;
-        margin-bottom: 40px;
+    .selection .container:nth-of-type(even) .pic-area{
+        /* border: 1px solid #000; */
+        /* background-color: aqua; */
+        padding: 0;
+        padding-left: 30px;
+        margin-bottom:0px;
     }
-    .selection .container .item:nth-last-of-type(odd){
-        margin-top: 120px;
+    .selection .container:nth-of-type(odd) .pic-area{
+        padding-right: 30px;
+        align-items: flex-end;
+        margin-bottom: 0;
     }
-    .selection .container .item p{
-        /* border:1px solid red; */
-        font-size:1.2rem;
-        text-align: center;
+    .selection .container .pic-area .pic{
+        aspect-ratio: 1.5 / 1;
+    }
+    .selection .container:nth-of-type(even) .pic{
+        border-radius: 0 100px 0 0 ;
+    }
+    .selection .container:nth-of-type(odd) .pic{
+        border-radius:  100px  0 0 0 ;
+    }
+    .selection .container .pic-area h2{
+        font-size: 1.4rem;
+        color:white;
+        width: 60%;
+        margin-top: 50px;
+    }
+    .selection .container:nth-of-type(odd) h2 {
+        /* border: 1px solid #000; */
+        text-align: right;
+    }   
+    .selection .container .pic-area h2::after{
+        content:"";
+        background-color:white;
+        height: 2px;
+    }
+    .selection .item .inf p{
+        /* border: 1px solid #000; */
+        font-size: 1rem;
+        color:white;
         font-weight: 400;
     }
-    .selection .container .item .pic p{
-        /* border:1px solid red; */
-        width: 100%;
-        text-align: center;
-        font-size: var(--p2-fz);
-        position: absolute;
-        background-color: white;
-        line-height: 30px;
-        opacity: 0;
-        transition: 2s;
-        padding: 5px;
+    .selection .item .inf p::first-letter{
+        font-size: 1.4rem;
     }
-    .selection .container .item:nth-child(2) .pic p,
-    .selection .item:nth-child(3) .pic p{
-        bottom:0px;
-        left: 0;
-        right: 0;
-        height: 80px;
-    }
-    .selection .container .item:first-child .pic p,
-    .selection .item:nth-child(4) .pic p{
-        top:0%;
-        left: 0;
-        right: 0;
-        height: 80px;
-    }
-    .selection .container .item .pic{
-        aspect-ratio: 6 / 8;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        box-shadow: var(--box-shadow);
-        margin-bottom: 40px;
-    }
-    .selection .container .item:nth-of-type(1) .pic{
-        border-radius:5% 5% 66% 12% / 5% 5% 46% 12%  ;
-    }
-    .selection .container .item:nth-of-type(2) .pic{
-        border-radius:40% 40% 5% 5% / 40% 40% 5% 5%;
-    }
-    .selection .container .item:nth-of-type(3) .pic{
-        border-radius:5% 5% 40% 40% / 5% 5% 40% 40%;
-    }
-    .selection .container .item:nth-of-type(4) .pic{
-        border-radius:12% 66% 5% 5% / 12% 46% 5% 5% 
-    }
-    .selection .container .item .pic p{
-        display: block;
-    }
-    .selection .container .item+p{
-        display: none;
-    }
-    .selection .container .item .pic:hover p{
-        opacity: .8;
-    }
-    
 
 }
 
+@media screen and (min-width:1200px){
+    .selection .container .pic-area .pic{
+        aspect-ratio: 1.7 / 1;
+    }
+    .selection .container .pic-area h2::after{
+        content:"";
+        background-color:white;
+        height: 2px;
+    }
+    .selection .container .pic-area h2{
+        font-size: 1.8rem;
+        color:white;
+        width: 60%;
+        margin-top: 120px;
+    }
+    .selection .item .inf p{
+        /* border: 1px solid #000; */
+        font-size: 1.2rem;
+        color:white;
+        font-weight: 400;
+    }
+    .selection .item .inf p::first-letter{
+        font-size: 2.2rem;
+    }
 
 
-
+}

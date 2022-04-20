@@ -112,8 +112,7 @@ input{
 @media screen and (min-width:1200px){
     .dessert-page1,
     .notice,
-    .activity,
-    .selection{
+    .activity{
         /* border: 1px solid #000; */
         width: 100%;
         background-image: url(../texture/bcg6.png),
@@ -122,6 +121,15 @@ input{
         background-repeat: no-repeat;
         background-position: 0% 200px, 0% 1100px , 100% 400px;
         background-size: 100%, 10% , 3%;
+    }
+    .selection{
+        background-image: url(../texture/bcg5.png),
+        url(../texture/bcg\ dot.svg),
+        url(../texture/bcg-sq.svg);
+        background-repeat: no-repeat;
+        background-position: 0% 200px, 0% 1100px , 100% 400px;
+        background-size: 100%, 10% , 3%;
+
     }
     .index {
         /* border: 1px solid #000; */
