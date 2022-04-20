@@ -29,7 +29,7 @@
 }
 
 
- /* //////////////////banner////////////////// */
+/* //////////////////banner////////////////// */
  .banner{
     border: 1px solid transparent;
     width: 100%;
@@ -146,8 +146,10 @@
 
 
 /* /////////////////最新甜點///////////////// */
+.new-dessert{
+    border: 1px solid #000;
+}
 .new-dessert .wrap{
-    /* border: 1px solid purple; */
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;

@@ -40,6 +40,9 @@
     <!-- /////////////////直橫rwd///////////////// -->
     <link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css" rel="external nofollow" > 
     <link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css"        rel="external nofollow" > 
+    <!-- /////////////////aos///////////////// -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </head>
@@ -159,13 +162,14 @@
 <!-- /////////////////主要內容///////////////// -->
 <div class="container wrap">
     <!-- 標題形式2 -->
-    <div class="title-2-1">
+    <div class="title-2-1" data-aos="fade-down"
+    data-aos-duration="1000">
         <div class="wrap">
             <p>:: 常溫甜點 ::</p>
         </div>
     </div>
 
-    <ul class="owl-carousel owl-theme list">
+    <ul class="owl-carousel owl-theme list" >
         <li class="item">
             <div class="pic">
                 <img src="./pic/snow-ori.jpg" alt="">
@@ -263,7 +267,8 @@
     </ul>
 
     <!-- 標題形式2 -->
-    <div class="title-2-1">
+    <div class="title-2-1" data-aos="fade-down"
+    data-aos-duration="1000">
         <div class="wrap">
             <p>:: 冷藏甜點 ::</p>
         </div>
@@ -363,13 +368,14 @@
     
     </ul>
     <!-- 標題形式2 -->
-    <div class="title-2-1">
+    <div class="title-2-1" data-aos="fade-down"
+    data-aos-duration="1000">
         <div class="wrap">
             <p>::  節慶禮盒＆客製化甜點 ::</p>
         </div>
     </div>
 
-    <ul class="owl-carousel owl-theme list">
+    <ul class="owl-carousel owl-theme list" >
         <li class="item">
             <div class="pic">
                     
@@ -664,8 +670,10 @@
 <script src="./js/jquery-3.6.0.min.js"></script>
 <script src="./js/all.js"></script>
 <!-- /////////////////aos///////////////// -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<script>
+    AOS.init();
+</script>
 
         
 </body>

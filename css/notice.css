@@ -17,6 +17,7 @@
     flex-direction: column;
     overflow: hidden;
     transition: .4s;
+    
 }
 .notice .step .wrap .card .pic{
     /* border: 1px solid #000; */
@@ -154,6 +155,47 @@
 
 }
 
+/* /////////////////哈囉熊熊///////////////// */
+.step .wrap{
+    /* border: 1px solid #000; */
+    margin-top: 100px;
+}
+.hi-bear{
+    /* border: 3px solid #000; */
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    transform: rotate(30deg);   
+    left:60px;
+    transition: ease .5s;
+    top:-30px;
+}
+.hi-bear .pic{
+    /* border: 1px solid #000; */
+    width: 100%;
+    position: relative;
+
+}
+.hi-bear .pic img{
+    width: 100%;
+    object-fit: cover;
+    transform: rotate(-25deg);
+}
+.title-shot{
+    position: absolute;
+    top:-50px;
+    width: 200px;
+    opacity: 0;
+}
+.bear-move{
+    top:-50px;
+    transition:ease .5s;
+}
+.shot-show{
+    opacity:1;
+    left:-10px;
+    transition:ease 1.5s;
+}
 /* /////////////////FAQ///////////////// */
 
 .faq .wrap {

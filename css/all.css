@@ -1163,7 +1163,7 @@ form .fa-cart-shopping{
     background-image: url("../texture/Line 2.svg");
 }
 .transtitle {
-    transform: rotate(-30deg);
+    transform: rotate(-40deg);
 }
 .title-shot{
     animation:moveup .5s infinite;
@@ -1392,7 +1392,7 @@ form .fa-cart-shopping{
         top:50%;
         transform: translateY(-50%);
     }  
-    .selection nav .wrap li:nth-child(9) a:before{
+    .selection nav .wrap li:nth-child(6) a:before{
         border: 1px solid #000;
         content:"";
         display: inline-block;

@@ -138,9 +138,41 @@
 <!-- ////////////////訂購須知三步驟///////////////// -->
     <div class="step">
         <div class="wrap">
+             <!-- 嗨熊熊 -->
+             <a href="" class="hi-bear" id="hi-bear">
+                <div class="pic">
+                    <img src="./texture/hibear.png" alt="">
+                    <div class="title-shot" id="title-shot">
+                        <p>要閱讀呦</p>
+                    </div>
+                </div>
+            
+            </a>
+            <script>
+                window.addEventListener("load",function(){
+                    
+                    
+                    document.addEventListener("scroll",function(){
+                        let shot = document.getElementById("title-shot");
+                        let bear = document.getElementById("hi-bear");
+                        let ScrollNum = document.documentElement.scrollTop;
+                        console.log(ScrollNum)
+                        if(ScrollNum>90){
+                            shot.classList.add("shot-show");
+                            bear.classList.add("bear-move");
+                            
+                        }else{
+                            bear.classList.remove("bear-move")
+                            shot.classList.remove("shot-show");
+                        }
+                    })
+                    
+                    
+                })
+            </script>
             <!-- 三卡片 -->
             <div class="container">
-                <div class="card" data-aos="zoom-in">
+                <div class="card" id="first-card" data-aos="zoom-in">
                     <div class="pic">
                         <img src="./pic/bearbear.jpg" alt="">
                         <p class="title">STEP1</p>
