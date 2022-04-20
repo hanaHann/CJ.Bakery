@@ -147,7 +147,7 @@
 
 /* /////////////////最新甜點///////////////// */
 .new-dessert{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 .new-dessert .wrap{
     display: flex;
