@@ -108,6 +108,30 @@ input{
     transform: scale(.8) rotate(15deg);
 }  */
 
+/* 手機 */
+.wrap{
+    /* border: 1px solid #000; */
+    width:88%;
+    margin: auto;
+}
+/* 平板直 */
+@media screen and (min-width:768px){
+    .wrap{
+        min-width:calc(680 / 768 * 100%);
+    }
+}
+/* 平板橫 */
+@media screen and (min-width:992px){
+    .wrap{
+        min-width:calc(900 / 992 * 100%);
+    }
+}
+/* 平板pro+電腦 */
+@media screen and (min-width:1200px){
+    .wrap{
+        min-width:calc(1100 / 1440 * 100%);
+    }
+}
 /* /////////////////背景圖///////////////// */
 @media screen and (min-width:1200px){
     .dessert-page1,
@@ -140,30 +164,6 @@ input{
         background-repeat: no-repeat;
         background-position: 0% 15%, 0% 1400px , 100% 800px;
         background-size: 100%, 10% , 3%;
-    }
-}
-/* 手機 */
-.wrap{
-    /* border: 1px solid #000; */
-    width:88%;
-    margin: auto;
-}
-/* 平板直 */
-@media screen and (min-width:768px){
-    .wrap{
-        min-width:calc(700 / 768 * 100%);
-    }
-}
-/* 平板橫 */
-@media screen and (min-width:992px){
-    .wrap{
-        min-width:calc(920 / 992 * 100%);
-    }
-}
-/* 平板pro+電腦 */
-@media screen and (min-width:1200px){
-    .wrap{
-        min-width:calc(1200 / 1440 * 100%);
     }
 }
 /* /////////////////我要購買燈箱///////////////// */
@@ -843,9 +843,9 @@ h2 .title-1 .middle{
 h2 .title-1 .middle p:first-child{
     /* border:1px solid red; */
     font-size:2rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--imcolor1);
-    text-shadow: var(--box-shadowsmall);
+    /* text-shadow: var(--box-shadowsmall); */
 }
 h2 .title-1 .middle p:last-child{
     /* border:1px solid blue; */
@@ -1135,66 +1135,6 @@ form .fa-cart-shopping{
 }
 /* /////////////////title///////////////// */
 
-.title-shot{
-    display: flex;
-    align-items: center;
-}
-.title-shot p{
-    color:var(--imcolor1);
-    font-size: .7rem;
-    text-align: center;
-    margin: 0 -5px;
-}
-.title-shot::before , .title-shot::after{
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 35px;
-    height: 35px;
-    z-index: 10;
-    /* border: 1px solid #000; */
-    transform: scale(.2);
-}
-.title-shot::before{
-    content:"";
-    background-image: url("../texture/line.svg");
-    
-}
-.title-shot::after{
-    content:"";
-    background-image: url("../texture/Line 2.svg");
-}
-.transtitle {
-    transform: rotate(-40deg);
-}
-.title-shot{
-    animation:moveup .5s infinite;
-}
-@keyframes moveup{
-    0%{
-        transform: translateY(0%);
-    }
-    25%{
-        transform: translateY(10%);
-    }
-    50%{
-        transform: translateY(20%);
-    }
-    75%{
-        transform: translateY(10%);
-    }
-    100%{
-        transform: translateY(0%);
-    }
-}
-
-@media screen and (min-width:992px){
-    .title-shot p{
-        font-size: 1rem;
-    }
-    .title-shot::before , .title-shot::after{
-        transform: scale(.4);
-    }
-}
 /* IG-post */
 .ig-post {
     /* border: 1px solid #000; */
@@ -1288,7 +1228,7 @@ form .fa-cart-shopping{
     }
     .ig-post .follow{
         width:100%;
-        padding-bottom: 48%;
+        padding-bottom: 48.4%;
     }
 }
 @media screen and (min-width:1200px){

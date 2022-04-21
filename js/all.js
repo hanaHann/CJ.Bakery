@@ -1,6 +1,9 @@
-// 導覽列
 window.addEventListener("load",function(){
-        
+    console.log(window.innerWidth)
+})
+
+// 導覽列
+window.addEventListener("load",function(){       
     var newin = document.getElementById("newIn");
     var hot = document.getElementById("hot");
     var dessert = document.getElementById("dessert");
@@ -67,10 +70,9 @@ window.addEventListener("load",function(){
     activity.addEventListener("mouseover",navMouseoverActivity);
     activity.addEventListener("mouseout",navMouseoutActivity  );
 
-    })
+})
 
 // 手機版footer 
-
 window.addEventListener("load",function(){
     let screenWidth = screen.width;
 
@@ -96,190 +98,6 @@ window.addEventListener("load",function(){
     }
 })
 
-// 我要購買-燈箱
-window.addEventListener("load",function(){
-    let cart = document.querySelectorAll(`.container .cart`);
-    let buyLightbox = document.getElementById("lightbox");
-    let closeBtn = document.getElementById("closebtn");
-    let cartAdd = document.getElementById("lightbox-joincart");
-    let flavorOpt = document.querySelectorAll(`.flavor-opt button`);
-    let lightboxImg = document.getElementById("lightbox-img");
-    let lightboxPrice = document.getElementById("lightbox-price");
-    let minus = document.getElementById("fa-minus");
-    let plus = document.getElementById("fa-plus");
-    let lightboxNum = document.getElementById("lightbox-num");
-    let lightboxBcg = document.getElementById("lightbox-bcg");
-
-
-    for(let i=0 ; i <cart.length ; i++){
-        cart[i].addEventListener("click",function(){
-            buyLightbox.style.display="block";
-            lightboxBcg.style.display="block";
-        })
-        closeBtn.addEventListener("click",function(){
-            buyLightbox.style.display="none";
-            lightboxBcg.style.display="none";
-        })
-        cartAdd.addEventListener("click",function(){
-            buyLightbox.style.display="none";
-            lightboxBcg.style.display="none";
-        })    
-    }
-    flavorOpt[0].addEventListener("click",function(){
-        lightboxImg.src="./pic/snow-ori.jpg";
-        lightboxPrice.value="320";
-        lightboxNum.value = 1;
-    })
-    flavorOpt[1].addEventListener("click",function(){
-        lightboxImg.src="./pic/snow-ch.jpg";
-        lightboxPrice.value="360";
-        lightboxNum.value = 1;
-    })
-
-    minus.addEventListener("click",function(){
-        if(lightboxNum.value == 1){
-            lightboxNum.value ==1 
-        }else{
-            lightboxNum.value --;
-        }
-    })
-    plus.addEventListener("click",function(){
-        lightboxNum.value ++;
-    })
-
-})
-
-// 入口燈箱-燈箱
-window.addEventListener("load",function(){
-    let screenWidth = screen.width;
-    let lightboxBcg = document.getElementById("lightbox-bcg");
-    if (screenWidth < 768){
-        let buyLightbox = document.getElementById("lightbox");
-        let closeBtn = document.getElementById("closebtn");
-        console.log(lightboxBcg);
-        closeBtn.addEventListener("click",function(){
-            buyLightbox.style.display="none";
-            lightboxBcg.style.display="none";
-        });
-    }
-
-});
-
-// 我的收藏
-
-window.addEventListener("load",function(){
-    let heart = document.getElementsByClassName("heart");   //所有愛心
-    console.log(heart)
-    let removeHeart = document.getElementById("remove-heart");  //已移除收藏燈箱
-    let addHeart = document.getElementById("add-heart");    //已加入收藏燈箱
-    let lightboxBcg = document.getElementById("lightbox-bcg");  //背景遮罩
-
-    for(let i=0 ; i<heart.length ; i++){
-        heart[i].addEventListener("click",function(){
-            console.log(heart[i])
-            if(this.title=="加入收藏"){
-                addHeart.style.visibility="visible"
-                this.src="./texture/heart2.png";        //換有愛心的圖片
-                this.title="取消收藏";
-                lightboxBcg.style.display="block";       //背景遮罩
-                lightboxBcg.style.opacity=".3"           //背景遮罩
-                setTimeout(function(){                      //時間到自動關閉
-                    addHeart.style.visibility="hidden"
-                    lightboxBcg.style.display="none";
-                    
-                },800)
-            }
-            else if (this.title="取消收藏"){
-                removeHeart.style.visibility="visible"
-                this.src="./texture/heart1.png";         //換空心的圖片
-                this.title="加入收藏";
-                lightboxBcg.style.display="block";        //背景遮罩
-                lightboxBcg.style.opacity=".3"            //背景遮罩
-                setTimeout(function(){                      //時間到自動關閉
-                    removeHeart.style.visibility="hidden"
-                    lightboxBcg.style.display="none";
-                },800)
-            }
-        })
-    }
-})
-
-
-//按鈕切換商品頁面
-window.addEventListener("load",function(){
-    var dessertBtns = document.getElementsByClassName("btn-item"); //元素們
-    var dessertContainers = document.getElementsByClassName("container");
-    
-    for(let i=0; i<dessertBtns.length; i++){
-        dessertContainers[i].style.display="none";
-        dessertContainers[0].style.display="block";
-        dessertBtns[i].addEventListener("click",function(){
-            this.style.backgroundColor="white";
-            this.style.border="2px solid #BD8B65";
-            dessertContainers[i].style.display="block";
-                for(let j=0; j<dessertBtns.length; j++){
-                    if( i != j){
-                        dessertBtns[j].style.backgroundColor="transparent";
-                        dessertBtns[j].style.border="1px solid #d2b48d";
-                        dessertContainers[j].style.display="none";
-                    }
-    
-                }
-        });
-    };
-})
-
-// 以下是輪播
-
-
-window.addEventListener("load",function(){
-    let imgAll = document.querySelectorAll(`#slidepic .img`);
-    let introduce = document.querySelectorAll(".introduce .inf");
-  
-    let num = 0; //宣告當前次數是0
- 
-    let start=setInterval(function(){
-        num++;
-        for(let i=0 ; i<imgAll.length ;i++){
-        imgAll[i].classList.add("hide");
-        introduce[i].classList.add("hide");
-        btn[i].style.backgroundColor="#AF6E4D";
-        }; //所有圖片文字都消失
-
-        if( num == imgAll.length ){
-            num = 0;
-        }
-        imgAll[num].classList.remove("hide"); //時間到的圖片出現
-        introduce[num].classList.remove("hide");//時間到的文字出現
-        btn[num].style.backgroundColor="white";
-    },3000)
-
-
-    let btn = document.querySelectorAll(".btn-control span");
-    // 按鈕事件
-    for(let a=0 ; a<btn.length ; a++){
-        for(let j=0 ; j<btn.length ; j++){
-            //點擊一下時清除輪播
-            btn[j].addEventListener("click",function(){clearInterval(start)});
-            btn[j].addEventListener("click",function(){
-                imgAll[j].classList.remove("hide");  //點到對應按鈕的圖片顯示
-                introduce[j].classList.remove("hide"); //點到對應按鈕的文字顯示
-                if( a != j){
-                    imgAll[a].classList.add("hide");  //其他圖片關起來
-                    introduce[a].classList.add("hide"); //其他文字關起來
-                }
-                //點擊時換按鈕顏色
-                this.style.backgroundColor="white";
-                console.log("點擊按鈕")
-                if( a != j){
-                    btn[a].style.backgroundColor="#AF6E4D"; //按鈕以外變回原本顏色
-                }
-            });
-        }
-
-    }
-
-})
 
 // 滑鼠
 
