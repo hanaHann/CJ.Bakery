@@ -1,6 +1,7 @@
 /* /////////////////入口燈箱///////////////// */
-.index #lightbox-bcg{
-    /* display: block; */
+.index #lightbox-bcg.show{
+    display: block;
+    opacity:.8;
 }
 .index .lightbox{
     display: block;
@@ -24,6 +25,9 @@
         display: none;
     }
     .index #lightbox-bcg{
+        display: none;
+    }
+    .index #lightbox-bcg.show{
         display: none;
     }
 }

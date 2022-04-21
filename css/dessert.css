@@ -52,6 +52,9 @@
 .dessert-page1  .owl-carousel{
     width: 90%;
 }
+.dessert-page1 .title-2-1 h2{
+    margin-top: 0;
+}
 .list {
     /* border: 1px solid rgb(64, 88, 224); */
     display: flex;

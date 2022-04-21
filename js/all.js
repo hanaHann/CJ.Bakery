@@ -152,10 +152,10 @@ window.addEventListener("load",function(){
 // 入口燈箱-燈箱
 window.addEventListener("load",function(){
     let screenWidth = screen.width;
+    let lightboxBcg = document.getElementById("lightbox-bcg");
     if (screenWidth < 768){
         let buyLightbox = document.getElementById("lightbox");
         let closeBtn = document.getElementById("closebtn");
-        let lightboxBcg = document.getElementById("lightbox-bcg");
         console.log(lightboxBcg);
         closeBtn.addEventListener("click",function(){
             buyLightbox.style.display="none";

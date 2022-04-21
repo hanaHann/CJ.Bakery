@@ -912,7 +912,7 @@ h2 .title-1 .middle p:last-child{
 }
 .title-2-1 .wrap h2,.title-2-2 .wrap h2{
     font-weight: 400;
-    font-size: 1.4rem;   
+    font-size: 1.2rem;   
 }
 .title-2-2 .wrap h2{
     color:white;
@@ -1134,13 +1134,14 @@ form .fa-cart-shopping{
 
 }
 /* /////////////////title///////////////// */
+
 .title-shot{
     display: flex;
     align-items: center;
 }
 .title-shot p{
     color:var(--imcolor1);
-    font-size: 1rem;
+    font-size: .7rem;
     text-align: center;
     margin: 0 -5px;
 }
@@ -1151,7 +1152,7 @@ form .fa-cart-shopping{
     height: 35px;
     z-index: 10;
     /* border: 1px solid #000; */
-    transform: scale(.4);
+    transform: scale(.2);
 }
 .title-shot::before{
     content:"";
@@ -1186,6 +1187,14 @@ form .fa-cart-shopping{
     }
 }
 
+@media screen and (min-width:992px){
+    .title-shot p{
+        font-size: 1rem;
+    }
+    .title-shot::before , .title-shot::after{
+        transform: scale(.4);
+    }
+}
 /* IG-post */
 .ig-post {
     /* border: 1px solid #000; */
