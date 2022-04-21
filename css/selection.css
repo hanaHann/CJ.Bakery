@@ -14,16 +14,15 @@
 .selection .container .bcg{
     /* border: 1px solid #000; */
     position: absolute;
-    width: 80%;
+    width:90%;
     bottom:0;
     top:0;
     right:0;
     z-index: -1;
-    background-image: linear-gradient(to right , var(--bcg-color) 0%,var(--imcolor2) 60%);
+    background-color: var(--color3);
 }
 .selection .container:nth-of-type(even) .bcg{
     left:0;
-    background-image: linear-gradient(to left , var(--bcg-color) 0%,var(--color2) 60%);
 }
 .selection .container:nth-of-type(even) .item{
     /* border: 2px solid purple; */
@@ -74,14 +73,14 @@
 .selection .container .pic-area h2{
     /* border: 1px solid #000; */
     font-size: .9rem;
-    color:var(--imcolor2);
+    color:white;
     font-weight: 500;;
     position: relative;
     margin-top: 20px;
 }
 .selection .container .pic-area h2::after{
     content:"";
-    background-color:var(--imcolor2) ;
+    background-color:white ;
     height: 1px;
     position: absolute;
     left: 0;
@@ -127,12 +126,6 @@
     .selection  .container .bcg{
         aspect-ratio:  2.2 / 1;
         top:10%;
-        /* background-image: linear-gradient(to right , #f7eedb,var(--color3)); */
-        background-image: none;
-        background-color: var(--color3);
-    }
-    .selection .container:nth-of-type(even) .bcg{
-        background-image: none;
         background-color: var(--color3);
     }
     .selection .item .pic-area{

@@ -28,32 +28,6 @@
     background-size: cover;
     background-attachment:fixed;
 }
-.activity .banner .pic .pic-item::after{
-    content:"MORE >";
-    width: 15%;
-    position: absolute;
-    top:0;
-    bottom:0;
-    height: 100%;
-    right:0;
-    opacity: .8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: center;
-    font-size: 1.2rem;
-    transition: ease .5s;
-    color:var(--wcolor);
-    background-color: white;
-}
-.activity .banner .pic .pic-item:hover:after{
-    content:"盒子戚風的最新口味，焦糖泰奶脆脆盒子，焦糖泰奶脆脆盒子戚風，夾層是經典lotus蓮花餅加伊斯尼鮮奶油，泰奶控千萬不能錯過";
-    padding: 40px;
-    width: 25%;
-    font-weight: 300;
-    font-family: 'Saira Condensed', sans-serif;
-}
 .activity .banner .inf{
     /* border: 1px solid #000; */
     border-radius: 0 0px 40px 0;
@@ -108,6 +82,34 @@
     .activity .banner .pic .btn-3,
     .activity .item .inf .btn-3{
     font-size: 1.2rem;
+    }
+}
+@media screen and (min-width:1200px){
+    .activity .banner .pic .pic-item::after{
+        content:"MORE >";
+        width: 15%;
+        position: absolute;
+        top:0;
+        bottom:0;
+        height: 100%;
+        right:0;
+        opacity: .8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        text-align: center;
+        font-size: 1.2rem;
+        transition: ease .5s;
+        color:var(--wcolor);
+        background-color: white;
+    }
+    .activity .banner .pic .pic-item:hover:after{
+        content:"盒子戚風的最新口味，焦糖泰奶脆脆盒子，焦糖泰奶脆脆盒子戚風，夾層是經典lotus蓮花餅加伊斯尼鮮奶油，泰奶控千萬不能錯過";
+        padding: 40px;
+        width: 25%;
+        font-weight: 300;
+        font-family: 'Saira Condensed', sans-serif;
     }
 }
 

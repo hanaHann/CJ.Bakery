@@ -222,11 +222,15 @@
     /* border: 1px solid #000; */
     width: 35px;
 }
-.nav-item button p{
+.nav-item button h2{
     /* border: 1px solid #000; */
     color:var(--imcolor2);
     writing-mode: vertical-lr;
     text-orientation: upright;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+
 }
 
 @media screen and (min-width:768px){
@@ -236,7 +240,7 @@
         margin: 10px;
         flex-direction: row;
     }
-    .nav-item button p{
+    .nav-item button h2{
         writing-mode: horizontal-tb;;
     }
 }
@@ -261,7 +265,10 @@
         border: 2px solid transparent;
 
     }
-   
+    .nav-item button h2{
+       font-size: 1.4rem;
+    }
+    
 }
 /* ////////////////主要內容///////////////// */
 
