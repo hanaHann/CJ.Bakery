@@ -272,11 +272,11 @@ input{
         font-size: .7rem;
     }
     .lightbox .frame .flavor button{
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         margin-right: 10px;
     }
     .lightbox .frame .flavor button:last-of-type{
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         margin-right: 0px;
     }
     .lightbox .frame .detail p{
@@ -453,6 +453,7 @@ input{
     .lightbox .frame .flavor-opt button:hover{
         opacity: .9;
     }
+ 
 
 }
 
@@ -799,17 +800,15 @@ footer ul:nth-of-type(1) li a p{
 
 
 /* /////////////////標題形式一///////////////// */
-h2{
-    /* border: 1px solid    #000; */
-    margin-top: 20%;
-    margin-bottom: 10%;
-}
+
 h2 .title-1{
     /* border: 1px solid #000; */
     margin: auto;
     display:flex;
     align-items: center;
     justify-content: center;
+    margin-top: 12%;
+    margin-bottom: 5%;
 }
 h2 .title-1 .line{
     /* border:1px solid red ; */
@@ -840,8 +839,7 @@ h2 .title-1 .middle p:last-child{
 }
 @media screen and (min-width:768px){
     h2{
-        margin-top: 120px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
     h2 .title-1 .line{
         /* border:1px solid red ; */

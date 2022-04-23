@@ -278,11 +278,11 @@
 }
 @media screen and (min-width:768px){
     .index .new-dessert .wrap .container{
-        /* border: 1px solid #000; */
+        /* border: 1px solid    #000; */
         margin-top: 0%;
         aspect-ratio: 2.5 / 1;
         align-items: center;
-        margin-top: -15%;
+        margin-top: -20%;
     }
     .index .new-dessert .wrap .num p{
         /* border: 1px solid #000; */
@@ -734,7 +734,7 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin: 0;
 }
 .index .about .wrap .inf{
@@ -762,6 +762,7 @@
 .index .about .wrap .inf :first-child{
     /* border: 1px solid #000; */
     font-size:1.6rem;
+    font-weight: 400;
     color:var(--imcolor2);
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
@@ -796,7 +797,6 @@
     .index .about .wrap{
         /* border: 1px solid blue; */
         flex-direction: row;
-        align-content: flex-start;
         align-items: flex-start;
         width: 88%;
         margin: auto;
@@ -812,7 +812,7 @@
         width: 50%;
         overflow: hidden;
         text-align: right;
-        padding-bottom: 120px;
+        padding-top: 120px;
     
     }
     .index .about .video-frame video{
@@ -823,7 +823,7 @@
         border-radius:0 10px 80px 0px ;
         position: absolute;
         left:0;
-        bottom:15%;
+        bottom:10%;
     }
     .index .about .wrap .img img{
         /* border: 1px solid #000; */
@@ -891,7 +891,7 @@
 .dessert-page1 .container{
     background-color: white;
     border-radius: 40px;
-    padding: 60px 10px;
+    padding: 80px 10px 100px 10px;
     margin-top: 80px;
     box-shadow: var(--box-shadowsmall);
 }
@@ -1005,7 +1005,7 @@
         cursor: pointer;
     }
     .dessert-page1 .title-2-1{
-        margin-top: 80px;
+        margin-top: 50px;
     }
     .dessert-page1 .container{
         background-color: white;
@@ -1014,6 +1014,7 @@
         margin-top: 40px;
     }
     .dessert-page1 .container .list li .inf{
+        /* border: 1px solid #000; */
         align-items: flex-start;      
     }
     .dessert-page1 .container ul li .inf h3{
@@ -1049,8 +1050,10 @@
         font-size: 1.6rem;
     }
     .dessert-page1 .container ul li .inf a+p{
+        /* border: 1px solid #000; */
+        margin-top:15px;
         font-size: 1.2rem;
-        aspect-ratio: 1 /.5;
+        aspect-ratio: 1 /.4;
     }
     .dessert-page1 .container ul li .price p{
         font-size: 1.8rem;
@@ -2527,6 +2530,7 @@
     padding-bottom: 65%;
     border-radius: 40px;
     box-shadow: var(--box-shadowsmall);
+    background-size: cover;
 }
 .activity .item .box:nth-of-type(odd) .pic {
     height: 100%;
@@ -2538,7 +2542,6 @@
 }
 .activity .item .box:nth-of-type(3) .pic {
     background-image: url(../pic/LINE_ALBUM_220306_26.jpg);
-    background-position: -400px -230px;
     opacity: .8 ;
 }
 .activity .item .box .inf{

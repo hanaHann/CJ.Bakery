@@ -1,64 +1,4 @@
-// 我要購買-燈箱
-// window.addEventListener("load",function(){
-//     let cart = document.querySelectorAll(`.container .cart`);
-//     let buyLightbox = document.getElementById("lightbox");
-//     let closeBtn = document.getElementById("closebtn");
-//     let cartAdd = document.getElementById("lightbox-joincart");
-//     let flavorOpt = document.querySelectorAll(`.flavor-opt button`);
-//     let lightboxImg = document.getElementById("lightbox-img");
-//     let lightboxPrice = document.getElementById("lightbox-price");
-//     let minus = document.getElementById("fa-minus");
-//     let plus = document.getElementById("fa-plus");
-//     let lightboxNum = document.getElementById("lightbox-num");
-//     let lightboxBcg = document.getElementById("lightbox-bcg");
-
-//     console.log("hihi");
-//     for(let i=0 ; i <cart.length ; i++){
-//         cart[i].addEventListener("click",function(){
-//             buyLightbox.style.display="block";
-//             lightboxBcg.style.display="block";
-//         })
-//         closeBtn.addEventListener("click",function(){
-//             buyLightbox.style.display="none";
-//             lightboxBcg.style.display="none";
-//         })
-//         cartAdd.addEventListener("click",function(){
-//             buyLightbox.style.display="none";
-//             lightboxBcg.style.display="none";
-//         })    
-//     }
-//     flavorOpt[0].addEventListener("click",function(){
-//         lightboxImg.src="./pic/snow-ori.jpg";
-//         lightboxPrice.value="320";
-//         lightboxNum.value = 1;
-//         this.style.backgroundColor="#BD8B65";
-//         flavorOpt[1].style.backgroundColor="#d2b48d";
-//     })
-//     flavorOpt[1].addEventListener("click",function(){
-//         lightboxImg.src="./pic/snow-ch.jpg";
-//         lightboxPrice.value="360";
-//         lightboxNum.value = 1;
-//         this.style.backgroundColor="#BD8B65";
-//         flavorOpt[0].style.backgroundColor="#d2b48d";
-//     })
-
-//     minus.addEventListener("click",function(){
-//         if(lightboxNum.value == 1){
-//             lightboxNum.value ==1 
-//         }else{
-//             lightboxNum.value --;
-//         }
-//     })
-//     plus.addEventListener("click",function(){
-//         lightboxNum.value ++;
-//     })
-
-// })
-
-///////////////////////////////////////////////////////////////////
-
-console.log("hi");
-// 我要購買-燈箱測試
+// 我要購買
 
 window.addEventListener("load",function(){
 
@@ -194,7 +134,11 @@ window.addEventListener("load",function(){
                     // console.log(button)
                     document.getElementById("lightbox-img").src=e.picURL[i];
                     document.getElementById("lightbox-price").value = e.price[i];
-                    button.style.backgroundColor="#BD8B65";
+
+                    button.style.backgroundColor="#BD8B65"; 
+                    $(button).siblings().css({                 //用jQuery取出其他button
+                        "background-color": "#d2b48d",
+                    });
                     
                 })
              
@@ -210,6 +154,13 @@ window.addEventListener("load",function(){
         lightboxBcg.style.display="none";
     }
 
+     //定義加入購物車的函式
+     let added =function(){           
+        buyLightbox.style.display="none";
+        lightboxBcg.style.display="none";
+        alert("已加入購物車");
+    }
+
     let cart = document.querySelectorAll(`.container .cart`); //取得購物車icon
 
     //註冊每個按鈕
@@ -217,7 +168,7 @@ window.addEventListener("load",function(){
 
         cart[i].addEventListener("click",ClickToShow(dessert[i]),false)   //按按鈕時呼叫函式，將desseet的所有陣列放入此函式
         closeBtn.addEventListener("click",lightboxHide)  //按xx時呼叫關閉燈箱
-        cartAdd.addEventListener("click",lightboxHide)   //按加入購物車時關閉燈箱
+        cartAdd.addEventListener("click",added)   //按加入購物車時關閉燈箱
    
     }
      //加減事件
