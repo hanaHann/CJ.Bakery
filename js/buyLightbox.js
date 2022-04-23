@@ -42,7 +42,7 @@ window.addEventListener("load",function(){
         inf:"不只有lotus的搭配，也有oreo口味，搭配抹茶的香氣，苦中帶甜。"
         },
         {name:`司康`,
-        picURL:["../pic/S__22176105.jpg"],
+        picURL:["../pic/scon.jpg"],
         flavor:["經典原味"],
         price:["200"],
         inf:"野餐必備甜點，口感滑順不乾澀的司康，小小一個完全沒負擔。"
@@ -60,7 +60,7 @@ window.addEventListener("load",function(){
         inf:"注意注意！並非一般的提拉米蘇呦，是提拉米蘇巴斯克，獨家口味。"
         },
         {name:`一口戚風`,
-        picURL:["../pic/LINE_ALBUM_220306_30.jpg","../pic/eco.jpg","../pic/one-straw.jpg"],
+        picURL:["../pic/strasand.jpg","../pic/eco.jpg","../pic/one-straw.jpg"],
         flavor:["三明治","櫻桃巧克力","檸檬草莓"],
         price:["100","100","100"],
         inf:"咕咕霍夫的小可愛，已經擁有一大票粉絲的磅蛋糕。"
@@ -72,7 +72,7 @@ window.addEventListener("load",function(){
         inf:"軟綿又扎實 外酥又內軟的布朗尼。"
         },
         {name:`巴斯克`,
-        picURL:["../pic/S__23224353.jpg","../pic/S__23224353.jpg"],
+        picURL:["../pic/beautybas.jpg","../pic/beautybas.jpg"],
         flavor:["4吋","6吋"],
         price:["380","580"],
         inf:"近年來夯到不行的巴斯克，是法國、西班牙邊界的巴斯克地區的傳統甜點，被稱為烤焦的起司蛋糕"
