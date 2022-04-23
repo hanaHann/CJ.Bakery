@@ -2266,7 +2266,7 @@
     font-weight: 500;
     position: relative;
     color:var(--imcolor1);
-    text-shadow: var(--box-shadowsmall);
+    /* text-shadow: var(--box-shadowsmall); */
     
 }
 .notice .faq .wrap h2::after{
@@ -2333,7 +2333,7 @@
         font-size: 4rem;
         position: relative;
         color:var(--imcolor1);
-        text-shadow: var(--box-shadowsmall);
+        /* text-shadow: var(--box-shadowsmall); */
     }
     .notice .faq .wrap h2::after{
         content:"";

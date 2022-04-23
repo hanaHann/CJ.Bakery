@@ -81,33 +81,6 @@ input{
     outline: none;
 }
 
-/* ////////////////cursor///////////////// */
-/* #cursor-wrap{
-    position: absolute;
-    opacity: 1;
-    z-index: 40;
-} */
-/* #cursor{ */
-    /* width: 8px;
-    height: 8px;
-    border: 1px solid white;
-    border-radius: 8px;
-    position: absolute;
-    background-color:var(--imcolor1);
-    top:0;
-    left:0;
-    opacity: .7;
-    animation: pulse .2s infinite; */
-/* #cursor-bear{
-    position: absolute;
-    top:20px;
-    left:100px;
-    transform: scale(.8);
-}
-*:active #cursor-bear{
-    transform: scale(.8) rotate(15deg);
-}  */
-
 /* 手機 */
 .wrap{
     /* border: 1px solid #000; */
@@ -298,8 +271,13 @@ input{
         background-color: var(--color2);
         font-size: .7rem;
     }
-    .lightbox .frame .flavor button:nth-of-type(1){
+    .lightbox .frame .flavor button{
+        border: 1px solid #000;
         margin-right: 10px;
+    }
+    .lightbox .frame .flavor button:last-of-type{
+        border: 1px solid #000;
+        margin-right: 0px;
     }
     .lightbox .frame .detail p{
         font-size: 1.2rem;
@@ -441,8 +419,14 @@ input{
         background-color: var(--color2);
         font-size: 1rem;
     }
-    .lightbox .frame .flavor button:nth-of-type(1){
+
+    .lightbox .frame .flavor button{
+        /* border: 1px solid #000; */
         margin-right: 10px;
+    }
+    .lightbox .frame .flavor button:last-of-type{
+        /* border: 1px solid #000; */
+        margin-right: 0px;
     }
     .lightbox .frame .detail p{
         font-size: 1.8rem;

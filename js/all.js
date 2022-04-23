@@ -77,8 +77,8 @@ window.addEventListener("load",function(){
     let screenWidth = screen.width;
 
     if (screenWidth < 768){
-        console.log("小於768");
-        console.log("螢幕寬度" , screenWidth)    
+            // console.log("小於768");
+            // console.log("螢幕寬度" , screenWidth)    
 
         var lastScrollTop = 0;
         console.log(lastScrollTop)
