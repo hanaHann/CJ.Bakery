@@ -157,6 +157,10 @@
     }
 }
 /* /////////////////index-最新甜點///////////////// */
+.index .new-dessert .title-1{
+    /* border: 1px solid #000; */
+    margin-top: 10%;  /*只for首頁手機的第一個 不能改*/
+}
 .index .new-dessert .wrap{
     /* border: 1px solid #000; */
     display: flex;
@@ -277,6 +281,10 @@
   100% { transform: rotate(0deg); }
 }
 @media screen and (min-width:768px){
+    .index .new-dessert .title-1{
+        /* border: 1px solid #000; */
+        margin-top: 15%;  /*只for首頁手機的第一個 不能改*/
+    }
     .index .new-dessert .wrap .container{
         /* border: 1px solid    #000; */
         margin-top: 0%;
@@ -2646,6 +2654,9 @@
         margin-bottom:50px ;
         color:var(--wcolor);
         font-weight: 200;
+    }
+    .activity .item .box .inf h3{
+        font-size: 1.8rem;
     }
 
 }

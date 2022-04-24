@@ -1,5 +1,7 @@
 window.addEventListener("load",function(){
-    console.log(window.innerWidth)
+    console.log("window.innerWidth",window.innerWidth);
+    console.log("screen.width",screen.width);
+
 })
 
 // 導覽列
@@ -11,6 +13,24 @@ window.addEventListener("load",function(){
     var selection = document.getElementById("selection");
     var notice = document.getElementById("notice");
     var activity = document.getElementById("activity");
+
+    let navA = document.querySelectorAll(".nav-a");
+    let phoneUl = document.getElementById("phone-ul");
+    
+    // for(i=0 ; i<navA.length ; i++){
+        
+        
+    //     navA[i].addEventListener("click",function(){
+    //         phoneUl.style.backgroundColor="red";
+    //         // let check = document.querySelector("header .wrap input");
+    //         // console.log(check);
+    //         console.log(check.ckecked);
+    //         check.style.border="5px solid red";
+    //         check.ckecked=false;
+    //         console.log("點完");
+
+    //     })
+    // }
 
     function navMouseoverNewin(){
         newin.innerText=("最新甜點");
@@ -81,12 +101,12 @@ window.addEventListener("load",function(){
             // console.log("螢幕寬度" , screenWidth)    
 
         var lastScrollTop = 0;
-        console.log(lastScrollTop)
+        // console.log(lastScrollTop);
         window.addEventListener("scroll", function(){
             var st = window.pageYOffset; 
 
             if (st > lastScrollTop){
-                console.log(st)
+                // console.log(st);
                 footer.classList.add("footer-hidden");
             } else {
                 footer.classList.remove("footer-hidden");

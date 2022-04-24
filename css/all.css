@@ -807,7 +807,7 @@ h2 .title-1{
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-top: 12%;
+    margin-top: 25%; /*手機版所有離上面的高度*/
     margin-bottom: 5%;
 }
 h2 .title-1 .line{
@@ -838,6 +838,9 @@ h2 .title-1 .middle p:last-child{
     margin-top: -10px;
 }
 @media screen and (min-width:768px){
+    h2 .title-1{
+        margin-top: 10%; /*平版所有離上面的高度*/
+    }
     h2{
         margin-bottom: 20px;
     }

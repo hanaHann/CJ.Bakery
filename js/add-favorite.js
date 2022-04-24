@@ -2,7 +2,6 @@
 
 window.addEventListener("load",function(){
     let heart = document.getElementsByClassName("heart");   //所有愛心
-    console.log(heart)
     let removeHeart = document.getElementById("remove-heart");  //已移除收藏燈箱
     let addHeart = document.getElementById("add-heart");    //已加入收藏燈箱
     let lightboxBcg = document.getElementById("lightbox-bcg");  //背景遮罩
