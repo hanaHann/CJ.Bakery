@@ -6,14 +6,15 @@ window.addEventListener("load",function(){
 
         let buyLightbox = document.getElementById("lightbox");
         let closeBtn = document.getElementById("closebtn");
-        closeBtn.addEventListener("mouseover",function(){
-            this.style.backgroundColor="#BD8B65";
-        });
-        closeBtn.addEventListener("click",function(){
-            buyLightbox.style.display="none";
-            lightboxBcg.style.display="none";
-        });
+   
     
     }
+    closeBtn.addEventListener("mouseover",function(){
+        this.style.backgroundColor="#BD8B65";
+    });
+    closeBtn.addEventListener("click",function(){
+        buyLightbox.style.display="none";
+        lightboxBcg.style.display="none";
+    });
 
 });
