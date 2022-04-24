@@ -2298,16 +2298,20 @@
     margin: 3% 0 0 0 ;
     position: relative;
 }
+.notice .faq .wrap .item:hover{
+    cursor: pointer;
+}
 .notice .faq .wrap input{
     display: none;
     z-index: -10;
 }
-.notice .faq .wrap .inf-hidden{
-    display: none;
+.notice .faq .wrap .inf{
     padding: 30px;
     width: 98%;
     /* background-color:rgba(231,212,171,.9 );  */
     background-color: rgba(255, 255, 255, 0.8);
+    color:var(--imcolor1);
+    margin: auto;
 }
 .notice .faq .wrap .item p:first-of-type{
     color:var(--imcolor1);
@@ -2323,13 +2327,15 @@
     font-size: 1.3rem;
     color:var(--imcolor1);
 }
-.notice .faq .wrap input:checked ~.inf-hidden {
+.notice .faq .wrap input:checked ~.inf {
     /* border: 1px solid #000; */
     display: block;
-    margin: auto;
 }
-.notice .faq .wrap .item .inf-hidden{
-    color:var(--imcolor1);
+
+
+
+.faq-hidden{
+    display: none;
 }
 
     
@@ -2368,8 +2374,7 @@
         display: none;
         z-index: -10;
     }
-    .notice .faq .wrap .inf-hidden{
-        display: none;
+    .notice .faq .wrap .inf{
         padding: 30px;
         width: 98%;
         /* background-color:rgba(231,212,171,.9 );  */
@@ -2389,13 +2394,13 @@
         font-size: 1.5rem;
         color:var(--imcolor1);
     }
-    .notice .faq .wrap input:checked ~.inf-hidden {
+    .notice .faq .wrap input:checked ~.inf {
         /* border: 1px solid #000; */
         display: block;
         margin: auto;
     
     }
-    .notice .faq .wrap .item .inf-hidden{
+    .notice .faq .wrap .item .inf{
         color:var(--imcolor1);
     }
 

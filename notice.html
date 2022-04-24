@@ -148,28 +148,6 @@
                 </div>
             
             </a>
-            <script>
-                window.addEventListener("load",function(){
-                    
-                    
-                    document.addEventListener("scroll",function(){
-                        let shot = document.getElementById("title-shot");
-                        let bear = document.getElementById("hi-bear");
-                        let ScrollNum = document.documentElement.scrollTop;
-                        console.log(ScrollNum)
-                        if(ScrollNum>90){
-                            shot.classList.add("shot-show");
-                            bear.classList.add("bear-move");
-                            
-                        }else{
-                            bear.classList.remove("bear-move")
-                            shot.classList.remove("shot-show");
-                        }
-                    })
-                    
-                    
-                })
-            </script>
             <!-- 三卡片 -->
             <div class="container">
                 <div class="card" id="first-card" data-aos="zoom-in">
@@ -223,7 +201,7 @@
                 
                     </form>
                 </div>
-                <p class="inf-hidden">可以的，請關注官網或是line、Instagram的最新消息，會再公布可以開放面交的日期地點。</p>
+                <p class="inf faq-hidden">可以的，請關注官網或是line、Instagram的最新消息，會再公布可以開放面交的日期地點。</p>
             </div>
 
             <div class="qa">
@@ -237,7 +215,7 @@
                 
                     </form>
                 </div>
-                <p class="inf-hidden">請使用本網站的查詢表格輸入您在訂購時註冊的電子郵件地址並與我們聯繫。</p>
+                <p class="inf faq-hidden">請使用本網站的查詢表格輸入您在訂購時註冊的電子郵件地址並與我們聯繫。</p>
             </div>
 
             <div class="qa">
@@ -251,7 +229,7 @@
                 
                     </form>
                 </div>
-                <p class="inf-hidden">我們將在您的訂單完成後 5 天內發貨</p>
+                <p class="inf faq-hidden">我們將在您的訂單完成後 5 天內發貨</p>
             </div>
             
             <div class="qa">
@@ -265,7 +243,7 @@
                 
                     </form>
                 </div>
-                <p class="inf-hidden">我們無法指定日期</p>
+                <p class="inf faq-hidden">我們無法指定日期</p>
             </div>
 
             <div class="qa">
@@ -279,7 +257,7 @@
                 
                     </form>
                 </div>
-                <p class="inf-hidden">可以在下方Instagram私訊我們，也可以Line官方詢問</p>
+                <p class="inf faq-hidden">可以在下方Instagram私訊我們，也可以Line官方詢問</p>
             </div>
 
             <div class="qa">
@@ -293,7 +271,7 @@
                 
                     </form>
                 </div>
-                <p class="inf-hidden">我們接受線上付款及轉帳</p>
+                <p class="inf faq-hidden">我們接受線上付款及轉帳</p>
             </div>
 
             <div class="qa">
@@ -307,7 +285,7 @@
                 
                     </form>
                 </div>
-                <p class="inf-hidden">請聯繫官方帳號會有專人為您服務</p>
+                <p class="inf faq-hidden">請聯繫官方帳號會有專人為您服務</p>
             </div>
 
             <div class="qa">
@@ -321,7 +299,7 @@
                 
                     </form>
                 </div>
-                <p class="inf-hidden"> 7-11/全家到店取貨、黑貓宅急便、配送到府<br><br>
+                <p class="inf faq-hidden"> 7-11/全家到店取貨、黑貓宅急便、配送到府<br><br>
 
                     配送範圍：臺灣本島、澎湖部分地區、金門部分地區（大金門、小金門）、小琉球、馬祖地區、綠島
                     以下區域除外：蘭嶼、澎湖（望安鄉、七美鄉、虎井島、桶盤島、大倉嶼、員貝嶼、鳥嶼、吉貝嶼）、金門（烏坵鄉-大膽島、二膽島）
@@ -490,6 +468,7 @@
 <script src="./js/jquery-3.6.0.min.js"></script>
 <!-- /////////////////js///////////////// -->
 <script src="./js/all.js"></script>
+<script src="./js/qaClick.js"></script>
 <!-- /////////////////aos///////////////// -->
 
 <script>

@@ -14,8 +14,8 @@ window.addEventListener("load",function(){
     var notice = document.getElementById("notice");
     var activity = document.getElementById("activity");
 
-    let navA = document.querySelectorAll(".nav-a");
-    let phoneUl = document.getElementById("phone-ul");
+    // let navA = document.querySelectorAll(".nav-a");
+    // let phoneUl = document.getElementById("phone-ul");
     
     // for(i=0 ; i<navA.length ; i++){
         
@@ -92,26 +92,23 @@ window.addEventListener("load",function(){
 
 })
 
-// 手機版footer 
+//footer
 window.addEventListener("load",function(){
     let screenWidth = screen.width;
+    let footer = document.getElementById("footer");
+    // alert("hi");
 
-    if (screenWidth < 768){
-            // console.log("小於768");
-            // console.log("螢幕寬度" , screenWidth)    
-
+    if (screenWidth < 768 || window.innerWidth < 768){
         var lastScrollTop = 0;
-        // console.log(lastScrollTop);
         window.addEventListener("scroll", function(){
             var st = window.pageYOffset; 
-
             if (st > lastScrollTop){
-                // console.log(st);
                 footer.classList.add("footer-hidden");
             } else {
                 footer.classList.remove("footer-hidden");
             }
-            lastScrollTop = st <= 0 ? 0 : st; 
+            lastScrollTop = st <= 0 ? 0 : st;  
+
 
         }, false);
 
