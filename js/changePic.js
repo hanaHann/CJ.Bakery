@@ -6,8 +6,6 @@ window.addEventListener("load",function(){
     })
     $(".ds-pic2").mouseout(function(){
         $(".ds-pic").fadeIn(0);
-        $(".ds-pic2").fadeOut(0);
-        
-        
+        $(".ds-pic2").fadeOut(0); 
     })
 })
