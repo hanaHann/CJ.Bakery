@@ -985,13 +985,15 @@
     /* border: 1px solid #000; */
     font-weight: 400;
     font-size: 1.4rem;
-    color:var(--imcolor2)
+    color:var(--imcolor2);
 }
 .dessert-page1 .container ul li .price i{
+    /* border: 1px solid #000; */
     font-size: 1.4rem;
     color:var(--imcolor2);
     transition: .2s;
 }
+
 .dessert-page1 .container .list .pic img:nth-of-type(2){
     /* border: 1px solid #000;q */
     width: 100%;
