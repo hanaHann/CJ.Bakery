@@ -1,10 +1,5 @@
 /* ====================index開始==================== */
-@media screen and (min-width:1200px){
-    .index .title-1:nth-of-type(1){
-        /* border: 1px solid #000; */
-        margin-top: 200px;
-    }
-}
+
 
 /* /////////////////index-入口燈箱///////////////// */
 .index #lightbox-bcg.show{
@@ -158,10 +153,6 @@
     }
 }
 /* /////////////////index-最新甜點///////////////// */
-.index .new-dessert .title-1{
-    /* border: 1px solid #000; */
-    margin-top: 10%;  /*只for首頁手機的第一個 不能改*/
-}
 .index .new-dessert .wrap{
     /* border: 1px solid #000; */
     display: flex;
@@ -282,10 +273,6 @@
   100% { transform: rotate(0deg); }
 }
 @media screen and (min-width:768px){
-    .index .new-dessert .title-1{
-        /* border: 1px solid #000; */
-        margin-top: 15%;  /*只for首頁手機的第一個 不能改*/
-    }
     .index .new-dessert .wrap .container{
         /* border: 1px solid    #000; */
         margin-top: 0%;
@@ -331,6 +318,9 @@
     }
 }
 @media screen and (min-width:992px){
+    .index .new-dessert{
+        /* border: 1px solid red;    */
+    }
     .index .new-dessert .wrap{
         /* border:3px solid rgb(49, 165, 109); */
         position: relative;
@@ -409,6 +399,9 @@
 
 }
 @media screen and (min-width:1200px){
+    .index .new-dessert{
+        border: 1px solid transparent;
+    }
     .index .new-dessert .wrap{
         /* border:3px solid rgb(49, 165, 109); */
         position: relative;
@@ -596,6 +589,10 @@
     }
 }
 @media screen and (min-width:768px){
+    .index .hot{
+        /* border: 1px solid #000; */
+        width: 100%;
+    }
     .index .hot .container .item{
         min-height: 250px;
     }
@@ -674,6 +671,7 @@
 }
 @media screen and (min-width:1200px){
     .index .hot .container .item{
+        /* border: 1px solid #000; */
         min-height: 400px;
     }
     .index .hot .container .item .heart{
@@ -901,7 +899,7 @@
     background-color: white;
     border-radius: 40px;
     padding: 60px 10px 100px 10px;
-    margin-top: 80px;
+    margin-top: 30px;
     box-shadow: var(--box-shadowsmall);
 }
 .dessert-page1  .owl-carousel{
@@ -1336,13 +1334,8 @@
 @media screen and (min-width:768px){
     .nav-item button{
         border-radius: 20px;
-        padding: 10px 25px;
+        padding: 10px 15px;
         margin: 10px;
-        flex-direction: row;
-    }
-    .nav-item button h2{
-        writing-mode: horizontal-tb;
-        /* transform: translate(0%); */
     }
 }
 @media screen and (min-width:1200px){
@@ -1360,13 +1353,15 @@
         padding: 5px 25px;
         margin: 0 30px;
         transition: .5s;
+        flex-direction: row;
     }
     .nav-item a button{
         border: 2px solid transparent;
 
     }
     .nav-item button h2{
-       font-size: 1.4rem;
+        writing-mode: horizontal-tb;
+        font-size: 1.4rem;
     }
 }
 /* ////////////////dessert-p2_主要內容///////////////// */

@@ -135,7 +135,7 @@ input{
         url(../texture/bcg\ dot.svg),
         url(../texture/bcg-sq.svg);
         background-repeat: no-repeat;
-        background-position: 0% 15%, 0% 1400px , 100% 800px;
+        background-position: 0% 17%, 0% 1400px , 100% 800px;
         background-size: 100%, 10% , 3%;
     }
 }
@@ -807,16 +807,22 @@ h2 .title-1{
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-top: 25%; /*手機版所有離上面的高度*/
-    margin-bottom: 5%;
+    margin-top: 80px; 
+    /* 手機版所有離上面的高度 */
+    margin-bottom: 40px;
+}
+.index .new-dessert  h2 .first-title-1{
+    /* border: 1px solid red; */
+    margin-top: 30px;  
+    /* 只for首頁手機的第一個 不能改 */
 }
 h2 .title-1 .line{
     /* border:1px solid red ; */
-    width: 65px;
-    height: 15px;
+    width: 40px;
+    height: 10px;
     border-radius: 5px;
-    background: radial-gradient(var(--imcolor2), var(--imcolor2) 2px, transparent 2px, transparent);
-    background-size: 15px 100%;
+    background: radial-gradient(var(--imcolor2), var(--imcolor2) 1.5px, transparent 1.5px, transparent);
+    background-size: 10px 100%;
 }
 h2 .title-1 .middle{
     /* border:2px solid red; */
@@ -839,7 +845,22 @@ h2 .title-1 .middle p:last-child{
 }
 @media screen and (min-width:768px){
     h2 .title-1{
-        margin-top: 10%; /*平版所有離上面的高度*/
+        margin-top: 100px; 
+        /* 平版所有離上面的高度 */
+        margin-bottom: 20px;
+    }
+    h2 .title-1 .line{
+        /* border:1px solid red ; */
+        width: 65px;
+        height: 15px;
+        border-radius: 5px;
+        background: radial-gradient(var(--imcolor2), var(--imcolor2) 2px, transparent 2px, transparent);
+        background-size: 15px 100%;
+    }
+    .index .new-dessert h2 .first-title-1{
+        /* border: 2px solid red; */
+        margin-top: 90px;  
+        /* 只for首頁平板的第一個 不能改 */
     }
     h2{
         margin-bottom: 20px;
@@ -858,6 +879,15 @@ h2 .title-1 .middle p:last-child{
     }
 }
 @media screen and (min-width:1200px){
+    h2 .title-1{
+        margin-top: 150px; 
+        /* 電腦所有離上面的高度 */
+    }
+    .index .new-dessert  h2 .first-title-1{
+        /* border: 1px solid #000; */
+        margin-top:140px; 
+        /* 電腦版首頁第一個 */
+    }
     h2 .title-1 .line{
         /* border:1px solid red ; */
         width: 120px;

@@ -14,23 +14,7 @@ window.addEventListener("load",function(){
     var notice = document.getElementById("notice");
     var activity = document.getElementById("activity");
 
-    // let navA = document.querySelectorAll(".nav-a");
-    // let phoneUl = document.getElementById("phone-ul");
-    
-    // for(i=0 ; i<navA.length ; i++){
-        
-        
-    //     navA[i].addEventListener("click",function(){
-    //         phoneUl.style.backgroundColor="red";
-    //         // let check = document.querySelector("header .wrap input");
-    //         // console.log(check);
-    //         console.log(check.ckecked);
-    //         check.style.border="5px solid red";
-    //         check.ckecked=false;
-    //         console.log("點完");
 
-    //     })
-    // }
 
     function navMouseoverNewin(){
         newin.innerText=("最新甜點");
@@ -116,28 +100,12 @@ window.addEventListener("load",function(){
 })
 
 
-// 滑鼠
+// 導覽列 點擊收合
 
 
-// window.addEventListener("load",function(){
-//     let newCursor = document.getElementById("cursor");
-//     console.log(cursor);
-//     let cursorBear = document.getElementById("cursor-bear");
-//     let cursorBearImg = document.getElementById("cursor-bear-img");
-//     let allLink = document.querySelectorAll("a")
-//     console.log(allLink)
+$(function(){
+    $(".nav-a").click(function(){
+        $("#hb").click() == true ;
+    })
 
-//     $("html").mousemove(function(e){
-//         console.log(e.pageX+", "+e.pageY);
-//         console.log("位置",cursor.style)
-//         // newCursor.style.top=e.pageY + "px";
-//         // newCursor.style.left=e.pageX + "px";
-//         cursorBear.style.top=e.pageY + 10 + "px";
-//         cursorBear.style.left=e.pageX + 10  + "px";
-//     })
-//     // allLink[i].addEventListener("mouseover",function(){
-//     //     console.log("hover囉")
-//     //     cursorBear.style.border="2px"
-//     // });
- 
-// })
+})
