@@ -2528,7 +2528,7 @@
     }
     .activity .banner .inf h3{
         /* border: 1px solid #000; */
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     .activity .banner .pic .btn-3,
     .activity .item .inf .btn-3{
@@ -2564,6 +2564,10 @@
         width: 25%;
         font-weight: 300;
         font-family: 'Saira Condensed', sans-serif;
+    }
+    .activity .banner .inf h3{
+        /* border: 1px solid #000; */
+        font-size: 1.8rem;
     }
 }
 /* /////////////////下方///////////////// */
@@ -2650,22 +2654,11 @@
 }
 
 @media screen and (min-width:768px){
-    .activity .item {
-        /* border: 1px solid #000; */
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap:40px;
-    }
     .activity .item .box:hover{
         transform:rotate(5deg);
     }
     .activity .item .box:first-of-type:hover{
         transform:rotate(-5deg);
-    }
-    .activity .item :first-child{
-        grid-column-start: 1;
-        grid-row-start:1 ;
-        grid-row-end:3 ;
     }
     .activity .item .box .pic{
         box-shadow: var(--box-shadow);
@@ -2693,6 +2686,17 @@
     }
 }
 @media screen and (min-width:1200px){
+    .activity .item {
+        /* border: 1px solid #000; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:40px;
+    }
+    .activity .item :first-child{
+        grid-column-start: 1;
+        grid-row-start:1 ;
+        grid-row-end:3 ;
+    }
     .activity .item .detail {
         display: block;
         padding: 20px;
