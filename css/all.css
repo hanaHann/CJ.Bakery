@@ -693,6 +693,13 @@ header i {
     }
   
 }
+@media screen and (min-width:1200px){
+    header #phone-ul{
+        /* border: 2px solid #000; */
+        height: 0px;
+        background-color: none;
+    }
+}
 
 /* ---------------footer--------------- */
 footer{
